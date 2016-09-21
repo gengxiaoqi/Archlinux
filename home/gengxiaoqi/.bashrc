@@ -36,6 +36,9 @@ alias screenon="xrandr --output eDP1 --auto"
 # set LAN
 alias lanon="systemctl start dhcpcd@enp0s25.service"
 
+alias wifion="nmcli r wifi on"
+alias wifioff="nmcli r wifi off"
+
 #export LD_LIBRARY_PATH=/usr/local/lib/
 #source /home/gengxiaoqi/SourceCode/neuron/nrnenv
 
