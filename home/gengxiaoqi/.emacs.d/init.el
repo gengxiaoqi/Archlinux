@@ -83,3 +83,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+;; enable auto fill in org-mode
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+

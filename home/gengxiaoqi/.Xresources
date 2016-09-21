@@ -55,9 +55,9 @@ URxvt*foreground:                     white
 ! URxvt*color13:                        color
 ! URxvt*color14:                        color
 ! URxvt*color15:                        color
-! URxvt*colorBD:                        color
+URxvt*colorBD:                        red
 ! URxvt*colorIT:                        color
-! URxvt*colorUL:                        color
+URxvt*colorUL:                        green
 ! URxvt*colorRV:                        color
 ! URxvt*underlineColor:                 color
 ! URxvt*scrollColor:                    color
