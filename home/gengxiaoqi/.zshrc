@@ -11,6 +11,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+zstyle ':completion:*' menu select=3
+# Enable menu select, use Emacs style key
+# Set menu select enable when more than 2 options
+
+setopt menu_complete
+
 autoload -Uz run-help
 autoload -Uz run-help-git
 autoload -Uz run-help-svn
@@ -29,4 +35,6 @@ PROMPT="%{$fg_bold[blue]%}%T %{$fg_bold[green]%}[%~]%{$reset_color%} "
 alias ls='ls --color=auto'
 LS_COLORS='fi=1;36:ln=1;33:'
 export LS_COLORS
+
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
