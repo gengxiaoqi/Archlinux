@@ -1,0 +1,62 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/" . "gengxiaoqi/")
+ ("/mnt/WinD/Google_Drive/" . "Journal Club/")
+ ("/mnt/WinD/" . "Google_Drive/")
+ ("/mnt/" . "WinD/")
+ ("/" . "mnt/")
+ ("/mnt/WinD/Google_Drive/Journal Club/" . "New/")
+ ("/home/gengxiaoqi/" . "R_language/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/gengxiaoqi/R_language/"
+ "/home/gengxiaoqi/Documents/"
+ "/home/gengxiaoqi/GTD/"
+ "/mnt/WinD/Google_Drive/Journal Club/New/"
+ "/mnt/WinD/Google_Drive/Journal Club/"
+ "/home/gengxiaoqi/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".#homework3.R"
+ "ArchlinuxInstallUEFI"
+ "Plans.org"
+ "Inbox.org"
+ "journalclub_new.org"
+ "JournalClub.org"
+ "init.el"
+ "JournalClub_New.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/gengxiaoqi/R_language/" (22506 22471 643075 450000) "20160926" "day1_od.txt" "readme.txt" "day4_od.txt" "luminescence.csv" "day5_od.txt" "day7_od.txt" "20160926.R" ".#homework3.R" "20160921.R" "day2_od.txt" "./" "day6_od.txt" "__MACOSX/" "../" "day3_od.txt" "session_2.html" "antibio_res.zip" "time.txt")
+
+ ("/home/gengxiaoqi/" (22506 55067 653602 763000) "GitHub/" "GTD/" ".Xresources" ".fehbg" ".rstudio-desktop/" ".mozilla/" ".viminfo" ".vim/" ".netease-musicbox/" ".gstreamer-0.10/" ".vimperator/" ".Rhistory" ".emacs.d/" "Downloads/" "Dictionaries/" ".local/" ".bashrc" ".zcompdump" ".goldendict/" ".anthy/" ".gitconfig" ".gnome/" ".thumbnails/" "News/" ".config/" ".viminfo.tmp" "elisp_learning" ".vimrc" ".lesshst" ".sunpinyin/" ".cache/" ".RData" "R/" "installed" ".Xauthority" ".zshrc" ".android/" "Screenshots/" "./" "Music/" "opt/" ".gtk-bookmarks" "Desktop/" "Documents/" ".bash_logout" ".python_history" ".xinitrc" "../" ".esd_auth" ".w3m/" "R_language/" ".gnupg/" "bin/" ".pki/" ".gimp-2.8/" ".histfile" ".urxvt/" ".bash_profile" ".wget-hsts" ".bash_history" "Wallpapers/" ".fonts/" ".newsrc-dribble")
+
+ ("/home/gengxiaoqi/Documents/" (22502 38689 861403 270000) "JournalClub_New.org" "download" "ArchlinuxInstallUEFI" "Python/" "./" "Reading/" "JournalClub.org" "../" "ListofPackages.org" "JournalClub/")
+
+ ("/home/gengxiaoqi/GTD/" (22452 36942 327764 18000) "Canceled.org" "Inbox.org" "./" "../" "Plans.org" "Done.org")
+
+ ("/home/gengxiaoqi/.emacs.d/" (22452 34177 691174 323000) "ido.last" "init.el" ".session" "url/" ".smex-items" "ibus/" "./" "elpa/" "../" "auto-save-list/")
+
+ ("/mnt/WinD/Google_Drive/Journal Club/New/" (22427 11670 658266 900000) "Yehezkel Ben-Ari, 2002.gif" "week4.pdf" "tjp0586-3751.pdf" "roth_mvr_chap.pdf" "Perforated-patch recording with gramicidin avoids artifactual changes in intracellular chloride concentration.pdf" "nrn920.pdf" "nn.4218refs.ris" "nn.4218.pdf" "nn.4218-SF9.jpg" "nn.4218-SF8.jpg" "nn.4218-SF7.jpg" "nn.4218-SF6.jpg" "nn.4218-SF5.jpg" "nn.4218-SF4.jpg" "nn.4218-SF3.jpg" "I_7.1.gif" "53-Supplementary_Video_a.avi" "22.pdf" "17_S2.gif" "I_3.2.jpg" "I_1.1.jpg" "fnins-07-00131.pdf" "fncel-08-00166.pdf" "fncel-08-00044.pdf" "fig3_10.1002%2Fcne.10874.pptx" "Cation-chloride cotransporters in the nervous system_Eduardo E. Benarroch_2013.jpg" "Calcium buffering/" "Brown_et_al-2003-Journal_of_Comparative_Neurology.pdf" "Armstrong_et_al-2011-Journal_of_Comparative_Neurology.pdf" "9.pdf" "8.pdf" "7606.full.pdf" "7.pdf" "6.pdf" "55.pdf" "53.pdf" "53-Supplementary_Video_b.avi" "21.pdf" "20.pdf" "20-mmc3.pdf" "20-mmc2.xls" "20-mmc1.xls" "2.pdf" "19_Supplemental_Figure_Legends.doc" "19_FigS3.eps" "19_FigS2.tif" "19_FigS1.eps" "19.pdf" "18_S6.pdf" "18_S5.pdf" "18_S4.pdf" "18_S3.pdf" "18_S2.pdf" "18_S1.pdf" "18.pdf" "18-Supplemental_Legend.pdf" "nn.4218-SF2.jpg" "nn.4218-SF10.jpg" "nn.4218-SF1.jpg" "nn.4218-S2.pdf" "nn.4218-S1.pdf" "nn.4218-F6.jpg" "nn.4218-F5.jpg" "nn.4218-F4.jpg" "nn.4218-F3.jpg" "nn.4218-F2.jpg" "nn.4218-F1.jpg" "nihms175673.pdf" "New Microsoft PowerPoint Presentation.pptx" "ncomms1744.pdf" "nature08010.pdf" "journalclub_new.org~" "journalclub_new (1).org" "journal.pone.0005320.g002.TIF" "53-Supplementary_Fig4.gif" "53-Supplementary_Fig3.gif" "53-Supplementary_Fig2.gif" "53-Supplementary_Fig1.gif" "52.pdf" "5.pdf" "4.pdf" "3.pdf" "3.full.pdf" "29.pdf" "28.pdf" "27.pdf" "27-S1.pdf" "26.pdf" "25.pdf" "24_s.zip" "24.PDF" "23.pdf" "17_S1.gif" "17.pdf" "16.pdf" "16-sv2.avi" "16-sv1.avi" "16-S1.pdf" "15.pdf" "14.pdf" "13.pdf" "13-s9.doc" "13-s8.doc" "13-s7.pdf" "13-s6.pdf" "13-s5.pdf" "13-s4.pdf" "13-s3.pdf" "13-s2.pdf" "13-s13.doc" "13-s12.mov" "13-s11.mov" "13-s10.doc" "13-s1.pdf" "1280.full.pdf" "12.pdf" "11.pdf" "11-mmc3.pdf" "11-mmc2.pdf" "11-mmc1.xlsx" "10.pdf" "10-s1.xls" "1.pdf" "1-s2.0-S0896627311003485-main.pdf" "1-s2.0-S089662730200586X-main.pdf" "1-s2.0-S0306452214006411-main.pdf" "../" "./")
+
+ ("/mnt/WinD/Google_Drive/" (22422 60803 830558 0) "Read Later/" "Neuroscience/" "Linux/" "Journal Club/" "Emacs_Tutorial.cn" "Emacs_Cheat_Sheet.org" "Documents/" "desktop.ini" "Books/" ".tmp.drivedownload/" "#Emacs_Tutorial.cn#" "#Emacs_Cheat_Sheet.org#" "../" "./")
+
+ ("/mnt/WinD/Google_Drive/Journal Club/" (22422 26701 382238 100000) "new.org" "New Microsoft PowerPoint Presentation.pptx" "New folder (3)/" "New folder (2)/" "New folder/" "New/" "JournalClub.org" "20160729/" "#JournalClub.org#" "../" "./")
+
+ ("/mnt/WinD/" (22421 51896 772048 200000) "Videos/" "System Volume Information/" "Searches/" "Saved Games/" "Program Files (x86)/" "Program Files/" "Pictures/" "Music/" "Links/" "KuGou/" "Google_Drive/" "Favorites/" "emacs/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Contacts/" "Archlinux_Backup/" "360WiFi/" "360Downloads/" "$RECYCLE.BIN/" "../" "./")
+
+ ("/mnt/" (22394 59592 191318 837000) "usb/" "WinD/" "./" "../")
+
+ ("/home/" (22394 54687 831236 715000) "gengxiaoqi/" "./" "../")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

@@ -20,7 +20,7 @@
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/"))))
- '(package-selected-packages (quote (org)))
+ '(package-selected-packages (quote (ess org)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -38,7 +38,7 @@
  ;; Enable linum-mode
 (global-linum-mode 1)
 
- ;; 高亮匹配的括号和引号等 Highlight parent
+ ;; Highlight parent
 (show-paren-mode 1)
 ;;(setq show-paren-style 'parentheses)
 
@@ -78,8 +78,11 @@
 (auto-image-file-mode t)
 
 ;;enable ibus in Emacs
-;;(add-to-list 'load-path "~/.emacs.d/ibus/")
+;;(add-to-list 'load-path "~/.emacs.d/ibus")
+;;(setq ibus-agent-file-name "~/.emacs.d/ibus/ibus-el-agent")
+;;(setq ibus-python-shell-command-name "python2.7")
 ;;(require 'ibus)
+;; Turn on ibus-mode automatically after loading init.el
 ;;(add-hook 'after-init-hook 'ibus-mode-on)
 ;;(global-set-key (kbd "C-=") 'ibus-toggle) ;;set the key to change ibus
 
@@ -93,5 +96,5 @@
 (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
 
 ;; enable Emacs-ESS, M-x R -> enable using R in Emacs
-(load "/usr/share/emacs/site-lisp/ess/ess-site")
+;; (load "/usr/share/emacs/site-lisp/ess/ess-site")
 
