@@ -1,0 +1,62 @@
+# zathurarc
+
+set adjust-open width
+
+# key bindings
+
+map [normal]     r reload
+map [fullscreen] r reload
+
+map [normal]     j scroll down
+map [fullscreen] j scroll down
+map [normal]	 <C-n> scroll down
+map [fullscreen] <C-n> scroll down	
+map [normal]     k scroll up
+map [fullscreen] k scroll up
+map [normal]	 <C-p> scroll up
+map [fullscreen] <C-p> scroll up
+map [normal]	 d scroll half-down
+map [fullscreen] d scroll half-down
+map [normal]     h scroll left
+map [fullscreen] h scroll left
+map [normal]     l scroll right
+map [fullscreen] l scroll right
+map [normal]	 <C-d> scroll half-down
+map [fullscreen] <C-d> scroll half-down
+map [normal]	 u scroll half-up
+map [fullscreen] u scroll half-up
+map [normal]	 <C-u> scroll half-up
+map [fullscreen] <C-u> scroll half-up
+map [normal]	 <C-v> scroll full-down
+map [fullscreen] <C-v> scroll full-down
+map [normal]	 <A-v> scroll full-up
+map [fullscreen] <A-v> scroll full-up
+map [normal]	 <A-\<> goto top
+map [fullscreen] <A-\<> goto top
+map [normal]	 <A-\>> goto bottom
+map [fullscreen] <A-\>> goto bottom
+map [normal]     R rotate rotate-cw
+map [fullscreen] R rotate rotate-cw
+map [normal]	 p navigate previous
+map [fullscreen] p navigate previous
+map [normal]	 n navigate next
+map [fullscreen] n navigate next
+
+map [normal]	 <C-g> abort
+map [fullscreen] <C-g> abort
+
+map [normal]	 w adjust_window best-fit
+map [fullscreen] w adjust_window best-fit
+map [normal]	 W adjust_window width
+map [fullscreen] W adjust_window width
+
+map [fullscreen] f follow
+map [normal]	 D toggle_page_mode 2
+map [fullscreen] D toggle_page_mode 2
+map [fullscreen] <Tab> toggle_index
+
+map [fullscreen] <C-o> jumplist backward
+map [fullscreen] <C-i> jumplist forward
+
+map [index] q quit
+
