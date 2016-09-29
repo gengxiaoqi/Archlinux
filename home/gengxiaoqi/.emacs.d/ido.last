@@ -2,48 +2,60 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/gengxiaoqi/.config/" . "zathura/")
  ("/home/" . "gengxiaoqi/")
  ("/mnt/WinD/Google_Drive/" . "Journal Club/")
  ("/mnt/WinD/" . "Google_Drive/")
  ("/mnt/" . "WinD/")
  ("/" . "mnt/")
  ("/mnt/WinD/Google_Drive/Journal Club/" . "New/")
- ("/home/gengxiaoqi/" . "R_language/")
+ ("/home/gengxiaoqi/" . "Downloads/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/gengxiaoqi/.config/zathura/"
+ "/home/gengxiaoqi/Downloads/"
+ "/home/gengxiaoqi/.config/"
  "/home/gengxiaoqi/R_language/"
+ "/home/gengxiaoqi/.emacs.d/"
  "/home/gengxiaoqi/Documents/"
  "/home/gengxiaoqi/GTD/"
  "/mnt/WinD/Google_Drive/Journal Club/New/"
  "/mnt/WinD/Google_Drive/Journal Club/"
- "/home/gengxiaoqi/.emacs.d/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- ".#homework3.R"
- "ArchlinuxInstallUEFI"
- "Plans.org"
- "Inbox.org"
- "journalclub_new.org"
- "JournalClub.org"
+ "zathurarc_backup"
+ "zathurarc_backup2"
+ "zathurarc"
+ "R-intro-170.jp.pdf"
+ "R commands(11.09.13).pdf"
+ "llpp.conf"
+ "learning1.R"
+ "learn-emacs-lisp.el"
  "init.el"
- "JournalClub_New.org"
+ "20160928.R"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/gengxiaoqi/R_language/" (22506 22471 643075 450000) "20160926" "day1_od.txt" "readme.txt" "day4_od.txt" "luminescence.csv" "day5_od.txt" "day7_od.txt" "20160926.R" ".#homework3.R" "20160921.R" "day2_od.txt" "./" "day6_od.txt" "__MACOSX/" "../" "day3_od.txt" "session_2.html" "antibio_res.zip" "time.txt")
+ ("/home/gengxiaoqi/.config/zathura/" (22508 52466 788728 53000) "zathurarc_backup" "zathurarc" "./" "zathurarc_backup2" "../")
 
- ("/home/gengxiaoqi/" (22506 55067 653602 763000) "GitHub/" "GTD/" ".Xresources" ".fehbg" ".rstudio-desktop/" ".mozilla/" ".viminfo" ".vim/" ".netease-musicbox/" ".gstreamer-0.10/" ".vimperator/" ".Rhistory" ".emacs.d/" "Downloads/" "Dictionaries/" ".local/" ".bashrc" ".zcompdump" ".goldendict/" ".anthy/" ".gitconfig" ".gnome/" ".thumbnails/" "News/" ".config/" ".viminfo.tmp" "elisp_learning" ".vimrc" ".lesshst" ".sunpinyin/" ".cache/" ".RData" "R/" "installed" ".Xauthority" ".zshrc" ".android/" "Screenshots/" "./" "Music/" "opt/" ".gtk-bookmarks" "Desktop/" "Documents/" ".bash_logout" ".python_history" ".xinitrc" "../" ".esd_auth" ".w3m/" "R_language/" ".gnupg/" "bin/" ".pki/" ".gimp-2.8/" ".histfile" ".urxvt/" ".bash_profile" ".wget-hsts" ".bash_history" "Wallpapers/" ".fonts/" ".newsrc-dribble")
+ ("/home/gengxiaoqi/.emacs.d/" (22508 49608 905290 316000) "eshell/" "ido.last" "init.el" "smex-items" "ac-comphist.dat" ".session" "url/" ".smex-items" "./" "elpa/" "../" "auto-save-list/")
 
- ("/home/gengxiaoqi/Documents/" (22502 38689 861403 270000) "JournalClub_New.org" "download" "ArchlinuxInstallUEFI" "Python/" "./" "Reading/" "JournalClub.org" "../" "ListofPackages.org" "JournalClub/")
+ ("/home/gengxiaoqi/" (22508 49583 605289 388000) "GitHub/" "GTD/" ".Xresources" ".fehbg" ".rstudio-desktop/" ".mozilla/" ".viminfo" ".vim/" ".netease-musicbox/" ".gstreamer-0.10/" ".vimperator/" ".Rhistory" ".emacs.d/" "Downloads/" "Dictionaries/" ".local/" ".bashrc" ".zcompdump" ".goldendict/" ".anthy/" ".gitconfig" ".gnome/" ".thumbnails/" "News/" ".config/" ".viminfo.tmp" "elisp_learning" ".vimrc" ".lesshst" ".sunpinyin/" ".cache/" ".RData" "R/" "installed" ".Xauthority" ".zshrc" ".android/" "Screenshots/" "./" "Music/" "opt/" ".gtk-bookmarks" "Desktop/" "Documents/" ".bash_logout" ".python_history" ".xinitrc" "../" ".esd_auth" ".w3m/" "R_language/" ".gnupg/" "bin/" ".pki/" ".gimp-2.8/" ".histfile" ".urxvt/" ".bash_profile" ".wget-hsts" ".bash_history" "Wallpapers/" ".fonts/" ".newsrc-dribble")
 
- ("/home/gengxiaoqi/GTD/" (22452 36942 327764 18000) "Canceled.org" "Inbox.org" "./" "../" "Plans.org" "Done.org")
+ ("/home/gengxiaoqi/R_language/" (22508 17850 1683 630000) "20160926" "day1_od.txt" "readme.txt" "day4_od.txt" "luminescence.csv" ".Rhistory" "day5_od.txt" "day7_od.txt" "20160926.R" ".#homework3.R" "20160921.R" "day2_od.txt" "./" "20160928.R" "day6_od.txt" "__MACOSX/" "../" "day3_od.txt" "session_2.html" "antibio_res.zip" "time.txt")
 
- ("/home/gengxiaoqi/.emacs.d/" (22452 34177 691174 323000) "ido.last" "init.el" ".session" "url/" ".smex-items" "ibus/" "./" "elpa/" "../" "auto-save-list/")
+ ("/home/gengxiaoqi/Downloads/" (22508 46399 981839 754000) "github-git-cheat-sheet.pdf" "tex_intro_talk.pdf" "arma3-tactical-guide.pdf" "learn-emacs-lisp.el" "FoxitReader1.1.1.0602_Server_x64_enu_Setup.run.tar.gz" "LGPL/" "font-awesome-4.6.3.zip" "aspell6-en-7.1-0.tar.bz2" "Stuff for sale.pdf" "libpepflashplayer.so" "Rè¯­è¨å®æ.rar" "é­ç¥è±éä¼ã¯ã¿ã«cm.mp4" "Liu-FAQ.pdf" ".emacs.d/" "Robert J. Chassell-An Introduction to Programming in Emacs Lisp-Free Software Foundation (2004).pdf" "flash_player_ppapi_linux.x86_64.tar" "ibus-el-0.3.2/" "manifest.json" "Liu-R-refcard.pdf" "Elegant_Graphics_for_Data_Analysis.pdf" "README" "emacs.d-master/" "å­¦ä¹ GNU_Emacs(2nd).pdf" "R_Course/" "YosemiteSanFranciscoFont-master.zip" "i3.tar.gz" "org-8.3.4.zip" "i3wm How To Rice Your Desktop (3_3).mp4" "R-intro-170.jp.pdf" "Robert I. Kabacoff-R in Action, 2nd Edition_ Data analysis and graphics with R-Manning (2015).pdf" "emacs.d-master (1).zip" "R-lang.jp.v110.pdf" "Getting_Things_Done_-_The_Art_Of_Stress-Free_Productivity.pdf" "download (1)" "LaTexä»ç».pdf" "emacs.d-master.zip" "refcard.pdf" "NVIDIA-Linux-x86_64-367.35.run" "advanced-r.pdf" "LaTeXå¥é¨.pdf" "GTD_cn.mobi" "R commands(11.09.13).pdf" "aspell-0.60.6.1.tar.gz" "ibus-el-0.3.2.tar.gz" "dotemacs.tgz" "urxvt.tar.gz" "./" "çé­ç¥è±éä¼ã¯ã¿ã«_ä¸ã®å·».mp4" ".emacs" "JournalClub.org" "Arma3KbBindingsDefault.pdf" "i3wm Configuration (2_3).mp4" "LibreOffice_5.2.0_Linux_x86-64_deb_langpack_zh-CN.tar.gz" "android-sdk-linux/" "HistData.pdf" "ggplot2_Elegant_Graphics_for_Data_Analysis.pdf" "GNU_Emacs_Lisp_ç¼ç¨å¥é¨.pdf" "aspell6-en-2016.06.26-0.tar.bz2" "../" "Rè¯­è¨å®æä¸­æç.pdf" "email.pdf" "02-19.pdf" "LibreOffice_5.2.0_Linux_x86-64_deb_helppack_zh-CN.tar.gz" "aspell-0.60.6.1/" "ova.torrent" "i3wm Jump Start (1_3).mp4" "Xu-Statistics_and_R.pdf" "åå¦02-19.txt" "Offer.pdf" "Ricoh-MP_C4503.zip" "HRfAgreementonAdvancedSalaryPayment_IAS-HR12.docx.docx" "Bill Lewis, Dan Laliberte-GNU Emacs Lisp reference manual-Free Software Foundation (1995).pdf" "Sams_Teach_Yourself_Emacs_in_24_Hours.pdf" "vimium.flv" "çé­ç¥è±éä¼ã¯ã¿ã«_ä¸ã®å·».mp4" "Ricoh-Aficio_MP_C3002.zip" "android-sdk_r24.4.1-linux.tgz" "R_in_Action.pdf" "Ding-R-intro_cn.pdf" "Rè¯­è¨å®æ.pdf" "Writing GNU Emacs Extensions - Bob Glickstein.pdf" "Bidirectional Regulation of Hippocampal Mossy Fiber Filopodial Motility by Kainate Receptors.pdf" "Ricoh-Aficio_MP_C4502A.zip" "Rå¸¸è§é®é¢è§£ç­.pdf")
+
+ ("/home/gengxiaoqi/.config/" (22508 46817 668521 679000) "autostart/" "netease-cloud-music/" "RStudio/" "pulse/" "keymap.map" "menus/" "gtk-2.0/" "vlc/" "llpp.conf" "volumeicon/" "i3/" "xfce4/" "Thunar/" "ranger/" "fish/" "pavucontrol.ini" "R/" "libreoffice/" "gtk-3.0/" "ibus/" "./" "QtProject.conf" "zathura/" "../" "htop/" "dconf/" "Foxit Software/" "mimeapps.list" "spacefm/" "chromium/" "gconf/")
+
+ ("/home/gengxiaoqi/GTD/" (22468 21111 42383 372000) "Canceled.org" "Inbox.org" "./" "../" "Plans.org" "Done.org")
+
+ ("/home/gengxiaoqi/Documents/" (22505 64611 806527 13000) "JournalClub_New.org" "download" "ArchlinuxInstallUEFI" "Python/" "./" "Reading/" "JournalClub.org" "../" "ListofPackages.org" "JournalClub/")
 
  ("/mnt/WinD/Google_Drive/Journal Club/New/" (22427 11670 658266 900000) "Yehezkel Ben-Ari, 2002.gif" "week4.pdf" "tjp0586-3751.pdf" "roth_mvr_chap.pdf" "Perforated-patch recording with gramicidin avoids artifactual changes in intracellular chloride concentration.pdf" "nrn920.pdf" "nn.4218refs.ris" "nn.4218.pdf" "nn.4218-SF9.jpg" "nn.4218-SF8.jpg" "nn.4218-SF7.jpg" "nn.4218-SF6.jpg" "nn.4218-SF5.jpg" "nn.4218-SF4.jpg" "nn.4218-SF3.jpg" "I_7.1.gif" "53-Supplementary_Video_a.avi" "22.pdf" "17_S2.gif" "I_3.2.jpg" "I_1.1.jpg" "fnins-07-00131.pdf" "fncel-08-00166.pdf" "fncel-08-00044.pdf" "fig3_10.1002%2Fcne.10874.pptx" "Cation-chloride cotransporters in the nervous system_Eduardo E. Benarroch_2013.jpg" "Calcium buffering/" "Brown_et_al-2003-Journal_of_Comparative_Neurology.pdf" "Armstrong_et_al-2011-Journal_of_Comparative_Neurology.pdf" "9.pdf" "8.pdf" "7606.full.pdf" "7.pdf" "6.pdf" "55.pdf" "53.pdf" "53-Supplementary_Video_b.avi" "21.pdf" "20.pdf" "20-mmc3.pdf" "20-mmc2.xls" "20-mmc1.xls" "2.pdf" "19_Supplemental_Figure_Legends.doc" "19_FigS3.eps" "19_FigS2.tif" "19_FigS1.eps" "19.pdf" "18_S6.pdf" "18_S5.pdf" "18_S4.pdf" "18_S3.pdf" "18_S2.pdf" "18_S1.pdf" "18.pdf" "18-Supplemental_Legend.pdf" "nn.4218-SF2.jpg" "nn.4218-SF10.jpg" "nn.4218-SF1.jpg" "nn.4218-S2.pdf" "nn.4218-S1.pdf" "nn.4218-F6.jpg" "nn.4218-F5.jpg" "nn.4218-F4.jpg" "nn.4218-F3.jpg" "nn.4218-F2.jpg" "nn.4218-F1.jpg" "nihms175673.pdf" "New Microsoft PowerPoint Presentation.pptx" "ncomms1744.pdf" "nature08010.pdf" "journalclub_new.org~" "journalclub_new (1).org" "journal.pone.0005320.g002.TIF" "53-Supplementary_Fig4.gif" "53-Supplementary_Fig3.gif" "53-Supplementary_Fig2.gif" "53-Supplementary_Fig1.gif" "52.pdf" "5.pdf" "4.pdf" "3.pdf" "3.full.pdf" "29.pdf" "28.pdf" "27.pdf" "27-S1.pdf" "26.pdf" "25.pdf" "24_s.zip" "24.PDF" "23.pdf" "17_S1.gif" "17.pdf" "16.pdf" "16-sv2.avi" "16-sv1.avi" "16-S1.pdf" "15.pdf" "14.pdf" "13.pdf" "13-s9.doc" "13-s8.doc" "13-s7.pdf" "13-s6.pdf" "13-s5.pdf" "13-s4.pdf" "13-s3.pdf" "13-s2.pdf" "13-s13.doc" "13-s12.mov" "13-s11.mov" "13-s10.doc" "13-s1.pdf" "1280.full.pdf" "12.pdf" "11.pdf" "11-mmc3.pdf" "11-mmc2.pdf" "11-mmc1.xlsx" "10.pdf" "10-s1.xls" "1.pdf" "1-s2.0-S0896627311003485-main.pdf" "1-s2.0-S089662730200586X-main.pdf" "1-s2.0-S0306452214006411-main.pdf" "../" "./")
 

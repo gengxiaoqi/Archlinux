@@ -9,7 +9,9 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (manoj-dark)))
+ '(electric-pair-mode t)
  '(evil-mode nil)
+ '(global-auto-complete-mode t)
  '(ido-mode (quote both) nil (ido))
  '(make-backup-files nil)
  '(menu-bar-mode nil)
@@ -20,9 +22,23 @@
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/"))))
- '(package-selected-packages (quote (ess org)))
+ '(package-selected-packages (quote (autopair ace-jump-mode auto-complete smex ess org)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
+
+;; To auto-start smex
+(require 'smex)
+(smex-initialize)
+;; Bind some keys
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is the old M-x
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; To enable Ace Jump Mode
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -34,6 +50,11 @@
  '(org-level-2 ((t (:foreground "LightGoldenrod" :height 1.2))))
  '(org-level-3 ((t (:foreground "Cyan1" :height 1.0))))
  '(org-level-4 ((t (:foreground "chocolate1" :height 1.0)))))
+
+;;(set-background-color "black")
+;; Transparent the window
+;;(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+;;(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
 
  ;; Enable linum-mode
 (global-linum-mode 1)

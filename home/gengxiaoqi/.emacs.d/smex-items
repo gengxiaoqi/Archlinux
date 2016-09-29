@@ -1,0 +1,29 @@
+
+;; ----- smex-history -----
+(
+ R
+ lisp-interaction-mode
+ autopair-mode
+ list-packages
+ R-mode
+ line-number-mode
+ linum-mode
+)
+
+;; ----- smex-data -----
+(
+ (R . 8)
+ (shell-command . 1)
+ (list-packages . 3)
+ (electric-pair-mode . 1)
+ (ace-jump-mode . 1)
+ (auto-complete . 1)
+ (auto-complete-mode . 4)
+ (S+3 . 1)
+ (linum-mode . 1)
+ (line-number-mode . 4)
+ (R-transcript-mode . 1)
+ (R-mode . 2)
+ (autopair-mode . 1)
+ (lisp-interaction-mode . 2)
+)
