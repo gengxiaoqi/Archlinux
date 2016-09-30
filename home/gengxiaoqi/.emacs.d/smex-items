@@ -1,20 +1,20 @@
 
 ;; ----- smex-history -----
 (
- R
- lisp-interaction-mode
- autopair-mode
+ python-mode
+ cd
+ mail
+ buffer-menu
+ gnus
  list-packages
- R-mode
- line-number-mode
- linum-mode
+ shell
 )
 
 ;; ----- smex-data -----
 (
- (R . 8)
+ (R . 9)
  (shell-command . 1)
- (list-packages . 3)
+ (list-packages . 6)
  (electric-pair-mode . 1)
  (ace-jump-mode . 1)
  (auto-complete . 1)
@@ -26,4 +26,12 @@
  (R-mode . 2)
  (autopair-mode . 1)
  (lisp-interaction-mode . 2)
+ (imenu . 2)
+ (shell . 2)
+ (eshell . 1)
+ (mail . 2)
+ (gnus . 2)
+ (buffer-menu . 1)
+ (cd . 1)
+ (python-mode . 1)
 )

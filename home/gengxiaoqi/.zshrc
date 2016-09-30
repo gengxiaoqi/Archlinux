@@ -26,15 +26,17 @@ alias help=run-help
 
 alias ll='ls -l'
 alias la='ls -a'
+alias ls='ls --color=auto'
+LS_COLORS='fi=1;36:ln=1;33:'
+export LS_COLORS
+alias grep='grep --color'
+alias wifion='nmcli r wifi on'
+alias wifioff='nmcli r wifi off'
 
 autoload -Uz colors && colors
 
 # autoload -Uz promptinit && promptinit
 PROMPT="%{$fg_bold[blue]%}%T %{$fg_bold[green]%}[%~]%{$reset_color%} "
-
-alias ls='ls --color=auto'
-LS_COLORS='fi=1;36:ln=1;33:'
-export LS_COLORS
 
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

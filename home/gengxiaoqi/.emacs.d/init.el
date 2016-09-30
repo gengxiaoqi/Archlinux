@@ -21,9 +21,13 @@
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "https://melpa.org/packages/"))))
- '(package-selected-packages (quote (autopair ace-jump-mode auto-complete smex ess org)))
+     ("melpa" . "https://melpa.org/packages/")
+     ("org" . "https://orgmode.org/elpa/"))))
+ '(package-selected-packages (quote (autopair ace-jump-mode auto-complete smex)))
  '(scroll-bar-mode nil)
+ '(send-mail-function (quote smtpmail-send-it))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 25)
  '(tool-bar-mode nil))
 
 ;; To auto-start smex

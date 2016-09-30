@@ -9,15 +9,15 @@
  ("/mnt/" . "WinD/")
  ("/" . "mnt/")
  ("/mnt/WinD/Google_Drive/Journal Club/" . "New/")
- ("/home/gengxiaoqi/" . "Downloads/")
+ ("/home/gengxiaoqi/" . "R_language/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/gengxiaoqi/R_language/"
  "/home/gengxiaoqi/.config/zathura/"
  "/home/gengxiaoqi/Downloads/"
  "/home/gengxiaoqi/.config/"
- "/home/gengxiaoqi/R_language/"
  "/home/gengxiaoqi/.emacs.d/"
  "/home/gengxiaoqi/Documents/"
  "/home/gengxiaoqi/GTD/"
@@ -27,6 +27,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "20160928.R"
  "zathurarc_backup"
  "zathurarc_backup2"
  "zathurarc"
@@ -36,20 +37,19 @@
  "learning1.R"
  "learn-emacs-lisp.el"
  "init.el"
- "20160928.R"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/gengxiaoqi/" (22510 52143 252724 629000) "GitHub/" "GTD/" ".Xresources" ".fehbg" ".rstudio-desktop/" ".mozilla/" ".viminfo" ".vim/" ".netease-musicbox/" ".gstreamer-0.10/" ".vimperator/" ".Rhistory" ".emacs.d/" "Downloads/" "Dictionaries/" ".local/" ".bashrc" ".zcompdump" ".goldendict/" ".anthy/" ".gitconfig" ".gnome/" ".thumbnails/" "News/" ".config/" ".viminfo.tmp" "elisp_learning" "Books/" ".vimrc" ".lesshst" ".sunpinyin/" ".cache/" ".RData" "R/" "installed" ".Xauthority" ".zshrc" ".android/" "Screenshots/" "./" "Music/" "opt/" ".gtk-bookmarks" "Desktop/" "Documents/" ".bash_logout" ".python_history" ".xinitrc" "../" ".esd_auth" ".w3m/" "R_language/" ".gnupg/" "bin/" ".pki/" ".gimp-2.8/" ".histfile" ".urxvt/" ".bash_profile" ".wget-hsts" ".bash_history" "Wallpapers/" ".fonts/" ".newsrc-dribble")
+
+ ("/home/gengxiaoqi/Downloads/" (22509 29611 681872 626000) "github-git-cheat-sheet.pdf" "tex_intro_talk.pdf" "arma3-tactical-guide.pdf" "learn-emacs-lisp.el" "FoxitReader1.1.1.0602_Server_x64_enu_Setup.run.tar.gz" "LGPL/" "font-awesome-4.6.3.zip" "aspell6-en-7.1-0.tar.bz2" "Stuff for sale.pdf" "libpepflashplayer.so" "Rè¯­è¨å®æ.rar" "é­ç¥è±éä¼ã¯ã¿ã«cm.mp4" "Liu-FAQ.pdf" ".emacs.d/" "Robert J. Chassell-An Introduction to Programming in Emacs Lisp-Free Software Foundation (2004).pdf" "flash_player_ppapi_linux.x86_64.tar" "ibus-el-0.3.2/" "manifest.json" "Liu-R-refcard.pdf" "Elegant_Graphics_for_Data_Analysis.pdf" "README" "emacs.d-master/" "å­¦ä¹ GNU_Emacs(2nd).pdf" "R_Course/" "YosemiteSanFranciscoFont-master.zip" "i3.tar.gz" "org-8.3.4.zip" "i3wm How To Rice Your Desktop (3_3).mp4" "R-intro-170.jp.pdf" "Robert I. Kabacoff-R in Action, 2nd Edition_ Data analysis and graphics with R-Manning (2015).pdf" "emacs.d-master (1).zip" "R-lang.jp.v110.pdf" "Getting_Things_Done_-_The_Art_Of_Stress-Free_Productivity.pdf" "download (1)" "LaTexä»ç».pdf" "emacs.d-master.zip" "refcard.pdf" "NVIDIA-Linux-x86_64-367.35.run" "advanced-r.pdf" "LaTeXå¥é¨.pdf" "GTD_cn.mobi" "R commands(11.09.13).pdf" "aspell-0.60.6.1.tar.gz" "ibus-el-0.3.2.tar.gz" "dotemacs.tgz" "urxvt.tar.gz" "./" "çé­ç¥è±éä¼ã¯ã¿ã«_ä¸ã®å·».mp4" ".emacs" "JournalClub.org" "Arma3KbBindingsDefault.pdf" "i3wm Configuration (2_3).mp4" "LibreOffice_5.2.0_Linux_x86-64_deb_langpack_zh-CN.tar.gz" "android-sdk-linux/" "HistData.pdf" "ggplot2_Elegant_Graphics_for_Data_Analysis.pdf" "GNU_Emacs_Lisp_ç¼ç¨å¥é¨.pdf" "aspell6-en-2016.06.26-0.tar.bz2" "../" "Rè¯­è¨å®æä¸­æç.pdf" "Survive.in.Emacs.pdf" "email.pdf" "02-19.pdf" "LibreOffice_5.2.0_Linux_x86-64_deb_helppack_zh-CN.tar.gz" "aspell-0.60.6.1/" "ova.torrent" "i3wm Jump Start (1_3).mp4" "Xu-Statistics_and_R.pdf" "åå¦02-19.txt" "Offer.pdf" "Ricoh-MP_C4503.zip" "HRfAgreementonAdvancedSalaryPayment_IAS-HR12.docx.docx" "Bill Lewis, Dan Laliberte-GNU Emacs Lisp reference manual-Free Software Foundation (1995).pdf" "Sams_Teach_Yourself_Emacs_in_24_Hours.pdf" "vimium.flv" "çé­ç¥è±éä¼ã¯ã¿ã«_ä¸ã®å·».mp4" "Ricoh-Aficio_MP_C3002.zip" "android-sdk_r24.4.1-linux.tgz" "R_in_Action.pdf" "Ding-R-intro_cn.pdf" "Rè¯­è¨å®æ.pdf" "Writing GNU Emacs Extensions - Bob Glickstein.pdf" "Bidirectional Regulation of Hippocampal Mossy Fiber Filopodial Motility by Kainate Receptors.pdf" "Ricoh-Aficio_MP_C4502A.zip" "Rå¸¸è§é®é¢è§£ç­.pdf")
+
  ("/home/gengxiaoqi/.config/zathura/" (22508 52466 788728 53000) "zathurarc_backup" "zathurarc" "./" "zathurarc_backup2" "../")
 
  ("/home/gengxiaoqi/.emacs.d/" (22508 49608 905290 316000) "eshell/" "ido.last" "init.el" "smex-items" "ac-comphist.dat" ".session" "url/" ".smex-items" "./" "elpa/" "../" "auto-save-list/")
 
- ("/home/gengxiaoqi/" (22508 49583 605289 388000) "GitHub/" "GTD/" ".Xresources" ".fehbg" ".rstudio-desktop/" ".mozilla/" ".viminfo" ".vim/" ".netease-musicbox/" ".gstreamer-0.10/" ".vimperator/" ".Rhistory" ".emacs.d/" "Downloads/" "Dictionaries/" ".local/" ".bashrc" ".zcompdump" ".goldendict/" ".anthy/" ".gitconfig" ".gnome/" ".thumbnails/" "News/" ".config/" ".viminfo.tmp" "elisp_learning" ".vimrc" ".lesshst" ".sunpinyin/" ".cache/" ".RData" "R/" "installed" ".Xauthority" ".zshrc" ".android/" "Screenshots/" "./" "Music/" "opt/" ".gtk-bookmarks" "Desktop/" "Documents/" ".bash_logout" ".python_history" ".xinitrc" "../" ".esd_auth" ".w3m/" "R_language/" ".gnupg/" "bin/" ".pki/" ".gimp-2.8/" ".histfile" ".urxvt/" ".bash_profile" ".wget-hsts" ".bash_history" "Wallpapers/" ".fonts/" ".newsrc-dribble")
-
  ("/home/gengxiaoqi/R_language/" (22508 17850 1683 630000) "20160926" "day1_od.txt" "readme.txt" "day4_od.txt" "luminescence.csv" ".Rhistory" "day5_od.txt" "day7_od.txt" "20160926.R" ".#homework3.R" "20160921.R" "day2_od.txt" "./" "20160928.R" "day6_od.txt" "__MACOSX/" "../" "day3_od.txt" "session_2.html" "antibio_res.zip" "time.txt")
-
- ("/home/gengxiaoqi/Downloads/" (22508 46399 981839 754000) "github-git-cheat-sheet.pdf" "tex_intro_talk.pdf" "arma3-tactical-guide.pdf" "learn-emacs-lisp.el" "FoxitReader1.1.1.0602_Server_x64_enu_Setup.run.tar.gz" "LGPL/" "font-awesome-4.6.3.zip" "aspell6-en-7.1-0.tar.bz2" "Stuff for sale.pdf" "libpepflashplayer.so" "Rè¯­è¨å®æ.rar" "é­ç¥è±éä¼ã¯ã¿ã«cm.mp4" "Liu-FAQ.pdf" ".emacs.d/" "Robert J. Chassell-An Introduction to Programming in Emacs Lisp-Free Software Foundation (2004).pdf" "flash_player_ppapi_linux.x86_64.tar" "ibus-el-0.3.2/" "manifest.json" "Liu-R-refcard.pdf" "Elegant_Graphics_for_Data_Analysis.pdf" "README" "emacs.d-master/" "å­¦ä¹ GNU_Emacs(2nd).pdf" "R_Course/" "YosemiteSanFranciscoFont-master.zip" "i3.tar.gz" "org-8.3.4.zip" "i3wm How To Rice Your Desktop (3_3).mp4" "R-intro-170.jp.pdf" "Robert I. Kabacoff-R in Action, 2nd Edition_ Data analysis and graphics with R-Manning (2015).pdf" "emacs.d-master (1).zip" "R-lang.jp.v110.pdf" "Getting_Things_Done_-_The_Art_Of_Stress-Free_Productivity.pdf" "download (1)" "LaTexä»ç».pdf" "emacs.d-master.zip" "refcard.pdf" "NVIDIA-Linux-x86_64-367.35.run" "advanced-r.pdf" "LaTeXå¥é¨.pdf" "GTD_cn.mobi" "R commands(11.09.13).pdf" "aspell-0.60.6.1.tar.gz" "ibus-el-0.3.2.tar.gz" "dotemacs.tgz" "urxvt.tar.gz" "./" "çé­ç¥è±éä¼ã¯ã¿ã«_ä¸ã®å·».mp4" ".emacs" "JournalClub.org" "Arma3KbBindingsDefault.pdf" "i3wm Configuration (2_3).mp4" "LibreOffice_5.2.0_Linux_x86-64_deb_langpack_zh-CN.tar.gz" "android-sdk-linux/" "HistData.pdf" "ggplot2_Elegant_Graphics_for_Data_Analysis.pdf" "GNU_Emacs_Lisp_ç¼ç¨å¥é¨.pdf" "aspell6-en-2016.06.26-0.tar.bz2" "../" "Rè¯­è¨å®æä¸­æç.pdf" "email.pdf" "02-19.pdf" "LibreOffice_5.2.0_Linux_x86-64_deb_helppack_zh-CN.tar.gz" "aspell-0.60.6.1/" "ova.torrent" "i3wm Jump Start (1_3).mp4" "Xu-Statistics_and_R.pdf" "åå¦02-19.txt" "Offer.pdf" "Ricoh-MP_C4503.zip" "HRfAgreementonAdvancedSalaryPayment_IAS-HR12.docx.docx" "Bill Lewis, Dan Laliberte-GNU Emacs Lisp reference manual-Free Software Foundation (1995).pdf" "Sams_Teach_Yourself_Emacs_in_24_Hours.pdf" "vimium.flv" "çé­ç¥è±éä¼ã¯ã¿ã«_ä¸ã®å·».mp4" "Ricoh-Aficio_MP_C3002.zip" "android-sdk_r24.4.1-linux.tgz" "R_in_Action.pdf" "Ding-R-intro_cn.pdf" "Rè¯­è¨å®æ.pdf" "Writing GNU Emacs Extensions - Bob Glickstein.pdf" "Bidirectional Regulation of Hippocampal Mossy Fiber Filopodial Motility by Kainate Receptors.pdf" "Ricoh-Aficio_MP_C4502A.zip" "Rå¸¸è§é®é¢è§£ç­.pdf")
 
  ("/home/gengxiaoqi/.config/" (22508 46817 668521 679000) "autostart/" "netease-cloud-music/" "RStudio/" "pulse/" "keymap.map" "menus/" "gtk-2.0/" "vlc/" "llpp.conf" "volumeicon/" "i3/" "xfce4/" "Thunar/" "ranger/" "fish/" "pavucontrol.ini" "R/" "libreoffice/" "gtk-3.0/" "ibus/" "./" "QtProject.conf" "zathura/" "../" "htop/" "dconf/" "Foxit Software/" "mimeapps.list" "spacefm/" "chromium/" "gconf/")
 
