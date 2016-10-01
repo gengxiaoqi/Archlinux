@@ -14,7 +14,7 @@
 (
  (R . 9)
  (shell-command . 1)
- (list-packages . 8)
+ (list-packages . 9)
  (electric-pair-mode . 1)
  (ace-jump-mode . 1)
  (auto-complete . 1)

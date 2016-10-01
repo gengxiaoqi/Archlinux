@@ -23,7 +23,9 @@
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://melpa.org/packages/")
      ("org" . "https://orgmode.org/elpa/"))))
- '(package-selected-packages (quote (autopair ace-jump-mode auto-complete smex)))
+ '(package-selected-packages
+   (quote
+    (nyan-mode autopair ace-jump-mode auto-complete smex)))
  '(scroll-bar-mode nil)
  '(send-mail-function (quote smtpmail-send-it))
  '(smtpmail-smtp-server "smtp.gmail.com")
