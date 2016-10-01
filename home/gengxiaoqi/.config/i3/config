@@ -273,7 +273,7 @@ bindsym $mod+minus scratchpad show
 # show the sup-mail scratchpad window, if any
 bindsym $mod+Shift+Control+minus [title="^Sup ::"] scratchpad show
 
-exec_always --no-startup-id feh --bg-scale ~/Wallpapers/4.jpg
+exec_always --no-startup-id feh --bg-scale ~/Wallpapers/archlinux.jpg
 #exec_always --no-startup-id compton -f
 exec_always --no-startup-id ibus-daemon -r -d
 
