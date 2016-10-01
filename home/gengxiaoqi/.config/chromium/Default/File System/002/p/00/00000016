@@ -1,4 +1,0 @@
-06:57:31 GMT+0200 (CEST) (ERROR) /background.html: EDAMUserException
-    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/js/main/UsageMetrics.js:2:1842
-    at .<anonymous> (/thrift/thrift-binary.js:2:7229)
-09:34:09 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:5475

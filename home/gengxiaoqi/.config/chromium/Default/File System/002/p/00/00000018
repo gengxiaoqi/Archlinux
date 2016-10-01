@@ -1,4 +1,0 @@
-17:15:21 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
-    at null.callback (/js/main/Extension.js:2:7314)
-    at safeCallbackApply (extensions::sendRequest:21:15)
-    at handleResponse (extensions::sendRequest:74:7)
