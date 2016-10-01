@@ -167,3 +167,37 @@ Git
 git init
 git clone "https://github.com/gengxiaoqi/***"
 
+#----------------------------------------
+useradd -m -G wheel -s /bin/bash archlinux
+passwd archlinux
+
+#Enable sudo for user
+nano /etc/sudoers
+#------------------------------
+archlinux ALL=(ALL) ALL
+OR
+%wheel ALL=(ALL) ALL
+#------------------------------
+
+#Run 32 bit applications on x86_64 system
+nano /etc/pacman.conf 
+#------------------------------
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+#------------------------------
+
+#Quick version for installing on a VM
+#------------------------------
+#------------------------------
+mkfs.btrfs /dev/sda
+mount /dev/sda /mnt
+pacstrap /mnt base grub btrfs-progs
+genfstab /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+reboot
+#------------------------------
+#------------------------------
