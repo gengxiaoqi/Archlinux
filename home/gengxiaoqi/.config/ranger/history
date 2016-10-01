@@ -1,0 +1,5 @@
+open with vlc
+help
+open_with vlc
+open_with 
+delete

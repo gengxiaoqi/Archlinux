@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "https://photos.google.com/"
+      },
+      "urls": [ "https://photos.google.com/" ]
+   },
+   "description": "Store, search, and share a lifetime of photos",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApKDSJVsjTyp+FJOEx7dSdOxakqRexigA26W6/RYCH+72BblOnxhav6PVVnoXwcp2DX8K83sJl2Qp4yMRWKigzccxyRIUmyZllyBBxF9nleq8P1mig2SD80DL6jnKbghMsLXnEjnrO10Jzcr4fW+gb1lUVzwQCpjALq2mS1Rp5YNlIIjsx8cELvw5lYQ5B/3vaQRxlkMFfI6sRLo/vrWd8mey6SmnslX/v2iJwuOdm4QBFVzboYSsyG2Sa9eJOwtpzk+DDleyCMJG6LhfGfNaK+MPCfTwajD7l5jtcMdoOLcP21ueQhPp32n+7OVxLL5EXVpAMcvaC5YYv/TcnWrLqQIDAQAB",
+   "manifest_version": 2,
+   "name": "Google Photos",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

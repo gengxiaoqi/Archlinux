@@ -1,0 +1,41 @@
+{
+   "625": {
+      "message": "Betöltés…"
+   },
+   "628": {
+      "message": "Tudós beállításai"
+   },
+   "853": {
+      "message": "Google Tudós gomb"
+   },
+   "854": {
+      "message": "Keressen tudományos cikkeket az internet böngészése közben!"
+   },
+   "855": {
+      "message": "Keressen tanulmányokat böngészés közben!"
+   },
+   "859": {
+      "message": "Egy másik cikk kereséséhez válassza ki a címét az oldalon."
+   },
+   "860": {
+      "message": "Egy cikk kereséséhez válassza ki a címét az oldalon."
+   },
+   "861": {
+      "message": "Egy másik cikk kereséséhez válassza ki és másolja le a címét az oldalon."
+   },
+   "862": {
+      "message": "Egy cikk kereséséhez válassza ki és másolja le a címét az oldalon."
+   },
+   "920": {
+      "message": "Keresés"
+   },
+   "921": {
+      "message": "Nem sikerült elérni a szervert."
+   },
+   "922": {
+      "message": "Találatok megnyitása új lapon"
+   },
+   "923": {
+      "message": "Ez a keresés nem eredményezett találatot."
+   }
+}

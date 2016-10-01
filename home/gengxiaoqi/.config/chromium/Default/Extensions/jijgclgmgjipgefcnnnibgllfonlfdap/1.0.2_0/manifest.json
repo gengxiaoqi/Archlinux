@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://getpocket.com/?src=chs"
+      },
+      "urls": [ "http://getpocket.com/", "https://getpocket.com/" ]
+   },
+   "description": "Pocket Website - The best way to save-for-later articles, videos and more.",
+   "icons": {
+      "128": "images/icon-128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDzOPR7jJAtBQ03k85g5B/2HBrH7s/e66FKJU9Cj+vwZHjZ/dkeAVEwxd76T4nUnawZBZHYVFnYOXCBem05An5Ng23VPy56Dz2UX5QZ/Dbwd/ZyYoVz7BewxAoZteuAdkJNQJJEgwU/TQJCG8fHIscN7hg7khr5iubsVzpRg6uD5wIDAQAB",
+   "manifest_version": 2,
+   "name": "Pocket Website",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.2"
+}
