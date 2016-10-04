@@ -1,0 +1,73 @@
+
+(nitrogen:964): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(nitrogen:964): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(clipit:969): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(clipit:969): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+cp: cannot create regular file '/home/gengxiaoqi/.local/share/icons/default/index.theme': No such file or directory
+
+(clipit:969): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+conky: desktop window (281) is root window
+conky: window type - override
+conky: drawing to created window (0x1e00001)
+conky: drawing to double buffer
+conky: forked to background, pid is 1016
+i3status: trying to auto-detect output_format setting
+i3status: auto-detected "i3bar"
+
+conky: desktop window (281) is root window
+conky: window type - override
+conky: drawing to created window (0x2000001)
+conky: drawing to double buffer
+conky: forked to background, pid is 1030
+
+Failed to open sound device with name: default
+
+(nm-applet:962): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+
+(nitrogen:964): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(nitrogen:964): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(pamac-tray:967): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+unable to connect to the rxvt-unicode daemon: Connection refused
+[i3bar/src/xcb.c:974] ERROR: PropertyNotify received for unknown window 01400003
+[i3bar/src/xcb.c:974] ERROR: PropertyNotify received for unknown window 00c00002
+[i3bar/src/xcb.c:974] ERROR: PropertyNotify received for unknown window 01600002
+[i3bar/src/xcb.c:974] ERROR: PropertyNotify received for unknown window 01a0000a
+
+(pamac-tray:967): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+[1199:1199:1002/075429:ERROR:browser_main_loop.cc(239)] GTK theme error: Unable to locate theme engine in module_path: "adwaita",
+[1199:1199:1002/075429:ERROR:browser_main_loop.cc(239)] GTK theme error: Unable to locate theme engine in module_path: "adwaita",
+[1278:1278:1002/075429:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads in process gpu-process. 
+[124:124:1002/082611:ERROR:PlatformKeyboardEvent.cpp(94)] Not implemented reached in static bool blink::PlatformKeyboardEvent::currentCapsLockState()
+1   0x558cc959cc8f
+2   0x558cc959ce9c
+3   0x558cc97a1be7
+4   0x558cc9795985
+5   0x558cc9bcb05c
+6   0x1b9efa308206
+Received signal 11 SEGV_MAPERR 0000fbadbeef
+#0 0x558cc86fad1e <unknown>
+#1 0x558cc86fb0f9 <unknown>
+#2 0x7f290aec9080 <unknown>
+#3 0x558ccaf4eba3 <unknown>
+#4 0x558cc959cc8f <unknown>
+#5 0x558cc959ce9c <unknown>
+#6 0x558cc97a1be7 <unknown>
+#7 0x558cc9795985 <unknown>
+#8 0x558cc9bcb05c <unknown>
+#9 0x1b9efa308206 <unknown>
+  r8: 00007f28ed5af700  r9: 0000000000000013 r10: 0000000000000078 r11: 0000000000000000
+ r12: 0000558ccdebb6c0 r13: 0000000000000001 r14: 00001342aad82020 r15: 00007f28ed5ad700
+  di: 0000000000000000  si: 0000000000000000  bp: 0000558ccded64b9  bx: 00001342aad82000
+  dx: 00007f2903a78730  ax: 00000000fbadbeef  cx: 00007f29037b954d  sp: 00007f28ed5acae0
+  ip: 0000558ccaf4eba3 efl: 0000000000010246 cgf: 0000000000000033 erf: 0000000000000006
+ trp: 000000000000000e msk: 0000000000000000 cr2: 00000000fbadbeef
+[end of stack trace]

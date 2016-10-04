@@ -1,0 +1,27 @@
+2016/10/02-08:29:06.169 833 Reusing MANIFEST /home/gengxiaoqi/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/10/02-08:29:06.169 833 Recovering log #15
+2016/10/02-08:29:06.169 833 Reusing old log /home/gengxiaoqi/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000015.log 
+2016/10/02-08:29:06.718 833 Current memtable full; waiting...
+2016/10/02-08:29:06.719 1039 Level-0 table #19: started
+2016/10/02-08:29:06.741 1039 Level-0 table #19: 652 bytes OK
+2016/10/02-08:29:06.818 1039 Delete type=0 #15
+2016/10/02-08:29:06.818 1039 Level-0 table #21: started
+2016/10/02-08:29:06.818 1039 Level-0 table #21: 0 bytes OK
+2016/10/02-08:29:06.847 1039 Delete type=0 #18
+2016/10/02-08:29:06.847 1039 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at '\x00\x04\x00\x00\x05' @ 92 : 1
+2016/10/02-08:29:06.847 1039 Compacting 1@0 + 1@1 files
+2016/10/02-08:29:06.928 1039 Generated table #22@0: 17 keys, 699 bytes
+2016/10/02-08:29:06.928 1039 Compacted 1@0 + 1@1 files => 699 bytes
+2016/10/02-08:29:06.955 1039 compacted to: files[ 0 1 2 0 0 0 0 ]
+2016/10/02-08:29:06.955 1039 Delete type=2 #14
+2016/10/02-08:29:06.955 1039 Delete type=2 #19
+2016/10/02-08:29:06.955 1039 Manual compaction at level-0 from '\x00\x04\x00\x00\x05' @ 92 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2016/10/02-08:29:21.817 1039 Level-0 table #24: started
+2016/10/02-08:29:21.890 1039 Level-0 table #24: 10672513 bytes OK
+2016/10/02-08:29:21.892 1039 Delete type=0 #20
+2016/10/02-08:29:59.367 1039 Level-0 table #26: started
+2016/10/02-08:29:59.479 1039 Level-0 table #26: 10650948 bytes OK
+2016/10/02-08:29:59.485 1039 Delete type=0 #23
+2016/10/02-08:31:14.447 1039 Level-0 table #28: started
+2016/10/02-08:31:14.537 1039 Level-0 table #28: 10690885 bytes OK
+2016/10/02-08:31:14.541 1039 Delete type=0 #25

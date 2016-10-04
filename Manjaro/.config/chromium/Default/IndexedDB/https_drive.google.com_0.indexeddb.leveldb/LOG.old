@@ -1,0 +1,11 @@
+2016/10/02-08:27:13.012 1239 Reusing MANIFEST /home/gengxiaoqi/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/10/02-08:27:13.012 1239 Recovering log #8
+2016/10/02-08:27:13.012 1239 Reusing old log /home/gengxiaoqi/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000008.log 
+2016/10/02-08:27:13.354 1239 Current memtable full; waiting...
+2016/10/02-08:27:13.354 1561 Level-0 table #14: started
+2016/10/02-08:27:13.355 1561 Level-0 table #14: 881 bytes OK
+2016/10/02-08:27:13.355 1561 Delete type=0 #8
+2016/10/02-08:27:13.356 1561 Level-0 table #16: started
+2016/10/02-08:27:13.356 1561 Level-0 table #16: 0 bytes OK
+2016/10/02-08:27:13.356 1561 Delete type=0 #13
+2016/10/02-08:27:13.356 1561 Manual compaction at level-0 from '\x00\x03\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x04\x00\x00\x00' @ 0 : 0; will stop at (end)

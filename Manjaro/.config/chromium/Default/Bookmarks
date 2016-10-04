@@ -1,0 +1,48 @@
+{
+   "checksum": "8e18f821c36787cfb3fa32e44d04e1ab",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13102446837000000",
+            "id": "6",
+            "name": "Manjaro Linux",
+            "type": "url",
+            "url": "https://manjaro.org/"
+         }, {
+            "date_added": "13102446886000000",
+            "id": "7",
+            "name": "Manjaro Wiki",
+            "type": "url",
+            "url": "https://wiki.manjaro.org/index.php?title=Main_Page"
+         }, {
+            "date_added": "13102446920000000",
+            "id": "8",
+            "name": "Manjaro Forum",
+            "type": "url",
+            "url": "https://forum.manjaro.org/"
+         } ],
+         "date_added": "13119882869454814",
+         "date_modified": "0",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13119882869454820",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13119882869454821",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

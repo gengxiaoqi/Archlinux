@@ -1,0 +1,41 @@
+cp: cannot create regular file '/home/gengxiaoqi/.local/share/icons/default/index.theme': No such file or directory
+i3status: trying to auto-detect output_format setting
+i3status: auto-detected "i3bar"
+
+(clipit:683): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(clipit:683): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+conky: desktop window (281) is root window
+conky: window type - override
+conky: drawing to created window (0x1a00001)
+conky: drawing to double buffer
+conky: forked to background, pid is 731
+
+(clipit:683): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+
+
+(nitrogen:679): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(nitrogen:679): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+conky: desktop window (281) is root window
+conky: window type - override
+conky: drawing to created window (0x1e00001)
+conky: drawing to double buffer
+conky: forked to background, pid is 751
+
+Failed to open sound device with name: default
+
+(nm-applet:676): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+
+(nitrogen:679): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(nitrogen:679): Gtk-WARNING **: Unable to locate theme engine in module_path: "adwaita",
+
+(pamac-tray:681): Gtk-WARNING **: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
+[798:798:1002/082855:ERROR:browser_main_loop.cc(239)] GTK theme error: Unable to locate theme engine in module_path: "adwaita",
+[798:798:1002/082855:ERROR:browser_main_loop.cc(239)] GTK theme error: Unable to locate theme engine in module_path: "adwaita",
+[798:798:1002/082925:ERROR:browser_main_loop.cc(239)] GTK theme error: Theme directory aplets/64 of theme Breeze-Maia-Dark has no size field
+
