@@ -49,3 +49,12 @@
 * wpa_supplicant
 * dialog
 * networkmanager
+* ttf-font-awesome
+* ttf-font-icon
+* xorg-xev
+* zatura
+* zathura-pdf-mupdf
+* virtualbox
+* refind-efi
+* alsa-utils
+

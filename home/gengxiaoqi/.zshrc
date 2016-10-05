@@ -32,6 +32,8 @@ export LS_COLORS
 alias grep='grep --color'
 alias wifion='nmcli r wifi on'
 alias wifioff='nmcli r wifi off'
+alias shutdown='shutdown now'
+alias imagej='~/Image/ImageJ'
 
 autoload -Uz colors && colors
 
