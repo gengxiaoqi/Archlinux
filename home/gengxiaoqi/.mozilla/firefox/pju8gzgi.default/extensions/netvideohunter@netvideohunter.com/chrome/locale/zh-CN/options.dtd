@@ -1,0 +1,19 @@
+<!ENTITY alwaysAsk "总是询问视频保存位置">
+<!ENTITY saveTo "保存到：">
+<!ENTITY chooseFolder "选择文件夹">
+<!ENTITY downloads "下载">
+<!ENTITY list "列表">
+<!ENTITY removeAfterDownload "下载开始后从列表中移除视频">
+<!ENTITY removeAfterSiteClosed "当不再有与视频相关网站的窗口或标签页时，从列表中移除视频。 例如：如果列表中有 YouTube 视频，当所有的 YouTube 窗口及标签页被关闭时，它们将被移除。">
+<!ENTITY iconAppearance "显示图标">
+<!ENTITY inStatusbar "在状态栏显示">
+<!ENTITY inToolbar "在工具栏显示">
+<!ENTITY inContext "在右键菜单显示 (当您在网页上右击时)">
+<!ENTITY ignoreWebsites "忽略网站">
+<!ENTITY ignoreWebsites.description "如果您添加网站名称 (例如: youtube.com) 到这个列表，那么来自这个站点的视频将不能被捕获.">
+<!ENTITY add "添加">
+<!ENTITY windowMode "窗口模式">
+<!ENTITY openInPopup "在弹出窗口中打开">
+<!ENTITY openInTab "在标签页中打开">
+<!ENTITY fileTypes "文件类型">
+<!ENTITY enableSwf "启用捕获 SWF 文件">

@@ -1,0 +1,20 @@
+<!ENTITY download "Letöltés">
+<!ENTITY play "Lejátszás">
+<!ENTITY play.tooltip "Nézze meg a videót, mielőtt letöltené">
+<!ENTITY itemMenu.copyLink "Videó címének másolása">
+<!ENTITY itemMenu.saveFromCache "A videó mentése a böngésző gyorsítótárából">
+<!ENTITY itemMenu.openPage "A videóhoz tartozó weboldal megnyitása">
+<!ENTITY selectAll "Mind">
+<!ENTITY selectAll.tooltip "Összes videó kijelölése a listában">
+<!ENTITY selectNone "Egyik sem">
+<!ENTITY selectNone.tooltip "Kijelölések törlése a listából">
+<!ENTITY removeSelected "Kijelöltek törlése">
+<!ENTITY removeSelected.tooltip "A kijelölt videó törlése a listából">
+<!ENTITY downloadSelected "Kijelöltek letöltése">
+<!ENTITY downloadSelected.tooltip "A listában kijelölt videók letöltése egyszerre">
+<!ENTITY options "Beállítások">
+<!ENTITY closeOptions "Beállítások bezárása">
+<!ENTITY closePlayer "Lejátszó bezárása">
+<!ENTITY clearList "Törlés">
+<!ENTITY clearList.tooltip "Az összes elem eltávolítása a listából">
+<!ENTITY help "Hogyan tölthet le videókat? 1. Játssza le a videót a weblapon. 2. Amikor elindul a lejátszás, a NetVideoHunter elfogja a videó címét és megjeleníti a listában az ablak bal oldalán. 3. A Letöltés gombra kattintva letöltheti a listában lévő videókat vagy belenézhet azokba a Lejátszás gombra kattintva, hogy meggyőződjön biztos jót tölt-e le.">

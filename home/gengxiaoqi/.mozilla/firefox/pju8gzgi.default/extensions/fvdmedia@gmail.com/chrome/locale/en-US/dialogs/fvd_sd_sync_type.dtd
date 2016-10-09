@@ -1,0 +1,8 @@
+<!ENTITY window.title "Sync Type Select">
+<!ENTITY select_sync_type "Select Sync Type">
+<!ENTITY merge.desc "Data from Server and Computer will be merged. (Note: Server has higher priority.)">
+<!ENTITY merge "Merge Local And Server Data">
+<!ENTITY upload.desc "Copy data from your Computer to Server">
+<!ENTITY upload "Overwrite Server Data">
+<!ENTITY download.desc "Copy data from Server to your Computer">
+<!ENTITY download "Overwrite Local Data">

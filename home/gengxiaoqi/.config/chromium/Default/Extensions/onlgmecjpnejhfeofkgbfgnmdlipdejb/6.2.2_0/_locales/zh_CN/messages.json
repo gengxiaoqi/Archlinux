@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "来自 Google 的在线照片分享服务，方便快捷且提供 1G 免费存储空间。"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Picasa"
+   }
+}

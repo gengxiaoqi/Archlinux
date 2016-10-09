@@ -1,0 +1,19 @@
+<!ENTITY main_button.title "Sincronizador FVD">
+
+<!ENTITY main_menu.tabs "Pestañas">
+<!ENTITY main_menu.tabs.save_to_server "Guardar en el servidor">
+<!ENTITY main_menu.tabs.load_from_server "Cargar desde el servidor">
+
+<!ENTITY main_menu.options "Opciones">
+
+<!ENTITY main_menu.bookmarks "Sincronizar marcadores">
+<!ENTITY main_menu.bookmarks_init "Inicialización...">
+<!ENTITY main_menu.speed_dial "Sincronizar SpeedDial">
+
+<!ENTITY main_menu.my_fvd_sync "Mi cuenta de EverHelper">
+
+<!ENTITY main_menu.report_bug "Informar de un error">
+
+<!ENTITY main_menu.rate_us "Valóranos">
+<!ENTITY main_menu.get_premium "Get Pro!">
+

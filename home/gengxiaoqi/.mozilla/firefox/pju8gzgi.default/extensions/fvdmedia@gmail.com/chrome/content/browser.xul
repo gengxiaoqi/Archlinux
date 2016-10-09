@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://fvd.sync/skin/browser.css" type="text/css"?>
+<?xml-stylesheet href="chrome://fvd.sync/skin/toolbaricons.css" type="text/css"?>
+
+<!DOCTYPE overlay [
+<!ENTITY % fvd.syncDTD SYSTEM "chrome://fvd.sync/locale/browser.dtd">
+%fvd.syncDTD;
+]>
+
+<overlay id="fvd-sync-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+
+  <script type="application/x-javascript" src="chrome://fvd.sync/content/browser.js"></script>
+  <script type="application/x-javascript" src="chrome://fvd.sync/content/content-scripts/everhelper_controller.js"></script>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="fvd_sync_MainButton" class="toolbarbutton-1" label="&main_button.title;" type="menu">
+      <menupopup id="fvd_sync_MainContextMenu" onpopupshowing="fvd_Sync.showingMainMenu()">
+
+        <menuitem class="menuitem-iconic everhelper" label="&main_menu.my_fvd_sync;" oncommand="fvd_Sync.goToEverhelper()"/>
+        <menuitem id="fvd_sync_driverMenu_Bookmarks" sync="0" class="menuitem-iconic defaultIcon" label="&main_menu.bookmarks;" initlabel="&main_menu.bookmarks_init;" activelabel="&main_menu.bookmarks;" oncommand="fvd_Sync.Bookmarks.mainSync()"/>
+        <menuitem id="fvd_sync_driverMenu_SpeedDial" sync="0" class="menuitem-iconic" label="&main_menu.speed_dial;" oncommand="fvd_Sync.SpeedDial.mainSync()"/>
+
+        <menuitem label="&main_menu.options;" oncommand="fvd_Sync.openOptions()"/>
+        <menuitem id="fvd_sync_reportBugButton" label="&main_menu.report_bug;" oncommand="fvd_Sync.reportBug()"/>
+        <menuitem id="fvd_sync_rateUsButton" hidden="true" label="&main_menu.rate_us;" oncommand="fvd_Sync.rateUs()"/>
+        <menuitem id="fvd_sync_getPremiumButton" class="menuitem-iconic" hidden="true" label="&main_menu.get_premium;" oncommand="fvd_Sync.getPremium()"/>
+        <menuseparator/>
+
+        <menuitem label="" class="loginOrLogout" oncommand="fvd_Sync.loginOrLogout()"/>
+
+      </menupopup>
+    </toolbarbutton>
+  </toolbarpalette>
+</overlay>
+

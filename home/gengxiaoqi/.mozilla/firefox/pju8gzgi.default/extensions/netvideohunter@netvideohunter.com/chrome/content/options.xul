@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://netvideohunter/locale/options.dtd">
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css" type="text/css"?> 
+<?xml-stylesheet href="chrome://netvideohunter/skin/options.css" type="text/css"?>
+<prefwindow id="netvideohunterOptions"  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" onload="com.netvideohunter.downloader.Options_Instance.onLoad(event);" onunload="com.netvideohunter.downloader.Options_Instance.onUnload(event);" 
+	persist="screenX screenY width height" title="NetVideoHunter Options" instantApply="true">
+
+	<script type="application/x-javascript">
+    // init packages
+	if(!com) var com={};
+	if(!com.netvideohunter) com.netvideohunter={};
+	if(!com.netvideohunter.downloader) com.netvideohunter.downloader={};
+	
+    Components.utils.import("resource://nvhlib/com/netvideohunter/downloader/Options.js", com.netvideohunter.downloader);
+	Components.utils.import("resource://nvhlib/com/netvideohunter/downloader/Main.js",com.netvideohunter.downloader);
+
+    com.netvideohunter.downloader.Options_Instance=new com.netvideohunter.downloader.Options(window);
+
+
+	</script>
+
+   
+	<prefpane id="prefpane1">
+		<preferences>
+			<preference id="extensions.netvideohunter.download.dirType" name="extensions.netvideohunter.download.dirType" type="int"/>
+			<preference id="extensions.netvideohunter.download.customDir" name="extensions.netvideohunter.download.customDir" type="file" onchange="com.netvideohunter.downloader.Options_Instance.updateDownloadFilePicker();"/>
+			<preference id="extensions.netvideohunter.list.removeAfterDownload" name="extensions.netvideohunter.list.removeAfterDownload" type="bool"/>
+			<preference id="extensions.netvideohunter.list.removeAfterSiteClosed" name="extensions.netvideohunter.list.removeAfterSiteClosed" type="bool"/>
+			<preference id="extensions.netvideohunter.externalPlayerPath" name="extensions.netvideohunter.externalPlayerPath" type="file" onchange="com.netvideohunter.downloader.Options_Instance.updatePlayerFilePicker();"/>		
+			<preference id="extensions.netvideohunter.openInTab" name="extensions.netvideohunter.openInTab" type="bool"/>
+			<preference id="extensions.netvideohunter.captureSwf" name="extensions.netvideohunter.captureSwf" type="bool"/>
+			<preference id="extensions.netvideohunter.icon.statusbar" name="extensions.netvideohunter.icon.statusbar" type="bool" />
+			<preference id="extensions.netvideohunter.icon.context" name="extensions.netvideohunter.icon.context" type="bool" />
+			<preference id="extensions.netvideohunter.icon.toolbar" name="extensions.netvideohunter.icon.toolbar" type="bool" />
+		</preferences>
+      
+       <groupbox>        
+			<caption label="&downloads;"/>
+			<radiogroup id="saveWhere" preference="extensions.netvideohunter.download.dirType" >			
+				<radio id="askDownladDir" value="1" label="&alwaysAsk;" />
+				<hbox id="saveToRow">
+				  <radio id="saveTo" value="3" label="&saveTo;" aria-labelledby="saveTo chooseFolder"/>
+				  <filefield id="downloadFolder" flex="1"
+							 preference="extensions.netvideohunter.download.customDir"
+							 preference-editable="true"
+							 aria-labelledby="saveTo"
+							 onsyncfrompreference="return com.netvideohunter.downloader.Options_Instance.updateDownloadFilePicker();"
+							 />
+				  <button id="chooseFolder" oncommand="com.netvideohunter.downloader.Options_Instance.chooseFolder();"		  
+						  label="&chooseFolder;"						  
+						  />
+				</hbox>
+			</radiogroup>
+		</groupbox>
+		<groupbox>        
+			<caption label="&iconAppearance;"/>
+			<checkbox label="&inStatusbar;" preference="extensions.netvideohunter.icon.statusbar" />
+			<checkbox label="&inToolbar;" id="toolbarItemCheckbox" preference="extensions.netvideohunter.icon.toolbar" onsyncfrompreference="return com.netvideohunter.downloader.Options_Instance.hasToolbarItem();" onsynctopreference="return com.netvideohunter.downloader.Options_Instance.toolbarItemCheckboxChange();" />
+			<checkbox label="&inContext;" preference="extensions.netvideohunter.icon.context" />
+			<!--<checkbox label="Remove the video from the list when there is no more open window or tab of the related video site. &#xa;For example: If there are YouTube videos in the list then they will removed after all YouTube window and tabs are closed." preference="extensions.netvideohunter.list.removeAfterSiteClosed" style="white-space:pre-wrap" />	-->
+		</groupbox>
+		<groupbox>        
+			<caption label="&list;"/>
+			<checkbox label="&removeAfterDownload;" preference="extensions.netvideohunter.list.removeAfterDownload" />
+			<!--<checkbox label="Remove the video from the list when there is no more open window or tab of the related video site. &#xa;For example: If there are YouTube videos in the list then they will removed after all YouTube window and tabs are closed." preference="extensions.netvideohunter.list.removeAfterSiteClosed" style="white-space:pre-wrap" />	-->
+		</groupbox>		
+		<groupbox flex="1">        
+			<caption label="&ignoreWebsites;"/>
+			<vbox>
+				<label>&ignoreWebsites.description;</label>
+				<hbox flex="1">
+					<textbox id="newIgnoreItem" flex="1" />
+					<button label="&add;" id="addIgnoreItemButton" image="chrome://netvideohunter/skin/addIcon13.gif" oncommand="com.netvideohunter.downloader.Options_Instance.addIgnoreItem()"/>
+				</hbox>
+				<richlistbox flex="1" id="netvideohunterIgnoreList" >			
+				</richlistbox>	
+			</vbox>
+		</groupbox>
+
+		<groupbox>        
+			<caption label="&windowMode;"/>
+			<radiogroup id="windowStyle" preference="extensions.netvideohunter.openInTab" >			
+				<radio id="windowStyleWindow" value="false" label="&openInPopup;" />				
+				<radio id="windowStyleTab" value="true" label="&openInTab;" />
+			</radiogroup>
+		</groupbox>
+
+		<groupbox>        
+			<caption label="&fileTypes;"/>
+			<checkbox label="&enableSwf;" preference="extensions.netvideohunter.captureSwf" />
+		</groupbox>
+
+		<!--<groupbox>        
+			<caption label="External Player"/>
+			<hbox>
+			<filefield id="externalPlayer" flex="1"
+							 preference="extensions.netvideohunter.externalPlayerPath"
+							 preference-editable="true"
+							 aria-labelledby="saveTo"
+							 onsyncfrompreference="return com.netvideohunter.downloader.Options_Instance.updatePlayerFilePicker();"
+							 />
+			<button id="choosePlayer" oncommand="com.netvideohunter.downloader.Options_Instance.choosePlayer();"		  
+						  label="Choose Player"						  
+						  />
+			</hbox>
+		</groupbox>-->
+
+	
+   </prefpane>
+</prefwindow>

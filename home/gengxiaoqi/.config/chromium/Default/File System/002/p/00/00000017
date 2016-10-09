@@ -1,0 +1,10 @@
+17:43:59 GMT+0200 (CEST) (WARN) https://drive.google.com/?utm_source=zh-CN&utm_medium=button&utm_campaign=web&utm_content=gotodrive&utm_term=carousel&usp=about_start&urp=https%3A%2F%2Fwww.google.at%2F: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:93)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:352
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310

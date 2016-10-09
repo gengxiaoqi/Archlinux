@@ -21,10 +21,10 @@ autoload -Uz run-help
 autoload -Uz run-help-git
 autoload -Uz run-help-svn
 autoload -Uz run-help-svk
-unalias run-help
+#unalias run-help
 alias help=run-help
 
-alias ll='ls -l'
+alias ll='ls -lh'
 alias la='ls -a'
 alias ls='ls --color=auto'
 LS_COLORS='fi=1;36:ln=1;33:'
@@ -33,7 +33,7 @@ alias grep='grep --color'
 alias wifion='nmcli r wifi on'
 alias wifioff='nmcli r wifi off'
 alias shutdown='shutdown now'
-alias imagej='~/Image/ImageJ'
+alias imagej='/home/gengxiaoqi/ImageJ/ImageJ'
 
 autoload -Uz colors && colors
 

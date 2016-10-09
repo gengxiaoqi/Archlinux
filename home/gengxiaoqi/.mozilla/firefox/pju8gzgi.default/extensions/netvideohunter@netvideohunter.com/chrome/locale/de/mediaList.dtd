@@ -1,0 +1,35 @@
+<!ENTITY download "Download">
+<!ENTITY play "Wiedergabe">
+<!ENTITY play.tooltip "Video-Vorschau vor dem Download anzeigen">
+<!ENTITY itemMenu.copyLink "Video-Adresse kopieren">
+<!ENTITY itemMenu.saveFromCache "Video aus dem Browser-Cache speichern…">
+<!ENTITY itemMenu.openPage "Video-Quellseite öffnen">
+<!ENTITY selectAll "Alle">
+<!ENTITY selectAll.tooltip "Alle Videos in der Liste auswählen">
+<!ENTITY selectNone "Keine">
+<!ENTITY selectNone.tooltip "Kein Video in der Liste auswählen">
+<!ENTITY removeSelected "Auswahl entfernen">
+<!ENTITY removeSelected.tooltip "Gewählte Videos aus der Liste entfernen">
+<!ENTITY downloadSelected "Auswahl herunterladen">
+<!ENTITY downloadSelected.tooltip "Gewählte Videos herunterladen">
+<!ENTITY options "Einstellungen">
+<!ENTITY closeOptions "Einstellungen schließen">
+<!ENTITY closePlayer "Player schließen">
+<!ENTITY clearList "Leeren">
+<!ENTITY clearList.tooltip "Alle Einträge aus der Liste entfernen">
+<!ENTITY help "Wie lade ich Videos herunter?.
+
+
+
+
+
+
+1. Starte ein Video auf Deiner Lieblingswebsite.
+
+
+
+2. Nach der Wiedergabe kann der NetVideoHunter den Video-Link abfangen, und ihn Dir in der Liste auf der linken Seite dieses Fensters anzeigen.
+
+
+
+3. Du kannst ein Video herunterladen, indem Du auf &quot;Download&quot; in der Liste klickst, oder Du kannst Dir mit &quot;Wiedergabe&quot; eine Vorschau ansehen, um sicherzugehen, dass Du auch das richtige Video herunterlädst.">

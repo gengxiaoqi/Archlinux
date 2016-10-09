@@ -1,0 +1,20 @@
+<!ENTITY download "Scarica">
+<!ENTITY play "Riproduci">
+<!ENTITY play.tooltip "Effettua l'anteprima del file con il riproduttore multimediale prima di scaricarlo">
+<!ENTITY itemMenu.copyLink "Copia il link del file">
+<!ENTITY itemMenu.saveFromCache "Salva il file dalla cache del browser">
+<!ENTITY itemMenu.openPage "Apri la pagina originaria del file">
+<!ENTITY selectAll "Tutti">
+<!ENTITY selectAll.tooltip "Seleziona tutti i file nella lista">
+<!ENTITY selectNone "Nessuno">
+<!ENTITY selectNone.tooltip "Deseleziona tutti i file nella lista">
+<!ENTITY removeSelected "Elimina selezionati">
+<!ENTITY removeSelected.tooltip "Elimina i file selezionati dalla lista">
+<!ENTITY downloadSelected "Scarica selezionati">
+<!ENTITY downloadSelected.tooltip "Effettua il download dei file selezionati">
+<!ENTITY options "Mostra le opzioni">
+<!ENTITY closeOptions "Nascondi le opzioni">
+<!ENTITY closePlayer "Chiudi il riproduttore multimediale">
+<!ENTITY clearList "Svuota">
+<!ENTITY clearList.tooltip "Elimina tutti i file dalla lista">
+<!ENTITY help "Istruzioni per il download 1) Riprodurre il file nel relativo sito web 2) Attendere che NetVideoHunter ne recuperi il link rendendolo disponibile nella lista posizionata a sinistra in questa finestra 3) Fare clic sul pulsante &apos;Scarica&apos; per effettuare il download del file oppure sul pulsante &apos;Riproduci&apos; per effettuarne l'anteprima, funzione utile per essere certi che il file sia quello corretto">

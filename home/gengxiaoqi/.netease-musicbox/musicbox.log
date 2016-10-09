@@ -1,0 +1,109 @@
+################################################################################
+2016-07-16 20:09:26,801 - WARNING - NEMbox.osdlyrics:21: PyQt4 module not installed.
+2016-07-16 20:09:26,802 - WARNING - NEMbox.osdlyrics:22: Osdlyrics Not Available.
+2016-07-16 20:09:26,807 - WARNING - NEMbox.menu:41: keybinder module not installed.
+2016-07-16 20:09:26,807 - WARNING - NEMbox.menu:42: Not binding global hotkeys.
+2016-07-16 20:09:26,809 - ERROR - NEMbox.api:185: [Errno 2] No such file or directory: '/home/gengxiaoqi/.netease-musicbox/cookie'
+2016-07-16 20:09:27,321 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:27,824 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:28,327 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:31,754 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:32,736 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:33,239 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:33,741 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:34,244 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:34,746 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:35,248 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:35,750 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:36,252 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:36,754 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:37,257 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:37,760 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:38,263 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:38,765 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:39,267 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:39,769 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:40,271 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:40,773 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:41,276 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:41,780 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:42,530 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:43,032 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:43,534 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:44,036 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:44,539 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:45,041 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:45,544 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:46,047 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:46,549 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:47,053 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:47,555 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:48,163 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:48,665 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:50,153 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:50,658 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:51,161 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:51,664 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:52,167 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:52,669 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:53,171 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:53,674 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:54,178 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:54,682 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:55,185 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:55,688 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:56,190 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:56,692 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:57,195 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:57,697 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:58,201 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:58,704 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:59,208 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:09:59,712 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:00,216 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:00,718 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:01,442 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:01,945 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:02,448 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:02,951 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:03,454 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:03,992 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:04,973 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:05,475 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:10,030 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:10,532 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:12,022 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:13,032 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:13,588 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:14,093 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:14,870 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:15,697 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:16,247 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:16,752 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:17,256 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:17,760 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:18,709 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:19,214 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:19,717 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:22,483 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:23,249 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:23,754 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:24,259 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:24,764 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:25,269 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:25,774 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:26,277 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:26,780 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:27,285 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:27,791 - ERROR - NEMbox.player:441: list index out of range
+2016-07-16 20:10:28,296 - ERROR - NEMbox.player:441: list index out of range
+################################################################################
+2016-07-16 20:10:47,306 - WARNING - NEMbox.osdlyrics:21: PyQt4 module not installed.
+2016-07-16 20:10:47,306 - WARNING - NEMbox.osdlyrics:22: Osdlyrics Not Available.
+2016-07-16 20:10:47,309 - WARNING - NEMbox.menu:41: keybinder module not installed.
+2016-07-16 20:10:47,309 - WARNING - NEMbox.menu:42: Not binding global hotkeys.
+################################################################################
+2016-07-16 20:11:03,966 - WARNING - NEMbox.osdlyrics:21: PyQt4 module not installed.
+2016-07-16 20:11:03,966 - WARNING - NEMbox.osdlyrics:22: Osdlyrics Not Available.
+2016-07-16 20:11:03,969 - WARNING - NEMbox.menu:41: keybinder module not installed.
+2016-07-16 20:11:03,969 - WARNING - NEMbox.menu:42: Not binding global hotkeys.

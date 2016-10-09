@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/usr/share/fonts'
+let g:netrw_dirhist_2='/home/gengxiaoqi/.urxvt'
+let g:netrw_dirhist_3='/home/gengxiaoqi/.config/i3'
+let g:netrw_dirhist_4='/home/gengxiaoqi/GitHub/Archlinux/Manjaro/.config'
+let g:netrw_dirhist_5='/home/gengxiaoqi/GitHub/Archlinux/Manjaro/.config/clipit'
+let g:netrw_dirhist_6='/home/gengxiaoqi/.config/i3'
+let g:netrw_dirhist_7='/home/gengxiaoqi/GitHub/Archlinux/Manjaro/.i3'
+let g:netrw_dirhist_8='/etc/X11/xorg.conf.d'

@@ -1,0 +1,16 @@
+<!ENTITY window.title "Конфликт версии содержания">
+<!ENTITY button.pick_local "Оставить локальную версию">
+<!ENTITY button.pick_server "Оставить серверную версию">
+<!ENTITY button.close "Отменить синхронизацию">
+
+<!ENTITY local_version "Локальная версия">
+<!ENTITY server_version "Версия Сервера">
+
+<!ENTITY description "Синхронизатор FVD не может определить какая из этих версий этой ">
+<!ENTITY description_part_bookmark "закладка">
+<!ENTITY description_part_end "должна быть сохранена.">
+
+
+<!ENTITY please_select "Пожалуйста выберите версию для сохранения">
+
+<!ENTITY use_choice "Использовать этот выбор для всех конфликтов этой синхронизации">

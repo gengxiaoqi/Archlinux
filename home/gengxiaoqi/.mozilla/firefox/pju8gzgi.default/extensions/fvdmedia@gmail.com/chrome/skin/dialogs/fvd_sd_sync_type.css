@@ -1,0 +1,22 @@
+window{
+	padding: 3px;
+}
+
+#syncTypesGroupBox{
+	padding: 5px;
+}
+
+#syncTypes > hbox{
+	padding: 5px;
+	cursor: pointer;
+}
+
+#syncTypes > hbox:hover{
+	background-color: Highlight;
+	color: HighlightText;		
+}
+
+#messageLabel{
+	margin: 5px;
+	font-weight: bold;
+}

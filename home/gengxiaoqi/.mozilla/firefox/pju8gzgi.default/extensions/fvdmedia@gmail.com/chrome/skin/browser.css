@@ -1,0 +1,45 @@
+menuitem.fvdSyncToServer{
+  list-style-image: url(arrow_to_server.png);
+}
+
+menuitem.fvdSyncFromServer{
+  border: 1px solid red;
+  list-style-image: url(arrow_from_server.png);
+}
+
+menuitem.fvdSyncFromServer{
+  border: 1px solid red;
+  list-style-image: url(arrow_from_server.png);
+}
+
+menuitem.everhelper{
+  list-style-image: url(everhelper_16x16.png);
+}
+
+menuitem.loginOrLogout{
+  font-weight: bold;
+}
+
+
+
+
+
+#fvd_sync_MainButton menuitem.defaultIcon[sync="0"]{
+  list-style-image: url(nosync.png);
+}
+
+#fvd_sync_MainButton menuitem.defaultIcon[sync="1"]{
+  list-style-image: url(hassync.png);
+}
+
+#fvd_sync_driverMenu_SpeedDial[sync="0"]{
+  list-style-image: url(nosync_sd_icon_small.png);
+}
+
+#fvd_sync_driverMenu_SpeedDial[sync="1"]{
+  list-style-image: url(sd_icon_small.png);
+}
+
+#fvd_sync_getPremiumButton{
+  list-style-image: url(star.png);
+}

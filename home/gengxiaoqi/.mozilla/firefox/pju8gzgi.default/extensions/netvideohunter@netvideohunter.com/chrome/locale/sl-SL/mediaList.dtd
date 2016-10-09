@@ -1,0 +1,20 @@
+<!ENTITY download "Prenesi">
+<!ENTITY play "Predvajaj">
+<!ENTITY play.tooltip "Predogled video posnetka pred prenosom">
+<!ENTITY itemMenu.copyLink "Kopiraj povezavo datoteke video posnetka">
+<!ENTITY itemMenu.saveFromCache "Shrani video posnetek iz predpomnilnika brskalnika">
+<!ENTITY itemMenu.openPage "Odpri izvirno stran video posnetka">
+<!ENTITY selectAll "Vse">
+<!ENTITY selectAll.tooltip "Izberi vse video posnetke iz seznama">
+<!ENTITY selectNone "Nobenega">
+<!ENTITY selectNone.tooltip "Ne izberi nobenega video posnetka iz seznama">
+<!ENTITY removeSelected "Odstrani izbrano">
+<!ENTITY removeSelected.tooltip "Odstrani izbrane video posnetke iz seznama">
+<!ENTITY downloadSelected "Prenesi izbrano">
+<!ENTITY downloadSelected.tooltip "Prenesi izbrane video posnetke">
+<!ENTITY options "Možnosti">
+<!ENTITY closeOptions "Zapri možnosti">
+<!ENTITY closePlayer "Zapri predvajalnik">
+<!ENTITY clearList "Počisti">
+<!ENTITY clearList.tooltip "Odstrani vse predmete iz seznama">
+<!ENTITY help "Kako prenesti video posnetke: 1. Predvajajte video posnetek na izvirni strani. 2. Ko se predvajanje začne, NetVideoHunter zajame povezavo video posnetka in jo prikaže na seznamu na levi strani tega okna. 3. Video posnetke lahko prenesete s klikom na gumb Prenesi na seznamu ali pa si lahko ogledate njegov predogled z gumbom Predvajaj, da se prepričate, da prenesete pravi video posnetek.">

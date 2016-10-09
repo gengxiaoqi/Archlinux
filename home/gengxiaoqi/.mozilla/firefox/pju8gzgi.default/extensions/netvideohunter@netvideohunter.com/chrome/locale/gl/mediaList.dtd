@@ -1,0 +1,20 @@
+<!ENTITY download "Descargar">
+<!ENTITY play "Reproducir">
+<!ENTITY play.tooltip "Ver o vídeo antes de descargalo">
+<!ENTITY itemMenu.copyLink "Copiar o enlace do arquivo de vídeo">
+<!ENTITY itemMenu.saveFromCache "Gravar o vídeo da memoria do navegador">
+<!ENTITY itemMenu.openPage "Abrir a páxina orixinal do vídeo">
+<!ENTITY selectAll "Todos">
+<!ENTITY selectAll.tooltip "Seleccionar tódolos vídeos da lista">
+<!ENTITY selectNone "Ningún">
+<!ENTITY selectNone.tooltip "Non seleccionar vídeos da lista">
+<!ENTITY removeSelected "Eliminar os Seleccionados">
+<!ENTITY removeSelected.tooltip "Eliminar os vídeos seleccionados da lista">
+<!ENTITY downloadSelected "Descargar os seleccionados">
+<!ENTITY downloadSelected.tooltip "Descargar os vídeos seleccionados">
+<!ENTITY options "Opcións">
+<!ENTITY closeOptions "Pechar as opcións">
+<!ENTITY closePlayer "Pechar o reproductor">
+<!ENTITY clearList "Borrar">
+<!ENTITY clearList.tooltip "Eliminar tódolos elementos da lista">
+<!ENTITY help "Como baixar vídeos? 1. Vexa o vídeo na páxina orixinal. 2. Cando comeza, o NetVideoHunter capta o videoenlace e pode velo na lista do lado esquerdo desta ventá. 3. Pode baixar vídeos se fai clic no botón Descargar na lista ou pode visualizalo co botón Reproducir para estar seguro de que baixa o vídeo certo.">

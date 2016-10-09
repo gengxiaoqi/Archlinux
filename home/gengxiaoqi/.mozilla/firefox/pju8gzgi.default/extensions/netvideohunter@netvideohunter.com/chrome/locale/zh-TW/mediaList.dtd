@@ -1,0 +1,20 @@
+<!ENTITY download "下載">
+<!ENTITY play "播放">
+<!ENTITY play.tooltip "下載之前先預覽影片">
+<!ENTITY itemMenu.copyLink "複製影片檔位址">
+<!ENTITY itemMenu.saveFromCache "從瀏覽器快取儲存影片">
+<!ENTITY itemMenu.openPage "開啟影片網頁">
+<!ENTITY selectAll "全部選擇">
+<!ENTITY selectAll.tooltip "選擇清單裡所有的影片">
+<!ENTITY selectNone "取消選擇">
+<!ENTITY selectNone.tooltip "取消清單裡所有影片的選擇狀態">
+<!ENTITY removeSelected "移除已選">
+<!ENTITY removeSelected.tooltip "從清單移除選擇的影片">
+<!ENTITY downloadSelected "下載已選">
+<!ENTITY downloadSelected.tooltip "下載選擇的影片">
+<!ENTITY options "選項">
+<!ENTITY closeOptions "關閉選項">
+<!ENTITY closePlayer "關閉播放器">
+<!ENTITY clearList "清除">
+<!ENTITY clearList.tooltip "移除清單裡所有的項目">
+<!ENTITY help "如何下載影片？1. 在來源網站上播放影片。2. 當播放開始後，NetVideoHunter 會抓出影片連結並顯示在本視窗的左側。3. 您可以按清單裡的「下載」按鈕來下載影片，或是按「播放」按鈕開始預覽，確認要下載的影片是否正確。">

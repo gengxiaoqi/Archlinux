@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>NetVideoHunter Player</title>
+		<style type="text/css">
+			html,body, object, video, #player, embed{
+				height: 100%;
+				width:100%;
+				background-color: #000000;
+				padding:0;
+				margin:0;
+				display:block;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="player"></div>
+		<script type="text/javascript">
+			function getUrlParams(){
+				var urlParams;
+				var match,
+						pl     = /\+/g,
+						search = /([^&=]+)=?([^&]*)/g,
+						decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+						query  = window.location.search.substring(1);
+						urlParams = {};
+						while (match = search.exec(query))
+				urlParams[decode(match[1])] = decode(match[2]);
+				return urlParams
+			}
+
+			var params=getUrlParams();
+
+			function insertFlash(){
+				var playerDiv=document.getElementById('player')
+				if(playerDiv.firstChild) playerDiv.removeChild(playerDiv.firstChild)
+				var embedEl=document.createElement('embed')
+				embedEl.setAttribute('src',params.swfURI)
+				embedEl.setAttribute('width','100%')
+				embedEl.setAttribute('height','100%')
+				embedEl.setAttribute('allowfullscreen','true')
+				embedEl.setAttribute('allowscriptaccess','always')
+				embedEl.setAttribute('bgcolor','#000000')
+				embedEl.setAttribute('flashvars','config={"clip":{"url":"'+encodeURIComponent(params.videoUrl)+'", "scaling":"fit"}, "content":{"backgroundColor":"#000000"}}')
+				playerDiv.appendChild(embedEl)
+			}
+
+			
+			var videoEl=document.createElement('video')
+			
+			if(videoEl.canPlayType && videoEl.canPlayType(params.type)!==''){
+				// insert html5 player with flash fallback on decodeing error
+				videoEl.setAttribute('width','100%')
+				videoEl.setAttribute('height','100%')
+				videoEl.setAttribute('controls','controls')
+				videoEl.setAttribute('autoplay','autoplay')
+				var sourceEl=document.createElement('source')
+				sourceEl.setAttribute('src',params.videoUrl)
+				sourceEl.setAttribute('type',params.type)
+				videoEl.appendChild(sourceEl)
+				if(params.type=='video/x-flv'){ 
+					videoEl.addEventListener('error',function(e){
+						if(e.target.error.code==e.target.error.MEDIA_ERR_DECODE || 
+						   e.target.error.code==e.target.error.MEDIA_ERR_SRC_NOT_SUPPORTED){
+							insertFlash()
+						}
+					})	
+				}
+				document.getElementById('player').appendChild(videoEl)
+			}else{
+				insertFlash()
+			}
+
+		</script>
+	</body>
+</html>

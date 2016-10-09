@@ -1,0 +1,97 @@
+09:27:44 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+09:27:50 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+09:54:10 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+10:02:51 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+10:15:08 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+10:15:15 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+10:16:11 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjK1I3f2sDPAhVoD8AKHR0WBI8QFggmMAE&url=http%3A%2F%2Fwww.olympus-ims.com%2Fja%2Fknowledge%2Fmetrology%2Flext_principles%2Fbasic%2F&usg=AFQjCNHcULj3thzdeBWG-gajRWS4DnQ8Pw&sig2=nL194GvmY3GJJ3jp7G6-AA: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+10:45:25 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+10:45:25 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+10:46:51 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+10:46:51 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+11:11:21 GMT+0200 (CEST) (ERROR) /background.html: Error
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/jsonrpc.js:2:3249
+    at za (/js/main/Extension.js:3:432)
+    at g (/js/main/Extension.js:2:22160)
+    at Object.f.(anonymous function) [as cb] (/js/JsonQueue.js:2:686)
+    at JSONRpcClient._async_handler (/third_party/jsonrpc.js:2:6099)
+11:17:01 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+11:17:02 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+11:18:44 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+11:18:50 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+13:48:07 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+13:48:08 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+13:49:23 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+13:49:23 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+13:53:14 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+13:53:19 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+14:23:29 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+14:23:30 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+14:24:46 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+14:24:46 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+14:54:56 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+14:54:56 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+14:56:45 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+14:56:45 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+15:26:55 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+15:26:56 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+15:28:46 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+15:28:46 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+15:34:29 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+17:42:11 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&ved=0ahUKEwiv4961vsHPAhVLkSwKHXXCB8gQFghbMAU&url=http%3A%2F%2Fwww.wienenergie.at%2F&usg=AFQjCNG_FhC6rS_SGRsMc0qxOv9XqCiJOA&sig2=kB0aE7iDIHsWCiBKqJKQAw: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+20:14:38 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+23:14:40 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwjpysbaiMLPAhVGEywKHa6zBO8QFggvMAI&url=https%3A%2F%2Fforums.virtualbox.org%2Fviewtopic.php%3Ff%3D7%26t%3D74119&usg=AFQjCNFAsvv8gFO8jn7da4nO5p_OGaReIg&sig2=4iH1aAxXexuFurOQI9rzLg: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+23:42:32 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjW8_H8jsLPAhWE_SwKHQ8xDyEQFggeMAA&url=https%3A%2F%2Faur.archlinux.org%2Fpackages%2Fluckybackup%2F&usg=AFQjCNHijrfBG2i5JRH-M5RMiO6jCx1tYA&sig2=dDYQPsONJMXkgxQAC6f0sw: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+23:42:58 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjW8_H8jsLPAhWE_SwKHQ8xDyEQFggnMAE&url=https%3A%2F%2Fbbs.archlinux.org%2Fviewtopic.php%3Fid%3D90286&usg=AFQjCNGLjP0pwGGfItIJ0PW5oBgs-gIwbg&sig2=GTw8AopxKntBqt8OpsTQkg: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+23:49:44 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)

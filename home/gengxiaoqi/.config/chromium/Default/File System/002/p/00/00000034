@@ -1,0 +1,25 @@
+16:38:41 GMT+0200 (CEST) (ERROR) /background.html: EDAMUserException
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/js/main/UsageMetrics.js:2:1842
+    at .<anonymous> (/thrift/thrift-binary.js:2:7225)
+17:19:53 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+17:21:03 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+17:28:45 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+17:33:27 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjPoOGiqajPAhWKvBoKHZ74DX8QFggsMAA&url=http%3A%2F%2Fwww.vpngate.net%2Fcn%2F&usg=AFQjCNH3E9RPWiiqRk8bQumKyyvxTMSZoA&sig2=SQDNciKvfTRNcV2CLooYLw: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310

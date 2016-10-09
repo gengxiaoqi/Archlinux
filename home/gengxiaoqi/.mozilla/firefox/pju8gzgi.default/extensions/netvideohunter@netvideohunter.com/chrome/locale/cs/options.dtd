@@ -1,0 +1,19 @@
+<!ENTITY alwaysAsk "U každého videa se dotázat, kam uložit">
+<!ENTITY saveTo "Uložit do:">
+<!ENTITY chooseFolder "Vybrat složku">
+<!ENTITY downloads "Stahování">
+<!ENTITY list "Seznam">
+<!ENTITY removeAfterDownload "Odebrat video ze seznamu po započetí stahování">
+<!ENTITY removeAfterSiteClosed "Odebrat video ze seznamu pokud není otevřena stránka videa. Například: Pokud jsou v seznamu videa z YouTube, budou odebrána ze seznamu po zavření všech oken a panelů se stránkou YouTube.">
+<!ENTITY iconAppearance "Umístění ikon">
+<!ENTITY inStatusbar "Zobrazit ve stavovém řádku">
+<!ENTITY inToolbar "Zobrazit v nástrojové liště">
+<!ENTITY inContext "Zobrazit v kontextové nabídce (pravé kliknutí myší)">
+<!ENTITY ignoreWebsites "Ignorované stránky">
+<!ENTITY ignoreWebsites.description "Pokud do tohoto seznamu přidáte název stránky (např: youtube.com), videa z této stránky nebudou zachycována.">
+<!ENTITY add "Přidat">
+<!ENTITY windowMode "Režim zobrazení">
+<!ENTITY openInPopup "Otevírat v samostatném okně">
+<!ENTITY openInTab "Otevírat v panelu">
+<!ENTITY fileTypes "Typy souborů">
+<!ENTITY enableSwf "Povolit zachycování souborů SWF">

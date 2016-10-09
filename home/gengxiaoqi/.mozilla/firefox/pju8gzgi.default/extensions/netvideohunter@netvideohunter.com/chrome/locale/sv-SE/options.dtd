@@ -1,0 +1,26 @@
+<!ENTITY alwaysAsk "Fråga alltid var videorna skall sparas">
+<!ENTITY saveTo "Spara till: ">
+<!ENTITY chooseFolder "Välj mapp">
+<!ENTITY downloads "Nerladdningar">
+<!ENTITY list "Lista">
+<!ENTITY removeAfterDownload "Ta bort videon från listan när nerladdningen har startat">
+<!ENTITY removeAfterSiteClosed "Ta bort videon från listan när det inte längre finns något öppet fönster eller öppen flik med den relaterade videowebbplatsen. 
+
+
+
+
+
+
+ Exempel: Om det finns YouTube-videor i listan, så kommer de att tas bort när alla YouTube-fönster och -flikar har stängts.">
+<!ENTITY iconAppearance "Ikonutseende">
+<!ENTITY inStatusbar "Visa i statusfältet">
+<!ENTITY inToolbar "Visa i verktygsfältet">
+<!ENTITY inContext "Visa i snabbmenyn (vid högerklick på en webbsida)">
+<!ENTITY ignoreWebsites "Ignorerade webbplatser">
+<!ENTITY ignoreWebsites.description "Om du lägger till en webbadress/domän i den här listan (t.ex. youtube.com), så kommer inga videor från den webbplatsen att fångas.">
+<!ENTITY add "Lägg till">
+<!ENTITY windowMode "Fönsterläge">
+<!ENTITY openInPopup "Öppna i popup-fönster">
+<!ENTITY openInTab "Öppna i flik">
+<!ENTITY fileTypes "Filtyper">
+<!ENTITY enableSwf "Aktivera infångandet av SWF-filer">

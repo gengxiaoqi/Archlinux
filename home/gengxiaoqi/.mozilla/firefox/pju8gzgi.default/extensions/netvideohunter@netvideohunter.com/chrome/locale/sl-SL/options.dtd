@@ -1,0 +1,19 @@
+<!ENTITY alwaysAsk "Vedno vprašaj za mesto shranjevanja video posnetka">
+<!ENTITY saveTo "Shrani v:">
+<!ENTITY chooseFolder "Izberi mapo">
+<!ENTITY downloads "Prenosi">
+<!ENTITY list "Seznam">
+<!ENTITY removeAfterDownload "Odstrani video posnetek iz seznama po začetku prenosa">
+<!ENTITY removeAfterSiteClosed "Odstrani video posnetek iz seznama, ko okno ali zavihek video posnetka ni več odprto. Na primer: Če so na seznamu video posnetki YouTube, bodo le-ti odstranjeni, ko zaprete vsa okna in zavihke strani YouTube.">
+<!ENTITY iconAppearance "Vidnost ikone">
+<!ENTITY inStatusbar "Prikaži v vrstici stanja">
+<!ENTITY inToolbar "Prikaži v orodni vrstici">
+<!ENTITY inContext "Prikaži v vsebinskem meniju (ob desnem kliku na spletno stran)">
+<!ENTITY ignoreWebsites "Prezri spletna mesta">
+<!ENTITY ignoreWebsites.description "Če dodate ime spletne strani na ta seznam (na primer: youtube.com), potem video posnetki iz te strani ne bodo zajeti.">
+<!ENTITY add "Dodaj">
+<!ENTITY windowMode "Način okna">
+<!ENTITY openInPopup "Odpri v pojavnem oknu">
+<!ENTITY openInTab "Odpri v zavihku">
+<!ENTITY fileTypes "Vrste datotek">
+<!ENTITY enableSwf "Omogoči zajem datotek SWF">

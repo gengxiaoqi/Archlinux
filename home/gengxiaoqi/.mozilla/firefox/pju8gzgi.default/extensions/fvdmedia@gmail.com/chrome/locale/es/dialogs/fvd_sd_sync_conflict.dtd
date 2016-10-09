@@ -1,0 +1,16 @@
+<!ENTITY window.title "Conflicto de versión de contenido">
+<!ENTITY button.pick_local "Mantener versión local">
+<!ENTITY button.pick_server "Mantener versión del servidor">
+<!ENTITY button.close "Cancelar sincronización">
+
+<!ENTITY local_version "Versión local">
+<!ENTITY server_version "Versión del servidor">
+
+<!ENTITY description "El sincronizador FVD no puede decidir qué versión de este ">
+<!ENTITY description_part_bookmark "marcador">
+<!ENTITY description_part_end "debería mantenerse.">
+
+
+<!ENTITY please_select "Selecciona la versión que debería mantenerse">
+
+<!ENTITY use_choice "Utilizar esta elección para todos los conflictos de esta sincronización">

@@ -1,0 +1,311 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<style>
+<!--
+a            { text-decoration: none }
+td { font-family: "Open Sans",sans-serif; font-size: 16px }
+p { font-family: "Open Sans",sans-serif; font-size: 16px }
+
+input[type=submit]
+{
+-webkit-appearance: none;
+-moz-appearance: none;
+padding: 2px 7px;
+background: #DFEAF4;
+font-family: "Open Sans",sans-serif;
+
+font-size: 10px;
+
+border-width: 2px;
+border-style: solid;
+border-color: #000099;
+/*
+position: absolute;
+top: 135px;
+left: 65px;
+*/
+}
+
+input[type=reset]
+{
+-webkit-appearance: none;
+-moz-appearance: none;
+padding: 2px 6px;
+background: #DFEAF4;
+font-family: "Open Sans",sans-serif;
+font-size: 14px;
+border-width: 1px;
+border-style: solid;
+border-color: #000099;
+/*
+position: absolute;
+top: 135px;
+left: 240px;
+*/
+}
+
+input[type=button]
+{
+-webkit-appearance: none;
+-moz-appearance: none;
+padding: 2px 6px;
+background: #CCFFCC;
+font-family: "Open Sans",sans-serif;
+font-size: 14px;
+border-width: 1px;
+border-style: solid;
+border-color: #000099;
+/*
+position: absolute;
+top: 135px;
+left: 240px;
+*/
+}
+
+input[type=text]
+{
+-webkit-appearance: none;
+-moz-appearance: none;
+padding: 3px;
+background: #FFFFFF;
+font-family: "Open Sans",sans-serif;
+font-size: 14px;
+border-width: 1px;
+border-style: solid;
+border-color: #000099;
+}
+
+input[type=password]
+{
+-webkit-appearance: none;
+-moz-appearance: none;
+padding: 3px;
+background: #FFFFFF;
+font-family: "Open Sans",sans-serif;
+font-size: 14px;
+border-width: 1px;
+border-style: solid;
+border-color: #000099;
+}
+
+select
+{
+-webkit-appearance: none;
+-moz-appearance: none;
+padding: 2px;
+font-family: "Open Sans",sans-serif; font-size: 13px; background-color: #FFFFFF";
+}
+
+-->
+</style>
+
+
+<head>
+
+<style>
+
+.top100 { font-family: "Open Sans",sans-serif; font-size: 14px }
+
+
+.auto-style1
+{
+	border-collapse: collapse;
+	border: 1px solid #B3B3FF;
+}
+.auto-style2
+{
+	border: 1px solid #B3B3FF;
+}
+
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+function cancel1()
+{
+document.all.note1.style.display='none';
+}
+
+function cancel2()
+{
+document.all.note2.style.display='none';
+}
+
+function showIntro()
+{
+
+top.document.getElementById('myFrames').cols="*,0,0,0";
+top.controller.document.all.mycell1.style.backgroundColor='#8FB5DA';
+top.controller.document.all.mycell2.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell3.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell4.style.backgroundColor='#CFDFEF';
+top.controller.document.all.label1.style.fontWeight = "bold";
+top.controller.document.all.label2.style.fontWeight = "normal";
+top.controller.document.all.label3.style.fontWeight = "normal";
+top.controller.document.all.label4.style.fontWeight = "normal";
+var URLat = top.x4.document.location.href;
+
+top.x1.document.all.intro.style.display='inline';
+top.x1.document.all.help1.style.display='none';
+top.x1.document.all.help2.style.display='none';
+top.x1.document.all.help3.style.display='none';
+top.x1.document.all.help4.style.display='none';
+top.x1.document.all.help5.style.display='none';
+
+top.x1.document.all.helpSec.style.display='none';
+top.x1.document.all.helpSort.style.display='none';
+top.x1.document.all.helpOpt.style.display='none';
+top.x1.document.all.helpVC.style.display='none';
+
+// alert('here');
+}
+
+function loader()
+{
+
+
+top.x4.document.location.href = 'http://corpus.byu.edu/coca/new/help/x1_help.asp';
+
+}
+
+function hilite(x)
+{
+// alert (x);
+switch(x)
+{
+case 1:
+top.document.getElementById('myFrames').cols="*,0,0,0";
+top.controller.document.all.mycell1.style.backgroundColor='#8FB5DA';
+top.controller.document.all.mycell2.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell3.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell4.style.backgroundColor='#CFDFEF';
+top.controller.document.all.label1.style.fontWeight = "bold";
+top.controller.document.all.label2.style.fontWeight = "normal";
+top.controller.document.all.label3.style.fontWeight = "normal";
+top.controller.document.all.label4.style.fontWeight = "normal";
+var URLat = top.x4.document.location.href;
+var n = URLat.indexOf("x1_help");
+
+
+if (n <= 0)
+{
+top.x4.document.location.href = 'http://corpus.byu.edu/coca/new/help/x1_help.asp';
+}
+
+
+break;
+case 2:
+top.document.getElementById('myFrames').cols="0,*,0,0";
+top.controller.document.all.mycell2.style.backgroundColor='#8FB5DA';
+top.controller.document.all.mycell1.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell3.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell4.style.backgroundColor='#CFDFEF';
+top.controller.document.all.label2.style.fontWeight = "bold";
+top.controller.document.all.label1.style.fontWeight = "normal";
+top.controller.document.all.label3.style.fontWeight = "normal";
+top.controller.document.all.label4.style.fontWeight = "normal";
+break;
+case 3:
+top.document.getElementById('myFrames').cols="0,0,*,0";
+top.controller.document.all.mycell3.style.backgroundColor='#8FB5DA';
+top.controller.document.all.mycell1.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell2.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell4.style.backgroundColor='#CFDFEF';
+top.controller.document.all.label3.style.fontWeight = "bold";
+top.controller.document.all.label2.style.fontWeight = "normal";
+top.controller.document.all.label1.style.fontWeight = "normal";
+top.controller.document.all.label4.style.fontWeight = "normal";
+break;
+case 4:
+top.document.getElementById('myFrames').cols="0,0,0,*";
+top.controller.document.all.mycell4.style.backgroundColor='#8FB5DA';
+top.controller.document.all.mycell1.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell2.style.backgroundColor='#CFDFEF';
+top.controller.document.all.mycell3.style.backgroundColor='#CFDFEF';
+top.controller.document.all.label4.style.fontWeight = "bold";
+top.controller.document.all.label2.style.fontWeight = "normal";
+top.controller.document.all.label3.style.fontWeight = "normal";
+top.controller.document.all.label1.style.fontWeight = "normal";
+break;
+default:
+}
+// alert (x);
+}
+
+</script>
+
+</head>
+
+<body onload="javascript:loader()">
+
+
+<table width="100%" border="1" cellpadding="4" style="border-collapse: collapse" width="100%" bordercolor="#5B92C8">
+<tr>
+<td nowrap bgcolor="#5B92C8">
+<div style="font-family: Open+Sans,sans-serif; font-size: 18px; margin-top: 4px; margin-bottom: 4px; letter-spacing:1pt; font-weight:bold; color:#FFFFFF">
+
+<a onclick="javascript:cancel1('')" target="x4" href="res_small.asp?d=phone"><span ID="note1" style="background-color: #FF0000"><font color="#FFFF00">&nbsp;<b>!</b>&nbsp;</font></span></a>
+
+&nbsp;<a title="Information on new interface" target="_blank" href="http://corpus.byu.edu/help/updates2016.asp">
+<img align="absmiddle" src="http://corpus.byu.edu/images/new.png" width="30" height="30"></a>&nbsp;
+
+&nbsp;<a target="_top" href="help/x1_help.asp?x4=y"><font color="#FFFFFF"><b>COCA</b></font></a>
+
+
+&nbsp;
+
+
+
+<a title="See introduction" target="x4" href="help/x1_help.asp?x4=y"><img align="absmiddle" src="images/info2.png" width="28" height="28"></a>&nbsp;
+<a title="See texts and registers" target="x4" href="help/texts.asp"><img align="absmiddle" src="images/file1.png" width="20" height="20"></a>&nbsp;
+
+<a title="Download full-text corpus data to your computer" target="_blank" href="http://corpus.byu.edu/full-text/"><img align="absmiddle" src="http://corpus.byu.edu/images/download.png" width="20" height="20"></a>&nbsp;
+
+<a title="Change to or compare to other corpora" target="x4" href="changeCorpus.asp"><img align="absmiddle" src="images/change.png" width="20" height="20"></a>
+
+
+</div>
+</b></font>
+</td>
+<td nowrap align="right" bgcolor="#5B92C8">
+
+<a title="Log in" ID="myLink1" target="x4" href="login1.asp">
+<img style="border: 3px solid yellow" align="absmiddle" ID="imgStatus" src="http://corpus.byu.edu/images/user_login.png" width="23" height="23"></a>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="8" style="border-collapse: collapse" width="100%" bordercolor="#5B92C8">
+	<tr>
+		<td bgcolor="#8FB5DA" width="25%" onclick="javascript:hilite(1)" ID="mycell1" align="center"><a target="_self" href="javascript:hilite(1)">
+<div ID="label1" style="font-family: Open+Sans,sans-serif; font-size: 13px; letter-spacing:0pt; color:#000000">
+SEARCH
+</div>
+</a></td>
+		<td bgcolor="#CFDFEF" width="25%" onclick="javascript:hilite(2)" ID="mycell2" align="center"><a target="_self" href="javascript:hilite(2)">
+<div ID="label2" style="font-family: Open+Sans,sans-serif; font-size: 13px; letter-spacing:0pt; color:#000000">
+FREQUENCY
+</div>
+</a></td>
+		<td bgcolor="#CFDFEF" width="25%" onclick="javascript:hilite(3)" ID="mycell3" align="center"><a target="_self" href="javascript:hilite(3)">
+<div ID="label3" style="font-family: Open+Sans,sans-serif; font-size: 13px; letter-spacing:0pt; color:#000000">
+CONTEXT
+</div>
+</a></td>
+		<td bgcolor="#CFDFEF" width="25%" onclick="javascript:hilite(4)" ID="mycell4" align="center"><a target="_self" href="javascript:hilite(4)">
+<div ID="label4" style="font-family: Open+Sans,sans-serif; font-size: 13px; letter-spacing:0pt; color:#000000">
+OVERVIEW
+</div>
+</a></td>
+	</tr>
+</table>
+
+</body>
+
+</html>{ò[ k      Wä†ÏWä†Ó<≠›1       9    :http://corpus.byu.edu/coca/links.asp?q=&x2c=&x2k=&c=coca necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: private
+Content-Length: 9557
+Content-Type: text/html
+Server: Microsoft-IIS/8.0
+Date: Sat, 16 Jul 2016 21:02:33 GMT
+ charset windows-1252 uncompressed-len 0 predictor::resource-count 8 predictor::http://fonts.googleapis.com/css?family=Open+Sans 1,1,1468702956,0 predictor::http://corpus.byu.edu/images/new.png 1,1,1468702956,0 predictor::http://corpus.byu.edu/coca/images/info2.png 1,1,1468702956,0 predictor::http://corpus.byu.edu/coca/images/file1.png 1,1,1468702956,0 predictor::http://corpus.byu.edu/images/download.png 1,1,1468702956,0 predictor::http://corpus.byu.edu/coca/images/change.png 1,1,1468702956,0 predictor::http://corpus.byu.edu/images/user_login.png 1,1,1468702956,0 predictor::http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2 1,1,1468702956,0   %U

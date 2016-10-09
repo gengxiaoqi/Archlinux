@@ -1,0 +1,17 @@
+<!ENTITY window.title "Будь ласка, зачекайте...">
+
+
+<!ENTITY please_wait "Виконується синхронізація. Будь ласка, зачекайте.">
+<!ENTITY please_wait_backup "Виконується резервне копіювання. Будь ласка, зачекайте.">
+<!ENTITY please_wait_restore "Виконується відновлення. Будь ласка, зачекайте.">
+<!ENTITY please_wait_initialization "Ініціалізація закладок EverSync. Будь ласка, зачекайте.">
+
+<!ENTITY unsorted_msg_1 "Важливо, якщо ви синхронізуєте закладки між Firefox та Chrome!" >
+<!ENTITY unsorted_msg_2 "Firefox папка &quot;Несортовані&quot; не синхронізується через браузер Chrome," >
+<!ENTITY unsorted_msg_3 "але синхронізується між браузерами Firefox." >
+<!ENTITY unsorted_msg_read_more "Детальніше &gt;&gt;">
+
+<!ENTITY success_text "Готово!">
+<!ENTITY error_text "Збій!">
+
+<!ENTITY progress "Перебіг:">

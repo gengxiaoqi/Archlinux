@@ -1,0 +1,1 @@
+/usr/share/imagej/macros/LogWindowTricks.ijm

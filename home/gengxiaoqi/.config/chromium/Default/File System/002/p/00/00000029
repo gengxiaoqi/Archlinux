@@ -1,0 +1,60 @@
+18:58:12 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwiZoo2085vPAhUtSJoKHQXuACIQFggmMAE&url=http%3A%2F%2Fwww.shouji56.com%2Fgonglue%2F113233.html&usg=AFQjCNGK-owj9tYFw-lg0mb2zkVJHg1PrA&sig2=khanXnAo9CBwbJWuDSUGYA: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+19:52:50 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi6lrew_5vPAhWBOSwKHTJ4DLUQFggmMAE&url=http%3A%2F%2Ffallout.wikia.com%2Fwiki%2FKendall_Hospital&usg=AFQjCNFYOn6c4qm9sdz87jZYiNvfSJAxvw&sig2=Zk9IpOFahcULuJ2J9giyZg: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+19:53:08 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=0ahUKEwi6lrew_5vPAhWBOSwKHTJ4DLUQFgg2MAM&url=http%3A%2F%2Fwww.ign.com%2Fwikis%2Ffallout-4%2FKendall_Hospital&usg=AFQjCNHLFpOqL1NXLRyoorsMG38lST0-Jw&sig2=vHIfD_je2sY4Tf4NVA7ocA: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+19:53:47 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjXvtTw_5vPAhVDdCwKHXrBAI8QFggeMAA&url=http%3A%2F%2Ffallout.wikia.com%2Fwiki%2FParsons_State_Insane_Asylum&usg=AFQjCNGMduVuGxDtx0NKKhVdztYwwu1n0g&sig2=jpzfXQDsIQbmVRW3GHhqvg: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+19:59:05 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwi60IDRgJzPAhXJO5oKHbj3DSoQFggmMAE&url=https%3A%2F%2Fsteamcommunity.com%2Fapp%2F377160%2Fdiscussions%2F0%2F492378806373790037%2F&usg=AFQjCNEBp0oSyXvVvvAs4p5-Y-Lsg_q8qQ&sig2=unYKk-8jgg0hEbYreIYeOw: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+20:06:32 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+20:06:38 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+20:54:33 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+20:54:39 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+21:09:16 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+21:09:22 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+21:22:38 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+21:22:44 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210
+21:48:28 GMT+0200 (CEST) (LOG) /background.html: Went offline. at /js/main/Extension.js:3:6135
+21:48:34 GMT+0200 (CEST) (LOG) /background.html: Went online. at /js/main/Extension.js:3:6210

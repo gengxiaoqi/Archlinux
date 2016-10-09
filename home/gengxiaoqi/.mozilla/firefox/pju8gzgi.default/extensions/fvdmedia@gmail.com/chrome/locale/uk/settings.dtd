@@ -1,0 +1,112 @@
+<!ENTITY txt.dialog.title		"Налаштування">
+
+<!ENTITY txt.dialog.button_ok.title	"ОК">
+<!ENTITY txt.dialog.button_cancel.title	"Скасувати">
+<!ENTITY txt.prefpane.general.title	"Налаштування">
+<!ENTITY txt.prefpane.about.title	"Про програму">
+
+<!ENTITY fvd_sd.group.sync.title "Синхронізація">
+<!ENTITY fvd_sd.sync.online " у мережі">
+<!ENTITY fvd_sd.sync.logout "Вийти">
+<!ENTITY fvd_sd.sync.remove_account "Видалити обліковий запис">
+<!ENTITY fvd_sd.sync.login "Увійти">
+<!ENTITY fvd_sd.sync.register "Реєстрація">
+<!ENTITY fvd_sd.sync.restore_password "Відновити пароль">
+<!ENTITY fvd_sd.sync.already_have_account "Увійти тут:">
+<!ENTITY fvd_sd.sync.email "E-Mail">
+<!ENTITY fvd_sd.sync.password "Пароль">
+<!ENTITY fvd_sd.sync.button.login "Увійти">
+<!ENTITY fvd_sd.sync.create_new_account "Створити новий обліковий запис">
+<!ENTITY fvd_sd.sync.subscribe "Подписатся на оновлення та новини">
+<!ENTITY fvd_sd.sync.button.create_account "Створити обліковий запис">
+<!ENTITY fvd_sd.sync.check_email "Перевірте свій E-mail, щоб підтвердити реєстрацію.">
+<!ENTITY fvd_sd.sync.confirm_code "Код підтвердження">
+<!ENTITY fvd_sd.sync.button.cancel_confirm "Скасувати">
+<!ENTITY fvd_sd.sync.button.confirm "Підтвердити">
+<!ENTITY fvd_sd.sync.button.resend_confirm "Надіслати E-mail з кодом">
+
+<!ENTITY fvd_sd.sync.button.restore_password "Відновити пароль">
+<!ENTITY fvd_sd.sync.enable_auto_sync "Увімкнути автосинхронізацію (кожні 3 години)">
+<!ENTITY fvd_sd.sync.button.merge "Об'єднати">
+<!ENTITY fvd_sd.sync.button.upload "Відвантажити">
+<!ENTITY fvd_sd.sync.button.download "Завантажити">
+<!ENTITY fvd_sd.sync.merge "Об'єднання локальних і серверних даних">
+<!ENTITY fvd_sd.sync.upload "Перезаписати серверні дані">
+<!ENTITY fvd_sd.sync.download "Перезаписати локальні дані">
+<!ENTITY fvd_sd.sync.import_export_to_from "до/з локального файлу (.sd)">
+
+<!ENTITY fvd_sd.sync.merge.description "Серверні дані та дані на Вашому комп'ютері будуть об'єднані (Серверні дані мають більший пріоритет).">
+<!ENTITY fvd_sd.sync.download.description "Скопіювати дані з сервера на Ваш комп'ютер">
+<!ENTITY fvd_sd.sync.upload.description "Скопіювати дані з Вашого комп'ютера на сервер">
+<!ENTITY fvd_sd.sync.default.description "Виберіть дію...">
+
+<!ENTITY fvd_sd.sync.enable_sync "Увімкнути синхронізацію">
+<!ENTITY fvd_sd.sync.tab.account "Обліковий запис">
+<!ENTITY fvd_sd.sync.tab.sync "Синхронізація">
+<!ENTITY fvd_sd.sync.tab.tabs_sync "Синхронізувати вкладки">
+<!ENTITY fvd_sd.sync.tab.bookmarks_sync "Синхронізувати закладки">
+<!ENTITY fvd_sd.sync.tab.speeddial_sync "Синхронізувати Speed Dial">
+
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.first_line "Ваші закладки не будуть загублені, ми автоматично створили резервні копії ваших закладок.">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.second_line "Всі ваші закладки збережені на вашому комп'ютері.">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.total_bookmarks "Загальна кількість збережених закладок">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.restore "Відновити закладки">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.backup "Створити резервну копію закладок">
+
+<!ENTITY fvd_sd.sync.tab.sd.backup.first_line "Щоб ваші закладки не були втрачені, для впевненості ми зробимо автоматичну резервну копію всіх ваших закладків.">
+<!ENTITY fvd_sd.sync.tab.sd.backup.second_line "Всі ваші дані збережені на вашому комп'ютері.">
+<!ENTITY fvd_sd.sync.tab.sd.backup.restore "Відновити закладки">
+<!ENTITY fvd_sd.sync.tab.sd.backup.backup "Резервне копіювання закладок">
+
+
+<!ENTITY fvd_sd.sync.tabs.sync_on_close "Синхронізувати вкладки при закритті браузера">
+
+<!ENTITY fvd_sd.sync.settings "Налаштування">
+<!ENTITY fvd_sd.sync.manual_sync "Синхронізувати вручну">
+
+<!ENTITY fvd_sd.sync.bookmarks.initial_sync "Спочатку ви повинні вибрати початкову дію синхронізації:">
+
+<!ENTITY fvd_sd.sync.close_sync_progress_window_after_sync "Закрити вікно прогресу після закінчення синхронізації">
+
+<!ENTITY fvd_sd.sync.manage_groups "Керування групами">
+
+<!ENTITY fvd_sd.register_account.terms.message "Натискаючи на Створити Обліковий запис, ви погоджуєтеся з нашими ">
+<!ENTITY fvd_sd.register_account.terms.title "Умовами та Постановами">
+
+<!ENTITY quota.items "Елементи:">
+<!ENTITY quota.archived "Архівні:">
+<!ENTITY quota.trashed "Видалені:">
+<!ENTITY quota.usage_report "Звіт про використання">
+<!ENTITY quota.bookmarks "Закладки">
+<!ENTITY quota.speeddial "Швидкий Набір:">
+
+<!ENTITY fvd_sd.sync.tab.backup_history "Резервні копії">
+<!ENTITY backup_history.date "Дата">
+<!ENTITY backup_history.count_items "Елементи">
+<!ENTITY backup_history.restore "Відновити">
+<!ENTITY backup_history.count_groups "Групи">
+<!ENTITY backup_history.count_dials "Закладки">
+
+<!ENTITY backup_history.enable "Увімкнути авто-створення резервних копій">
+<!ENTITY backup_history.bookmarks "Закладки">
+<!ENTITY backup_history.sd "SpeedDial">
+
+<!ENTITY bookmarks_initialization "Ініціалізація...">
+
+<!ENTITY increase_limits "Збільшити ліміти">
+<!ENTITY count_items_in_browser "У браузері:">
+
+<!ENTITY backup.warning "Важливо! Резервні копії зберігаються в локальній базі даних EverSync. База даних буде видалена якщо ви видалите це розширення! Використовуйте онлайн доступ та резервні копії онлайн.">
+
+<!ENTITY backups.online_access "Онлайн доступ">
+
+<!ENTITY cookies_warning.warning "Увага!">
+<!ENTITY cookies_warning.desc "Через ваші куки, налаштування EverSync можуть працювати неправильно.">
+<!ENTITY cookies_warning.solution "Переглянути вирішення проблеми.">
+<!ENTITY cookies_warning.hide "Сховати дане попередження">
+
+<!ENTITY fvd_sd.sync.enable_autosync "Увімкнути авто синхронізацію (кожні 30 хвилин)">
+
+<!ENTITY fvd_sd.get_pro "Отримати Преміум!">
+
+<!ENTITY fvd_sd.how_to_use "Помощь по использованию">

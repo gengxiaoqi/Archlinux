@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://netvideohunter/skin/overlay.css" type="text/css"?>
+
+<overlay id="netvideohunterOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript">
+   // init packages
+	if(!com) var com={};
+	if(!com.netvideohunter) com.netvideohunter={};
+	if(!com.netvideohunter.downloader) com.netvideohunter.downloader={};
+
+	Components.utils.import("resource://nvhlib/com/netvideohunter/downloader/Overlay.js", com.netvideohunter.downloader);
+	Components.utils.import("resource://nvhlib/com/netvideohunter/downloader/Main.js",com.netvideohunter.downloader);
+  com.netvideohunter.downloader.Main.window=window;
+	com.netvideohunter.downloader.Overlay_Instance=new com.netvideohunter.downloader.Overlay(com.netvideohunter.downloader.Main,window);
+
+
+</script>
+<window id="main-window">
+	<menupopup id="netvideohunter-iconpopup" onpopupshowing="com.netvideohunter.downloader.Overlay_Instance.onIconPopupShow(event);" onpopuphiding="com.netvideohunter.downloader.Overlay_Instance.onIconPopupHide(event);">
+		<menuitem id="netvideohunter-disablemenuitem" label="Disable NetVideoHunter" oncommand="com.netvideohunter.downloader.Overlay_Instance.onDisableClick(event);" />
+		<menuitem id="netvideohunter-ignoremenuitem" label="Don't capture videos from this site" oncommand="com.netvideohunter.downloader.Overlay_Instance.onIgnoreClick(event);" />
+	</menupopup>
+	<stringbundleset id="netvideohunter-stringbundleset">
+		<stringbundle id="netvideohunter-strings" src="chrome://netvideohunter/locale/overlay.properties"/>
+	</stringbundleset>
+
+</window>
+
+<statusbar id="status-bar">
+	<statusbarpanel id="netvideohunter-statusbar" context="netvideohunter-iconpopup" onclick="com.netvideohunter.downloader.Overlay_Instance.iconClicked(event);">
+		<button id="netvideohunter-button" class="statusbarpanel-menu-iconic" />
+		<label id="netvideohunter-mediacounter" value="0" />
+	</statusbarpanel>
+</statusbar>
+
+<toolbarpalette id="BrowserToolbarPalette">
+  <toolbarbutton id="netvideohunter-toolbarbutton"
+	class="toolbarbutton-1 chromeclass-toolbar-additional"
+    label="NetVideoHunter" tooltip="Open NetVideoHunter"
+    onclick="com.netvideohunter.downloader.Overlay_Instance.iconClicked(event);"
+	context="netvideohunter-iconpopup"
+	/>
+</toolbarpalette>
+
+<popup id="contentAreaContextMenu">
+    <menuitem id="netvideohunter-menuitem"
+		oncommand="com.netvideohunter.downloader.Overlay_Instance.openMediaListWindow();"
+		label="NetVideoHunter" class="menuitem-iconic"
+		accesskey="H"
+		hidden="true"/>
+</popup>
+
+</overlay>
+

@@ -1,0 +1,25 @@
+VirtualBox GUI VM Selector Window 5.1.6 r110634 linux.amd64 (Sep 17 2016 15:36:37) release log
+00:00:00.268931 Log opened 2016-10-08T07:37:10.629926000Z
+00:00:00.268933 Build Type: release
+00:00:00.268935 OS Product: Linux
+00:00:00.268935 OS Release: 4.7.6-1-ARCH
+00:00:00.268936 OS Version: #1 SMP PREEMPT Fri Sep 30 19:28:42 CEST 2016
+00:00:00.268952 DMI Product Name: 20CLS2LK00
+00:00:00.268957 DMI Product Version: ThinkPad X250
+00:00:00.268989 Host RAM: 7867MB total, 7436MB available
+00:00:00.268991 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.268991 Process ID: 1467
+00:00:00.268992 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.269009 Qt version: 5.7.0
+00:00:00.282894 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.384868 Failed to open "/dev/vboxdrv", errno=13, rc=VERR_VM_DRIVER_NOT_ACCESSIBLE
+00:00:00.385226 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:31.300653 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:39.275184 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:47.121571 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:07.036022 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:17.777699 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:19.781234 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:26.605634 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:36.734522 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:48.899211 GUI: UIMediumEnumerator: Medium-enumeration finished!

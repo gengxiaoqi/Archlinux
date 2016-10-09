@@ -1,0 +1,20 @@
+<!ENTITY download "Télécharger">
+<!ENTITY play "Lire">
+<!ENTITY play.tooltip "Voir la vidéo avant de la télécharger">
+<!ENTITY itemMenu.copyLink "Copier le lien pointant vers le fichier vidéo">
+<!ENTITY itemMenu.saveFromCache "Enregistrer la vidéo à partir du cache du navigateur">
+<!ENTITY itemMenu.openPage "Ouvrir la page sur laquelle se trouve la vidéo">
+<!ENTITY selectAll "Tout">
+<!ENTITY selectAll.tooltip "Choisir toutes les vidéos de la liste">
+<!ENTITY selectNone "Aucune">
+<!ENTITY selectNone.tooltip "Ne sélectionner aucune vidéo de la liste">
+<!ENTITY removeSelected "Supprimer la sélection">
+<!ENTITY removeSelected.tooltip "Supprimer les vidéos sélectionnées à partir de la liste">
+<!ENTITY downloadSelected "Télécharger la sélection">
+<!ENTITY downloadSelected.tooltip "Télécharger les vidéos sélectionnées">
+<!ENTITY options "Options">
+<!ENTITY closeOptions "Fermer les options">
+<!ENTITY closePlayer "Fermer le lecteur">
+<!ENTITY clearList "Effacer">
+<!ENTITY clearList.tooltip "Supprimer tous les éléments de la liste">
+<!ENTITY help "Comment télécharger des vidéos ? 1. Lancer la vidéo sur le site original. 2. Lorsque la vidéo démarre, NetvideoHunter capture le lien pointant vers la vidéo et vous pouvez la voir dans la liste à gauche de votre écran. 3. Vous pouvez télécharger des vidéos en cliquant sur le bouton « Télécharger » dans la liste ou la prévisualiser en cliquant sur « Lire » pour être sûr de bien télécharger la bonne vidéo.">

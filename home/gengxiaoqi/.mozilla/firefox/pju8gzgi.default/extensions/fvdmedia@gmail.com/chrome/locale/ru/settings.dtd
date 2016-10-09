@@ -1,0 +1,112 @@
+<!ENTITY txt.dialog.title		"Настройки">
+
+<!ENTITY txt.dialog.button_ok.title	"Да">
+<!ENTITY txt.dialog.button_cancel.title	"Отменить">
+<!ENTITY txt.prefpane.general.title	"Настройки">
+<!ENTITY txt.prefpane.about.title	"О продукте">
+
+<!ENTITY fvd_sd.group.sync.title "Синхронизировать">
+<!ENTITY fvd_sd.sync.online " В сети">
+<!ENTITY fvd_sd.sync.logout "Выйти">
+<!ENTITY fvd_sd.sync.remove_account "Удалить профиль">
+<!ENTITY fvd_sd.sync.login "Войти">
+<!ENTITY fvd_sd.sync.register "Регистрация">
+<!ENTITY fvd_sd.sync.restore_password "Восстановить пароль">
+<!ENTITY fvd_sd.sync.already_have_account "Войти тут:">
+<!ENTITY fvd_sd.sync.email "E-Mail">
+<!ENTITY fvd_sd.sync.password "Пароль">
+<!ENTITY fvd_sd.sync.button.login "Войти">
+<!ENTITY fvd_sd.sync.create_new_account "Создать новый профиль">
+<!ENTITY fvd_sd.sync.subscribe "Подписаться на обновления и новости">
+<!ENTITY fvd_sd.sync.button.create_account "Создать профиль">
+<!ENTITY fvd_sd.sync.check_email "Проверьте Ваш email для подтверждения регистрации.">
+<!ENTITY fvd_sd.sync.confirm_code "Код подтверждения">
+<!ENTITY fvd_sd.sync.button.cancel_confirm "Отменить">
+<!ENTITY fvd_sd.sync.button.confirm "Подтвердить">
+<!ENTITY fvd_sd.sync.button.resend_confirm "Выслать подтверждающий Email снова">
+
+<!ENTITY fvd_sd.sync.button.restore_password "Восстановить пароль">
+<!ENTITY fvd_sd.sync.enable_auto_sync "Включить Авто Синхронизацию (Каждые 3 часа.)">
+<!ENTITY fvd_sd.sync.button.merge "Объединить">
+<!ENTITY fvd_sd.sync.button.upload "Загрузить">
+<!ENTITY fvd_sd.sync.button.download "Скачать">
+<!ENTITY fvd_sd.sync.merge "Объединить локальные и Серверные данные">
+<!ENTITY fvd_sd.sync.upload "Переписать данные на Сервере">
+<!ENTITY fvd_sd.sync.download "Переписать локальные данные">
+<!ENTITY fvd_sd.sync.import_export_to_from "на/из локального файла (.sd)">
+
+<!ENTITY fvd_sd.sync.merge.description "Данные с сервера и компьютера будут объединены (Примечание: Сервер имеет приоритет выше).">
+<!ENTITY fvd_sd.sync.download.description "Копировать данные с Сервера на Ваш компьютер">
+<!ENTITY fvd_sd.sync.upload.description "Копировать данные с Вашего компьютера на Сервер">
+<!ENTITY fvd_sd.sync.default.description "Выберите действие...">
+
+<!ENTITY fvd_sd.sync.enable_sync "Включить Синхронизацию">
+<!ENTITY fvd_sd.sync.tab.account "Профиль">
+<!ENTITY fvd_sd.sync.tab.sync "Синхронизация">
+<!ENTITY fvd_sd.sync.tab.tabs_sync "Синхронизировать вкладки">
+<!ENTITY fvd_sd.sync.tab.bookmarks_sync "Синхронизировать закладки">
+<!ENTITY fvd_sd.sync.tab.speeddial_sync "Синхронизировать Speed Dial">
+
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.first_line "Ваши закладки не будут утеряны, так как мы автоматически создали резервные копии ваших закладок.">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.second_line "Все ваши закладки сохранены на Вашем компьютере.">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.total_bookmarks "Общее количество сохраненных закладок">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.restore "Восстановить закладки">
+<!ENTITY fvd_sd.sync.tab.bookmarks.backup.backup "Создать резервную копию закладок">
+
+<!ENTITY fvd_sd.sync.tab.sd.backup.first_line "Ваши дилы не будут утеряны, так как мы автоматически создали резервные копии ваших данных.">
+<!ENTITY fvd_sd.sync.tab.sd.backup.second_line "Все ваши данные сохранены на Вашем компьютере.">
+<!ENTITY fvd_sd.sync.tab.sd.backup.restore "Восстановить наборы">
+<!ENTITY fvd_sd.sync.tab.sd.backup.backup "Создать резервную наборов">
+
+
+<!ENTITY fvd_sd.sync.tabs.sync_on_close "Синхронизировать вкладки при закрытии браузера">
+
+<!ENTITY fvd_sd.sync.settings "Настройки">
+<!ENTITY fvd_sd.sync.manual_sync "Ручная синхронизация">
+
+<!ENTITY fvd_sd.sync.bookmarks.initial_sync "Сначала вы должны выбрать первоначальное действие синхронизации:">
+
+<!ENTITY fvd_sd.sync.close_sync_progress_window_after_sync "Закрыть окно прогресса по окончании синхронизации">
+
+<!ENTITY fvd_sd.sync.manage_groups "Управлять группами">
+
+<!ENTITY fvd_sd.register_account.terms.message "Нажимая на Создать Профиль, вы соглашаетесь с нашими">
+<!ENTITY fvd_sd.register_account.terms.title "Условиями и Постановлениями">
+
+<!ENTITY quota.items "Элементы:">
+<!ENTITY quota.archived "Архивировано:">
+<!ENTITY quota.trashed "Удалено:">
+<!ENTITY quota.usage_report "Отчет об использовании">
+<!ENTITY quota.bookmarks "Закладки">
+<!ENTITY quota.speeddial "Speed Dial:">
+
+<!ENTITY fvd_sd.sync.tab.backup_history "Резервные копии">
+<!ENTITY backup_history.date "Дата">
+<!ENTITY backup_history.count_items "Элементы">
+<!ENTITY backup_history.restore "Восстановить">
+<!ENTITY backup_history.count_groups "Группы">
+<!ENTITY backup_history.count_dials "Наборы">
+
+<!ENTITY backup_history.enable "Включить авто-создание резервных копий">
+<!ENTITY backup_history.bookmarks "Закладки">
+<!ENTITY backup_history.sd "Speed Dial">
+
+<!ENTITY bookmarks_initialization "Инициализация...">
+
+<!ENTITY increase_limits "Увеличить лимиты">
+<!ENTITY count_items_in_browser "В браузере:">
+
+<!ENTITY backup.warning "Важно! Эти резервные копии сохранены в локальной базе данных EverSync. База данных будет удалена если вы удалите это расширение! Используйте онлайн доступ и резервные копии онлайн.">
+
+<!ENTITY backups.online_access "Онлайн доступ">
+
+<!ENTITY cookies_warning.warning "Внимание!">
+<!ENTITY cookies_warning.desc "Из-за ваших  cookie настроек EverSync может работать неправильно.">
+<!ENTITY cookies_warning.solution "Посмотреть решение проблемы.">
+<!ENTITY cookies_warning.hide "Спрятать это предупреждение">
+
+<!ENTITY fvd_sd.sync.enable_autosync "Включить автосинхронизацию (каждые 30 минут)">
+
+<!ENTITY fvd_sd.get_pro "Получить Pro!">
+
+<!ENTITY fvd_sd.how_to_use "Помощь по использованию">

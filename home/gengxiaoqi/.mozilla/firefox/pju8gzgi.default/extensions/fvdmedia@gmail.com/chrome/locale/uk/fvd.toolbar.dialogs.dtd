@@ -1,0 +1,86 @@
+<!ENTITY fvd_confirm_download_browser.dialog.title "Fvd Suite не запущений" >
+<!ENTITY fvd_confirm_download_browser.button.no.title "Ні (Спочатку я запущу програму Fvd Suite)" >
+<!ENTITY fvd_confirm_download_browser.button.yes.title "Так" >
+<!ENTITY fvd_confirm_download_browser.label.first.value "Fvd Suite не запущений. " >
+<!ENTITY fvd_confirm_download_browser.label.second.value "Ми рекомендуємо спочатку запустити Fvd Suite і повторити спробу завантаження." >
+<!ENTITY fvd_confirm_download_browser.label.three.value "Ви хочете продовжити завантажування в Firefox?" >
+
+<!ENTITY fvd_sd_new_dial.dialog.title "Створити/змінити закладку" >
+<!ENTITY fvd_sd_new_dial.title.title "Заголовок" >
+<!ENTITY fvd_sd_new_dial.url.title "URL" >
+<!ENTITY fvd_sd_new_dial.title_not_found "Заголовок не знайдено" >
+
+<!ENTITY fvd_sd_new_dial.preview_type.make_from_dial "Створити за допомогою URL" >
+<!ENTITY fvd_sd_new_dial.preview_type.make_from_uri "Створити за допомогою URL (Оновлено!)" >
+<!ENTITY fvd_sd_new_dial.preview_type.make_from_local_file "Створити використовуючи Локальний Файл" >
+<!ENTITY fvd_sd_new_dial.preview_type.preview "Натисніть для перегляду" >
+<!ENTITY fvd_sd_new_dial.preview_type.make_from_file_button "..." >
+<!ENTITY fvd_sd_new_dial.group.title "Група" >
+<!ENTITY fvd_sd_new_dial.user_defined_image.title "Готові логотипи">
+<!ENTITY fvd_sd_new_dial.url.emptytext "http://">
+<!ENTITY fvd_sd_new_dial.button.close "Закрити">
+<!ENTITY fvd_sd_new_dial.disable_js "Вимкнути JavaScript">
+<!ENTITY fvd_sd_new_dial.enable_js "Увімкнути JavaScript">
+<!ENTITY fvd_sd_new_dial.tab.main "Основні">
+<!ENTITY fvd_sd_new_dial.tab.preview "Перегляд">
+<!ENTITY fvd_sd_new_dial.button.back "Назад">
+<!ENTITY fvd_sd_new_dial.delay.label "Затримка (секунд):">
+<!ENTITY fvd_sd_new_dial.empty_title.value "Динамічний заголовок">
+<!ENTITY fvd_sd_new_dial.disable_plugins.yes "так">
+<!ENTITY fvd_sd_new_dial.disable_plugins.no "ні">
+<!ENTITY fvd_sd_new_dial.disable_plugins "Вимкнути плагіни(flash, silverlight,...):"> 
+<!ENTITY fvd_sd_new_dial.preview_type "Тип перегляду"> 
+<!ENTITY fvd_sd_new_dial.autoupdate "Автооновлення"> 
+<!ENTITY fvd_sd_new_dial.autoupdate.every "Кожні:"> 
+<!ENTITY fvd_sd_new_dial.autoupdate.minutes "Хвилин"> 
+<!ENTITY fvd_sd_new_dial.autoupdate.hours "Годин"> 
+<!ENTITY fvd_sd_new_dial.autoupdate.days "Днів"> 
+
+
+<!ENTITY fvd_sd_manage_groups.tree.name.title "Назва">
+<!ENTITY fvd_sd_manage_groups.tree.count.title "Закладки">
+<!ENTITY fvd_sd_manage_groups.add.title "Додати">
+<!ENTITY fvd_sd_manage_groups.edit.title "Редагувати">
+<!ENTITY fvd_sd_manage_groups.remove.title "Вилучити">
+<!ENTITY fvd_sd_manage_groups.close.title "Закрити">
+<!ENTITY fvd_sd_manage_groups.context.remove.title "Вилучити">
+
+
+<!ENTITY fvd_sd_sd_block.dialog.title "Блокування URL/домену" >
+<!ENTITY fvd_sd_sd_block.block_type.title "Тип блокування" >
+<!ENTITY fvd_sd_sd_block.block_type.uri "URL" >
+<!ENTITY fvd_sd_sd_block.block_type.domain "Домен" >
+<!ENTITY fvd_sd_sd_block.block_url.title "URL/Домен" >
+
+
+<!ENTITY fvd_sd_manage_blocked.dialog.title "Керування заблокованими доменами" >
+<!ENTITY fvd_sd_manage_blocked.tree.sign.title "URL/Домен" >
+<!ENTITY fvd_sd_manage_blocked.tree.type.title "Тип" >
+<!ENTITY fvd_sd_manage_blocked.button.ok "Гаразд" >
+<!ENTITY fvd_sd_manage_blocked.button.unblock "Розблокувати" >
+<!ENTITY fvd_sd_manage_blocked.button.add "Додати" >
+<!ENTITY fvd_sd_manage_blocked.button.edit "Редагувати" >
+<!ENTITY fvd_sd_manage_blocked.context.unblock "Розблокувати" >
+<!ENTITY fvd_sd_manage_blocked.context.open_uri "Відкрити URL" >
+<!ENTITY fvd_sd_manage_blocked.context.edit "Редагувати" >
+
+
+<!ENTITY fvd_sd_view_group.dialog.title "Переглянути групу">
+<!ENTITY fvd_sd_view_group.type.title "Заголовок">
+<!ENTITY fvd_sd_view_group.type.uri "URL">
+
+
+<!ENTITY fvd_sd_view_group.context.open	"Відкрити в поточній вкладці">
+<!ENTITY fvd_sd_view_group.context.open_new_tab	"Відкрити в новому вікні">
+<!ENTITY fvd_sd_view_group.context.open_new_tab_background	"Відкрити в фоновому вікні">
+<!ENTITY fvd_sd_view_group.context.remove "Вилучити URL" >
+<!ENTITY fvd_sd_view_group.context.add_to_speed_dial "Додати в Speed Dial" >
+<!ENTITY fvd_sd_view_group.context.block "Заблокувати" >
+<!ENTITY fvd_sd_view_group.context.copy_url "Копіювати URL" >
+<!ENTITY fvd_sd_view_group.context.refresh "Оновити" >
+
+
+<!ENTITY fvd_sd_new_group.dialog.title "Створити/змінити групу">
+<!ENTITY fvd_sd_new_group.group_name.title "Назва групи">
+
+<!ENTITY fvd_sd_new_dial.close_window "Закрити вікно">

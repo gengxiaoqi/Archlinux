@@ -21,8 +21,8 @@ bindsym $mod+t border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font xft:Noto Mono 10
-font pango: SFRegular 12
+font xft:Noto Mono 10
+#font pango: SFRegular 12
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -221,6 +221,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [class="netease-cloud-music"] $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -249,6 +250,8 @@ for_window [class="Thus"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="ij-ImageJ"] floating enable border normal
+#for_window [class="fiji-Main"] floating enable border normal
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -341,7 +344,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-	font xft:Noto Sans,Icons 10.5
+	font xft:Noto Sans,Icons 12
 	strip_workspace_numbers yes
 
 	colors {

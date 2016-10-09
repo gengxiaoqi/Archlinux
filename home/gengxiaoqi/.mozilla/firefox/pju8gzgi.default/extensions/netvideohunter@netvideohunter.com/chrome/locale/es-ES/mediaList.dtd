@@ -1,0 +1,20 @@
+<!ENTITY download "Download">
+<!ENTITY play "Play">
+<!ENTITY play.tooltip "Preview the video before the download">
+<!ENTITY itemMenu.copyLink "Copy the link of the video file">
+<!ENTITY itemMenu.saveFromCache "Save the video from the browser cache">
+<!ENTITY itemMenu.openPage "Open the original page of the video">
+<!ENTITY selectAll "All">
+<!ENTITY selectAll.tooltip "Select all of the videos in the list">
+<!ENTITY selectNone "None">
+<!ENTITY selectNone.tooltip "Select none of the videos in the list">
+<!ENTITY removeSelected "Remove Selected">
+<!ENTITY removeSelected.tooltip "Remove the selected videos from the list">
+<!ENTITY downloadSelected "Download Selected">
+<!ENTITY downloadSelected.tooltip "Download the selected videos">
+<!ENTITY options "Options">
+<!ENTITY closeOptions "Close options">
+<!ENTITY closePlayer "Close player">
+<!ENTITY clearList "Clear">
+<!ENTITY clearList.tooltip "Remove all items from the list">
+<!ENTITY help "How to download videos? 1. Play the video on the original site. 2. When the play begins then the NetVideoHunter captures the videolink and you can see it in the list at the left side of this window. 3. You can Download videos if you click on the Download button in the list or you can preview it with the Play button to be sure you downloading the right video.">

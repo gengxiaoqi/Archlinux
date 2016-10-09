@@ -1,0 +1,19 @@
+<!ENTITY alwaysAsk "Sempre perguntar onde salvar os vídeos">
+<!ENTITY saveTo "Salvar em:">
+<!ENTITY chooseFolder "Escolher pasta">
+<!ENTITY downloads "Downloads">
+<!ENTITY list "Lista">
+<!ENTITY removeAfterDownload "Remover o vídeo da lista após o download começar">
+<!ENTITY removeAfterSiteClosed "Remover o vídeo da lista quando não há mais nenhuma janela ou aba aberta no site relacionado ao vídeo. Exemplo: Se existem vídeos do YouTube na lista, então eles serão removidos após todas as janelas e abas do YouTube serem fechadas.">
+<!ENTITY iconAppearance "Icon appearance">
+<!ENTITY inStatusbar "Show in statusbar">
+<!ENTITY inToolbar "Show in toolbar">
+<!ENTITY inContext "Show in context menu (when you right-clicking on a webpage)">
+<!ENTITY ignoreWebsites "Ignore websites">
+<!ENTITY ignoreWebsites.description "If you add the name of a website (for example: youtube.com) to this list then videos from this site will not be captured.">
+<!ENTITY add "Add">
+<!ENTITY windowMode "Window mode">
+<!ENTITY openInPopup "Open in popup window">
+<!ENTITY openInTab "Open in tab">
+<!ENTITY fileTypes "FileTypes">
+<!ENTITY enableSwf "Enable the capturing of SWF files">

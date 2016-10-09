@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="netvideohunter@netvideohunter.com"
+                   em:name="NetVideoHunter"
+                   em:version="1.20"
+                   em:description="Download flash videos (FLV) and music (MP3) from any video site (For example: YouTube, Metacafe, DailyMotion, Vimeo)."
+                   em:creator="NetVideoHunter"
+                   em:type="2"
+                   em:unpack="true"
+                   em:homepageURL="http://www.netvideohunter.com"
+                   em:optionsURL="chrome://netvideohunter/content/options.xul"
+                   em:iconURL="chrome://netvideohunter/skin/netvideohunterIcon32.png">
+    <em:targetApplication RDF:resource="rdf:#$FHDH01"/>
+    <em:targetApplication RDF:resource="rdf:#$KHDH01"/>
+    <em:targetApplication RDF:resource="rdf:#$PHDH01"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$PHDH01"
+                   em:id="toolkit@mozilla.org"
+                   em:minVersion="17.0"
+                   em:maxVersion="42.*" />
+  <RDF:Description RDF:about="rdf:#$KHDH01"
+                   em:id="{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}"
+                   em:minVersion="2.0"
+                   em:maxVersion="2.36" />
+  <RDF:Description RDF:about="rdf:#$FHDH01"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.5"
+                   em:maxVersion="42.*" />
+</RDF:RDF>

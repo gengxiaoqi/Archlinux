@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<!DOCTYPE bindings SYSTEM "chrome://netvideohunter/locale/mediaList.dtd">
+<bindings id="downloadBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+	<binding id="medialistbox-base" extends="chrome://global/content/bindings/richlistbox.xml#richlistbox">
+    <resources>
+      <stylesheet src="chrome://netvideohunter/skin/mediaList.css"/>
+    </resources>
+    <implementation>
+		<field name="_data">null</field>
+		<property name="data" >
+			<setter>
+				<![CDATA[
+					if(this._data){
+						this.removeAllDataListener()
+					}
+					this._data=val;
+					if(this._data){
+						this._data.addEventListener("itemAdded",this.onItemAdded,this);
+						this._data.addEventListener("itemUpdated",this.onItemUpdated,this);
+						this._data.addEventListener("itemRemoved",this.onItemRemoved,this);
+						this._data.addEventListener("cleared",this.onListCleared,this);
+					}
+					this.updateFromData();
+					return val;
+				]]>
+			</setter>
+			<getter>
+				<![CDATA[
+					return this._data;
+				]]>
+			</getter>
+		</property>
+
+		<method name="removeAllDataListener">
+			<body>
+				<![CDATA[
+					if(this._data){
+						this._data.removeEventListener("itemAdded",this.onItemAdded);
+						this._data.removeEventListener("itemUpdated",this.onItemUpdated);
+						this._data.removeEventListener("itemRemoved",this.onItemRemoved);
+						this._data.removeEventListener("cleared",this.onListCleared);
+					}
+				]]>
+			</body>
+		</method>
+
+		<property name="hasCheckedItem" >
+			<getter>
+				<![CDATA[
+					for(var i = 0; i < this.childNodes.length; i++ ){
+						if(this.childNodes[i].checked==true) return true;
+					}
+					return false;
+				]]>
+			</getter>
+		</property>
+
+		<method name="getCheckedIds">
+			<body>
+				<![CDATA[
+					var result=[];
+				for(var i = 0; i < this.childNodes.length; i++ ){
+					if(this.childNodes[i].checked==true) result.push(this.childNodes[i].id);
+				}
+				return result;
+				]]>
+			</body>
+		</method>
+
+		<method name="removeCheckedItemsFromData">
+			<body>
+				<![CDATA[
+					var ids = this.getCheckedIds();
+					for(var i = 0; i < ids.length; i++ ){
+						this._data.removeItem(ids[i]);
+					}
+				]]>
+			</body>
+		</method>
+
+		<method name="onItemAdded">
+			<parameter name="event"/>
+			<body>
+				<![CDATA[
+					this.addItem(event.item);
+				]]>
+			</body>
+		</method>
+		<method name="onItemUpdated">
+			<parameter name="event"/>
+			<body>
+				<![CDATA[
+					this.removeItemById(event.item.id);
+					this.addItem(event.item);
+				]]>
+			</body>
+		</method>
+		<method name="onItemRemoved">
+			<parameter name="event"/>
+			<body>
+				<![CDATA[
+					this.removeItemById(event.item.id);
+				]]>
+			</body>
+		</method>
+		<method name="onListCleared">
+			<parameter name="event"/>
+			<body>
+				<![CDATA[
+
+
+					this.removeAllItems();
+				]]>
+			</body>
+		</method>
+
+		<method name="updateFromData">
+			<body>
+				<![CDATA[
+					this.removeAllItems();
+					this._data.forEach(function(item,i){
+						this.addItem(item,item.id);
+					},this);
+				]]>
+			</body>
+		</method>
+		<method name="checkAll">
+			<body>
+				<![CDATA[
+					var result=[];
+					for(var i = 0; i < this.childNodes.length; i++ ){
+						this.childNodes[i].checked=true;
+					}
+				]]>
+			</body>
+		</method>
+		<method name="checkNone">
+			<body>
+				<![CDATA[
+					var result=[];
+					for(var i = 0; i < this.childNodes.length; i++ ){
+						this.childNodes[i].checked=false;
+					}
+				]]>
+			</body>
+		</method>
+		<method name="addItem">
+			<parameter name="item"/>
+			<body>
+				<![CDATA[
+					var rli = document.createElement("richlistitem");
+					rli.setAttribute("id",item['id']);
+					rli.setAttribute("title", item['title']);
+					rli.setAttribute("url", item['url']);
+					rli.setAttribute("downloadStarted", item['downloadStarted']);
+					rli.setAttribute("icon", item['favicon']);
+					rli.setAttribute("fileSize",this.formatFileSize(item['size']));
+					if(item['uploadStream']!=null){
+						rli.setAttribute("playDisabled",true);
+					}else{
+						rli.setAttribute("playDisabled",false);
+					}
+					if(this.childNodes.length==0){
+						this.appendChild(rli);
+					}else{
+						this.insertBefore(rli,this.childNodes[0]);
+					}
+				]]>
+			</body>
+		</method>
+		<method name="formatFileSize">
+			<parameter name="bytes"/>
+			<body>
+				<![CDATA[
+					if(bytes===null) return '';
+					var size = bytes / 1024;
+					if(size < 1024){
+						size = Math.round(size*100)/100;
+						size += ' KB';
+					}else {
+						if(size / 1024 < 1024) {
+							size = 	Math.round(size / 1024*100)/100
+							size += ' MB';
+						} else if(size / 1024 / 1024 < 1024) {
+							size = Math.round(size / 1024 / 1024 *100)/100
+							size += ' GB';
+						}
+					}
+					return size;
+				]]>
+			</body>
+		</method>
+		<method name="removeAllItems">
+			<body>
+				<![CDATA[
+					while (this.childNodes.length > 0) {
+						this.removeChild(this.childNodes[0]);
+					}
+				]]>
+			</body>
+		</method>
+		<method name="removeItemById">
+			<parameter name="id"/>
+			<body>
+				<![CDATA[
+					for(i=0;i < this.childNodes.length;i++){
+						if(this.childNodes[i].getAttribute("id")==id){
+							this.removeChild(this.childNodes[i]);
+						}
+					}
+				]]>
+			</body>
+		</method>
+		<destructor>
+			this.removeAllDataListener();
+		</destructor>
+    </implementation>
+	<handlers>
+		<handler event="checked">
+			<![CDATA[
+
+			]]>
+		</handler>
+	</handlers>
+  </binding>
+
+  <binding id="medialistitem-base" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
+    <resources>
+      <stylesheet src="chrome://netvideohunter/skin/mediaList.css"/>
+    </resources>
+    <implementation>
+		<property name="checked" onget="return this.getAttribute('checked') == 'true';">
+		<setter>
+			<![CDATA[
+			  if (val)
+				this.setAttribute("checked", "true");
+			  else
+				this.removeAttribute("checked");
+			  this._fireEvent("checked");
+			  return val;
+			]]>
+		</setter>
+		</property>
+    </implementation>
+
+  </binding>
+  <binding id="medialistitem-default" extends="chrome://netvideohunter/content/mediaList.xml#medialistitem-base">
+    <content>
+      <xul:hbox flex="1" pack="start" dblclick="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('play', this);" crop="none"  context="itemMenu" >
+				<xul:checkbox xbl:inherits="checked=checked" oncommand="document.getBindingParent(this).checked=this.checked" crop="none"/>
+	      <xul:vbox pack="start" flex="1">
+				  <xul:hbox align="center" flex="1">
+					  <xul:image xbl:inherits="src=icon" width="16" height="16" style="margin-left:5px"/>
+			      <xul:label xbl:inherits="value=title,tooltiptext=title" crop="right" class="mediaTitle" flex="1"/>
+				  </xul:hbox>
+				  <xul:hbox flex="1">
+						<xul:label xbl:inherits="value=url,tooltiptext=url" crop="center" class="mediaUrl" flex="1" style="margin-right:0px;"/>
+						<xul:label xbl:inherits="value=fileSize" crop="right" class="mediaSize" width="60"/>
+				  </xul:hbox>
+				  <xul:spacer flex="1"/>
+	      </xul:vbox>
+				<xul:vbox>
+					<xul:button class="mediaButton downloadButton" tooltiptext="&download;" label="&download;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('download', this);"/>
+					<xul:button class="mediaButton playButton" tooltiptext="&play.tooltip;" label="&play;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('play', this);"  xbl:inherits="disabled=playDisabled" />
+				</xul:vbox>
+      </xul:hbox>
+    </content>
+  </binding>
+
+</bindings>

@@ -1,0 +1,20 @@
+<!ENTITY alwaysAsk "Всегда спрашивать куда сохранять видео">
+<!ENTITY saveTo "Сохранить в: ">
+<!ENTITY chooseFolder "Обзор">
+<!ENTITY downloads "Загрузки">
+<!ENTITY list "Список">
+<!ENTITY removeAfterDownload "Удалить видео из списка после того, как загрузка выполнена">
+<!ENTITY removeAfterSiteClosed "Удалить видео из списка, когда нет более открытых окон и вкладок соответствующего сайта и видео. Пример: Если есть видео YouTube в списке, то они будут после всех YouTube окон и вкладок закрыты.">
+<!ENTITY iconAppearance "Иконка приложения">
+<!ENTITY inStatusbar "Показать в строке состояния">
+<!ENTITY inToolbar "Показать в панели инструментов">
+<!ENTITY inContext "Показать в контекстном меню(При щелчке правой кнопкой мыши на веб-странице)">
+<!ENTITY ignoreWebsites "Игнорируемые сайты">
+<!ENTITY ignoreWebsites.description "Если добавить название сайта (Пример: youtube.com)"> 
+<!ENTITY ignoreWebsites.description "в этот список, то видео с этого сайта не будет захвачен.">
+<!ENTITY add "Добавить">
+<!ENTITY windowMode "Настройки расширения">
+<!ENTITY openInPopup "Открыть в новом окне">
+<!ENTITY openInTab "Открыть в новой вкладке">
+<!ENTITY fileTypes "Захват SWF">
+<!ENTITY enableSwf "Включить захват SWF файлов">

@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "Google의 빠르고 편리한 온라인 사진 공유 서비스로서 1G의 무료 저장용량이 제공됩니다."
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Picasa"
+   }
+}

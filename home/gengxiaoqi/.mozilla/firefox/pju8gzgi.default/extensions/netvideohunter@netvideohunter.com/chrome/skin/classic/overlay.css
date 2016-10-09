@@ -1,0 +1,36 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#netvideohunter-statusbar {
+	cursor:pointer;
+}
+#netvideohunter-button,#netvideohunter-menuitem {   
+	list-style-image: url("chrome://netvideohunter/skin/netvideohunterIcon16.png");
+}
+
+#netvideohunter-button[disabled="true"],#netvideohunter-menuitem[disabled="true"] {	
+	list-style-image: url("chrome://netvideohunter/skin/netvideohunterIcon16disabled.png") !important;
+}
+
+
+#netvideohunter-toolbarbutton {	
+	list-style-image: url("chrome://netvideohunter/skin/netvideohunterIcon24.png") !important;
+}
+
+#netvideohunter-toolbarbutton[disabled="true"] {
+	
+	list-style-image: url("chrome://netvideohunter/skin/netvideohunterIcon24disabled.png") !important;
+}
+
+toolbar[iconsize="small"] #netvideohunter-toolbarbutton {
+	
+	list-style-image: url("chrome://netvideohunter/skin/netvideohunterIcon16.png") !important;
+}
+
+toolbar[iconsize="small"] #netvideohunter-toolbarbutton[disabled="true"] {
+	
+	list-style-image: url("chrome://netvideohunter/skin/netvideohunterIcon16disabled.png") !important;
+}
+
+tab[bold="1"] .tab-icon-image {
+	opacity:0.4 !important;
+}

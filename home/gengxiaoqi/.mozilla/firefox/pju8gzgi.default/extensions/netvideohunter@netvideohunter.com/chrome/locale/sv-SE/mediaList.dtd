@@ -1,0 +1,20 @@
+<!ENTITY download "Ladda ner">
+<!ENTITY play "Spela">
+<!ENTITY play.tooltip "Förhandsgranska videon före nerladdningen">
+<!ENTITY itemMenu.copyLink "Kopiera länken till videofilen">
+<!ENTITY itemMenu.saveFromCache "Spara videon från webbläsarens cache">
+<!ENTITY itemMenu.openPage "Öppna originalsidan för videon">
+<!ENTITY selectAll "Alla">
+<!ENTITY selectAll.tooltip "Markera alla videor i listan">
+<!ENTITY selectNone "Ingen">
+<!ENTITY selectNone.tooltip "Markera ingen av videorna i listan">
+<!ENTITY removeSelected "Ta bort markerade">
+<!ENTITY removeSelected.tooltip "Ta bort de markerade videorna från listan">
+<!ENTITY downloadSelected "Ladda ner markerade">
+<!ENTITY downloadSelected.tooltip "Ladda ner markerade videor">
+<!ENTITY options "Inställningar">
+<!ENTITY closeOptions "Stäng inställningarna">
+<!ENTITY closePlayer "Stäng spelaren">
+<!ENTITY clearList "Rensa">
+<!ENTITY clearList.tooltip "Ta bort alla objekt från listan">
+<!ENTITY help "Hur laddar man ner videor? 1. Spela videon på originalwebbplatsen. 2. När videon börjar spela fångar NetVideoHunter videolänken, som du hittar i listan på vänster sida av det här fönstret. 3. Du kan ladda ner videor genom att klicka på knappen &quot;Ladda ner&quot; i listan, eller förhandsgranska dem med &quot;Spela&quot;-knappen för att säkerställa att du laddar ner rätt video.">

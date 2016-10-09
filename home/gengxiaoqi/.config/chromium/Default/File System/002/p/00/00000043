@@ -1,0 +1,72 @@
+18:40:42 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwiwr4CvjcTPAhWXOsAKHQz5Av8QFggeMAA&url=https%3A%2F%2Fwww.neuron.yale.edu%2FphpBB%2Fviewtopic.php%3Ff%3D6%26t%3D2387&usg=AFQjCNGNYQuZn-HYVxMD7XI8Rk2xkQI5bg&sig2=2zRpoo1Kals9CNo2fVAh4A: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+21:09:50 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwiD_tParsTPAhXD_ywKHTedCZcQFggeMAA&url=http%3A%2F%2Fsuperuser.com%2Fquestions%2F113219%2Fgo-back-to-previous-directory-in-shell&usg=AFQjCNEMMDicU3GFA1lKs-1KDXvns38m8Q&sig2=kLmccx6seBIo4nl-7W-oJQ: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+21:12:02 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+21:12:22 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+21:20:04 GMT+0200 (CEST) (WARN) /background.html: chrome tabs query did not return a result while changing window focus
+    at null.callback (/js/main/Extension.js:2:7334)
+    at safeCallbackApply (extensions::sendRequest:21:15)
+    at handleResponse (extensions::sendRequest:74:7)
+21:25:17 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0ahUKEwiol86TssTPAhVB2ywKHY3wAmkQFgguMAI&url=https%3A%2F%2Fforum.xfce.org%2Fviewtopic.php%3Fid%3D8228&usg=AFQjCNGo1bQF3NCSEK0D1p2zuQKpKR0Vrw&sig2=x3NcbGu2MLsrwIuo-Naxyw: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+21:34:57 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjwxvmptMTPAhUC1ywKHfleANwQFggeMAA&url=https%3A%2F%2Fwiki.archlinux.org%2Findex.php%2Fextra_keyboard_keys&usg=AFQjCNF4-iv1pR3AJNOaz9ZQvEckLCtZwA&sig2=o5dEPOIT4Uy_nn1En--6Aw: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+22:34:30 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwie4YrRwcTPAhWI8ywKHWZgDegQFggeMAA&url=ftp%3A%2F%2Fftp.tu-chemnitz.de%2Fpub%2Fiic%2Fela%2Fela2.0%2Fela-articles%2Farticles%2Fvol1_pp44-58.ps&usg=AFQjCNEuQB9dZSPqzclwHi68QjBy_udMPw&sig2=wYy4MzSN1eKzeG_bXOlS9w: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310
+22:35:44 GMT+0200 (CEST) (WARN) https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=web&cd=11&ved=0ahUKEwip7ZvxwcTPAhXKCCwKHV2WBtoQFghEMAo&url=https%3A%2F%2Fwww.alislam.org%2Furdu%2Fkn%2F1968%2F19680823.pdf&usg=AFQjCNEwfScyOeLjBiVcBrk1BYe4EwugKA&sig2=ztgSVLKywnmwyje_qu8N0Q: Couldn't initialize clearly custom detect
+    at Object.H [as isCustomFormat] (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:9134)
+    at Object.isSiteEligible (eval at finishLoadingScript (/content/require/require-config.js:2:101), <anonymous>:2:542)
+    at b (/content/tooltips/custom_tooltip_check.js:2:94)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content/tooltips/custom_tooltip_check.js:2:351
+    at Object.execCb (/third_party/require/require.js:6:12300)
+    at Object.check (/third_party/require/require.js:6:6850)
+    at Object.<anonymous> (/third_party/require/require.js:6:8952)
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:670
+    at chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/third_party/require/require.js:6:9310

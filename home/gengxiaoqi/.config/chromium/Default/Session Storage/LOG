@@ -1,0 +1,9 @@
+2016/10/09-18:02:29.905 719 Reusing MANIFEST /home/gengxiaoqi/.config/chromium/Default/Session Storage/MANIFEST-000001
+2016/10/09-18:02:29.906 719 Recovering log #1757
+2016/10/09-18:02:29.906 719 Reusing old log /home/gengxiaoqi/.config/chromium/Default/Session Storage/001757.log 
+2016/10/09-18:09:52.486 994 Level-0 table #1762: started
+2016/10/09-18:09:52.488 994 Level-0 table #1762: 26404 bytes OK
+2016/10/09-18:09:52.490 994 Delete type=0 #1757
+2016/10/09-18:13:24.913 994 Level-0 table #1764: started
+2016/10/09-18:13:24.918 994 Level-0 table #1764: 31633 bytes OK
+2016/10/09-18:13:24.920 994 Delete type=0 #1761

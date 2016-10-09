@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "Google 提供 1GB 免費儲存空間，為您帶來輕鬆快速的線上分享相片功能。"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Picasa"
+   }
+}

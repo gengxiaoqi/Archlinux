@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://fvd.sync/skin/dialogs/fvd_sd_sync_progress.css" type="text/css"?>
+<?xml-stylesheet href="chrome://fvd.sync/skin/sd/skin/dials/icons.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://fvd.sync/locale/dialogs/fvd_sd_sync_progress.dtd">
+
+<dialog
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  title="&window.title;"
+  buttons="extra1,cancel"
+  buttonlabelextra1="&button.try_again;"
+  buttonlabelcancel="&button.close;"
+  ondialogextra1="tryAgain()"
+>
+
+  <script src="chrome://fvd.sync/content/dialogs/fvd_sd_sync_progress.js"/>
+
+  <vbox id="syncingBox" flex="2" align="center" class="head">
+    <label id="progressMessage"/>
+
+    <hbox id="progressMeterParent" pack="center" flex="2">
+      <progressmeter mode="undetermined"/>
+    </hbox>
+  </vbox>
+
+  <vbox id="successBox" hidden="true" flex="2" align="center" class="head">
+    <label value="&sync_success;"/>
+  </vbox>
+
+  <vbox id="errorBox" hidden="true" flex="2" align="center" class="head">
+    <label value="&sync_failed;"/>
+  </vbox>
+
+  <vbox id="abortingBox" hidden="true" flex="2" align="center" class="head">
+    <label value="&aborting_sync;"/>
+  </vbox>
+
+  <groupbox id="syncStatus">
+
+    <caption label="&syncing_status;"/>
+
+    <vbox id="syncStatuses"  flex="2">
+
+      <hbox id="syncStatus_groups">
+        <label value="&groups;"/> <label id="syncGroupsCount"/>
+      </hbox>
+
+      <hbox id="syncStatus_dials">
+        <label value="&dials;"/> <label id="syncDialsCount"/>
+      </hbox>
+
+      <hbox id="syncStatus_applyChanges">
+        <label value="&apply_changes;"/>
+      </hbox>
+
+    </vbox>
+
+  </groupbox>
+
+  <hbox pack="end">
+    <checkbox label="&close_when_finished;" id="closeWhenFinished" oncommand="changeCloseWhenFinishedState()"/>
+  </hbox>
+
+</dialog>

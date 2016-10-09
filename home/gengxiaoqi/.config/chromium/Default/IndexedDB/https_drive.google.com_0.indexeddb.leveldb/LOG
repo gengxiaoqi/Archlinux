@@ -1,0 +1,32 @@
+2016/10/07-09:16:14.314 1588 Reusing MANIFEST /home/gengxiaoqi/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2016/10/07-09:16:14.314 1588 Recovering log #602
+2016/10/07-09:16:14.314 1588 Reusing old log /home/gengxiaoqi/.config/chromium/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000602.log 
+2016/10/07-09:16:14.950 1588 Current memtable full; waiting...
+2016/10/07-09:16:14.951 1864 Level-0 table #606: started
+2016/10/07-09:16:14.954 1864 Level-0 table #606: 814 bytes OK
+2016/10/07-09:16:14.956 1864 Delete type=0 #602
+2016/10/07-09:16:14.957 1864 Compacting 4@0 + 0@1 files
+2016/10/07-09:16:14.957 1864 Level-0 table #609: started
+2016/10/07-09:16:14.957 1864 Level-0 table #609: 0 bytes OK
+2016/10/07-09:16:14.960 1864 Delete type=0 #605
+2016/10/07-09:16:15.121 1864 Generated table #608@0: 8 keys, 10863595 bytes
+2016/10/07-09:16:15.126 1864 Generated table #610@0: 15 keys, 65989 bytes
+2016/10/07-09:16:15.126 1864 Compacted 4@0 + 0@1 files => 10929584 bytes
+2016/10/07-09:16:15.128 1864 compacted to: files[ 0 2 2 0 0 0 0 ]
+2016/10/07-09:16:15.128 1864 Delete type=2 #606
+2016/10/07-09:16:15.128 1864 Manual compaction at level-0 from '\x00)\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00*\x00\x00\x00' @ 0 : 0; will stop at (end)
+2016/10/07-09:16:15.128 1864 Compacting 1@1 + 1@2 files
+2016/10/07-09:16:15.134 1864 Generated table #611@1: 42 keys, 66550 bytes
+2016/10/07-09:16:15.134 1864 Compacted 1@1 + 1@2 files => 66550 bytes
+2016/10/07-09:16:15.136 1864 compacted to: files[ 0 1 2 0 0 0 0 ]
+2016/10/07-09:16:15.136 1864 Delete type=2 #599
+2016/10/07-09:16:15.136 1864 Delete type=2 #598
+2016/10/07-09:16:15.137 1864 Delete type=2 #601
+2016/10/07-09:16:15.138 1864 Delete type=2 #610
+2016/10/07-09:16:15.138 1864 Delete type=2 #603
+2016/10/07-09:16:15.140 1864 Compacting 1@1 + 1@2 files
+2016/10/07-09:16:15.287 1864 Generated table #612@1: 23 keys, 10863948 bytes
+2016/10/07-09:16:15.287 1864 Compacted 1@1 + 1@2 files => 10863948 bytes
+2016/10/07-09:16:15.289 1864 compacted to: files[ 0 0 2 0 0 0 0 ]
+2016/10/07-09:16:15.289 1864 Delete type=2 #608
+2016/10/07-09:16:15.296 1864 Delete type=2 #596

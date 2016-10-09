@@ -1,0 +1,35 @@
+<!ENTITY download "Baixar">
+<!ENTITY play "Visualizar">
+<!ENTITY play.tooltip "Visualizar o vídeo antes de baixar">
+<!ENTITY itemMenu.copyLink "Copiar o link do arquivo de vídeo">
+<!ENTITY itemMenu.saveFromCache "Salvar o vídeo a partir do cache do navegador">
+<!ENTITY itemMenu.openPage "Abrir a página original do vídeo">
+<!ENTITY selectAll "Todos">
+<!ENTITY selectAll.tooltip "Seleciona todos os vídeos na lista">
+<!ENTITY selectNone "Nenhum">
+<!ENTITY selectNone.tooltip "Não seleciona nenhum dos vídeos da lista">
+<!ENTITY removeSelected "Remover os selecionados">
+<!ENTITY removeSelected.tooltip "Remove os vídeos selecionados da lista">
+<!ENTITY downloadSelected "Baixar os selecionados">
+<!ENTITY downloadSelected.tooltip "Baixa os vídeos selecionados">
+<!ENTITY options "Opções">
+<!ENTITY closeOptions "Fechar opções">
+<!ENTITY closePlayer "Fechar visualizador">
+<!ENTITY clearList "Limpar">
+<!ENTITY clearList.tooltip "Remove todos os itens da lista">
+<!ENTITY help "Como baixar vídeos?
+
+
+
+
+
+
+1. Assista o vídeo no site original.
+
+
+
+2. Quando começar, o NetVideoHunter captura o link do vídeo, e você pode vê-lo na lista no lado esquerdo da janela.
+
+
+
+3. Você pode baixar vídeos se clicar no botão Baixar da lista, ou pode visualizá-lo com o botão Visualizar para ter certeza que está baixando o vídeo correto.">

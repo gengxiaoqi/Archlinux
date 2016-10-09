@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "Google が提供する 1G の無料ストレージですばやく簡単に写真を共有できます。"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Picasa"
+   }
+}

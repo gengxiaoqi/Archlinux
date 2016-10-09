@@ -1,0 +1,22 @@
+<!ENTITY alwaysAsk "Her zaman nereye kaydedeceğini sor">
+<!ENTITY saveTo "Kaydet:">
+<!ENTITY chooseFolder "Klasör seç">
+<!ENTITY downloads "İndirilenler">
+<!ENTITY list "Liste">
+<!ENTITY removeAfterDownload "İndirmeye başladığında videoyu listeden sil">
+<!ENTITY removeAfterSiteClosed "Video ilgili bir sayfa veye sekme yoksa videoyu sil. 
+
+
+ Örneğin:Listede Youtube videoları varsa Youtube sayfası kapatıldıktan sonra onlar silinecek">
+<!ENTITY iconAppearance "Icon appearance">
+<!ENTITY inStatusbar "Show in statusbar">
+<!ENTITY inToolbar "Show in toolbar">
+<!ENTITY inContext "Show in context menu (when you right-clicking on a webpage)">
+<!ENTITY ignoreWebsites "Ignore websites">
+<!ENTITY ignoreWebsites.description "If you add the name of a website (for example: youtube.com) to this list then videos from this site will not be captured.">
+<!ENTITY add "Add">
+<!ENTITY windowMode "Window mode">
+<!ENTITY openInPopup "Open in popup window">
+<!ENTITY openInTab "Open in tab">
+<!ENTITY fileTypes "FileTypes">
+<!ENTITY enableSwf "Enable the capturing of SWF files">

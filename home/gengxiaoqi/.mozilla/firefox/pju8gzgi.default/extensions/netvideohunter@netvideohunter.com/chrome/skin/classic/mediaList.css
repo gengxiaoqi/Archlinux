@@ -1,0 +1,170 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#netvideohunterMediaList checkbox{
+	margin:0px;
+	padding:0px;
+	padding-left:4px;
+	width:15px;
+}
+
+#netvideohunterMediaList checkbox .checkbox-label-box{
+	-moz-appearance: none;
+	display:none;
+	border: none;
+}
+
+#netvideohunterMediaList{
+	-moz-binding: url("chrome://netvideohunter/content/mediaList.xml#medialistbox-base");
+
+}
+
+
+#netvideohunterMediaList richlistitem{
+	-moz-binding: url("chrome://netvideohunter/content/mediaList.xml#medialistitem-default");
+    padding:2px;
+    border-bottom:solid 1px #444444;
+
+}
+
+#netvideohunterMediaList richlistitem[selected="true"]{
+	background:Menu;
+	color:MenuText;
+}
+
+#netvideohunterMediaList richlistitem[checked="true"]{
+	background:Highlight !important;
+	color:HighlightText !important;
+}
+
+#netvideohunterMediaList richlistitem[downloadStarted="true"]{
+	color:#AAAAAA;
+}
+
+.mediaSize{
+	font-weight:bold;
+	font-size:11px;
+	text-align:right;
+}
+.mediaTitle{
+	font-size:14px;
+	font-weight:bold;
+}
+.mediaUrl{
+	font-size:11px;
+	font-weight:normal;
+	color:#888888 !important;
+}
+
+.listBoxBottomButton{
+	margin-left:0px;
+	margin-right:0px;
+	min-width:10px;
+}
+
+.mediaButton {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  font-size:11px;
+}
+
+
+
+.mediaButton > .button-box {
+  padding: 0 !important;
+}
+
+#htmlDiv{
+    text-align:center;
+    background:#213253;
+	overflow:hidden;
+}
+a{
+    color:#9cdb3c;
+    text-decoration:underline;
+}
+a:hover, a:active, a:focus{
+    color:#b3ff3f !important;
+
+}
+a:focus{
+    outline-color:#ffbc4b;
+    outline-style:dotted;
+    outline-width:1px;
+}
+a:visited{
+   color:#89bf37;
+}
+p{
+    margin:5px 0px 10px 0px;
+    padding:0px;
+    text-align:justify;
+}
+ul{
+    text-align:left !important;
+}
+li{
+    margin-bottom:10px;
+    text-align:left;
+}
+h1{
+    font-size:160%;
+    font-weight:normal;
+    margin:5px 0px 30px 0px;
+    color:#acea4c;
+}
+h2{
+    color:#acea4c;
+    font-size:140%;
+    font-weight:normal;
+    margin:5px 0px 15px 0px;
+
+}
+
+splitter grippy {
+  background-image: url("chrome://global/skin/splitter/grip-right.gif");
+}
+
+splitter[state="collapsed"] grippy {
+  background-image: url("chrome://global/skin/splitter/grip-left.gif");
+}
+
+.downloadButton{
+	font-weight:bold !important;
+}
+
+.playButton{
+	font-size:85% !important;
+}
+
+browser{
+	border-bottom:1px solid ThreeDShadow;
+}
+
+#browserButtonBar{
+	border-top:1px solid ThreeDHighlight;
+}
+
+#windowSplitter{
+	border:none;
+}
+
+#listButtons{
+	z-index:100000;
+	position:relative;
+}
+
+#netvideohunterWarning{
+	text-align:center;
+	padding:8px;
+	background:#FFFFAA;
+	font-size:130%;
+	cursor:pointer;
+	font-weight:bold;
+}
+
+
+

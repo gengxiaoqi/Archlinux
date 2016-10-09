@@ -1,0 +1,20 @@
+<!ENTITY download "Stáhnout">
+<!ENTITY play "Přehrát">
+<!ENTITY play.tooltip "Náhled videa před stažením">
+<!ENTITY itemMenu.copyLink "Kopírovat adresu souboru videa">
+<!ENTITY itemMenu.saveFromCache "Uložit video z vyrovnávací paměti">
+<!ENTITY itemMenu.openPage "Otevřít původní stránku videa">
+<!ENTITY selectAll "Vše">
+<!ENTITY selectAll.tooltip "Vybrat vše">
+<!ENTITY selectNone "Žádný">
+<!ENTITY selectNone.tooltip "Odznačit všechny videa">
+<!ENTITY removeSelected "Odebrat vybrané">
+<!ENTITY removeSelected.tooltip "Odebrat vybraná videa ze seznamu">
+<!ENTITY downloadSelected "Stáhnout vybrané">
+<!ENTITY downloadSelected.tooltip "Stáhnout vybraná videa">
+<!ENTITY options "Možnosti">
+<!ENTITY closeOptions "Zavřít možnosti">
+<!ENTITY closePlayer "Zavřít přehrávač">
+<!ENTITY clearList "Vyčistit">
+<!ENTITY clearList.tooltip "Odebrat vše">
+<!ENTITY help "Jak stahovat videa? 1.Spusťte video z původní stránky. 2.Po jeho spuštění NetVideoHunter zachytí odkaz a video uvidíte v seznamu v levé části okna. 3.Video můžete stáhnout kliknutím na tlačítko Stáhnout, nebo si jej nejprve prohlédnout pomocí tlačítka Přehrát, abyste si byli jisti, že stahujete správné video.">

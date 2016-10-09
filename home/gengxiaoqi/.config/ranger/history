@@ -1,5 +1,14 @@
 open with vlc
-help
 open_with vlc
+open gime
 open_with 
 delete
+hidden
+hel
+help
+set show_hidden true
+default_linemode 
+delete 
+open_with gimp
+open vlc
+

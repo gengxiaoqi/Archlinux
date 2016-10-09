@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://fvd.sync/skin/dialogs/fvd_sd_sync_simple_progress.css" type="text/css"?>
+<?xml-stylesheet href="chrome://fvd.sync/skin/icons.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://fvd.sync/locale/dialogs/fvd_sd_sync_simple_progress.dtd">
+
+<dialog
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&window.title;"
+	buttons="accept"
+	buttonalign="center"
+	buttonpack="center"	
+>
+
+	<script src="chrome://fvd.sync/content/dialogs/fvd_sd_sync_simple_progress.js"/>
+	
+	<vbox id="syncingBox" flex="2" align="center" class="head">
+		
+		<label id="progressMessage" value="&please_wait;"/>
+		<label id="progressMessageBackup" value="&please_wait_backup;" hidden="true"/>
+		<label id="progressMessageRestore" value="&please_wait_restore;" hidden="true"/>
+		<label id="progressMessageInitialization" value="&please_wait_initialization;" hidden="true"/>
+				
+		<hbox id="progressMeterParent" pack="center" flex="2">
+			<progressmeter mode="undetermined"/>	
+		</hbox>	
+		
+		<hbox id="detailedProgress" hidden="true">
+			<label value="&progress;"/><label class="value"/>
+		</hbox>
+		
+		<vbox id="unsorted-warning">
+		  <label value="&unsorted_msg_1;"/>
+      <label value="&unsorted_msg_2;"/>
+      <hbox>
+        <label value="&unsorted_msg_3;"/>
+        <label value="&unsorted_msg_read_more;" 
+          class="text-link"/>
+      </hbox>
+		</vbox>
+		
+	</vbox>	
+	
+	<vbox id="successBox" align="center" hidden="true">
+		
+		<label value="&success_text;"/>
+			
+	</vbox>
+	
+	<vbox id="errorBox" align="center" hidden="true">
+		
+		<label value="&error_text;"/>
+			
+	</vbox>
+		
+</dialog>

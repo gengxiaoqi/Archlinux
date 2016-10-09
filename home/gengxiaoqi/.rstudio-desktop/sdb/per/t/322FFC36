@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "od=NULL\nfor (i in 1:6){\n  stuff=paste(\"~/R_language/day\",i,\"_od.txt\",sep=\"\")\n  od=cbind(od,scan(paste(\"~/R_language/day\",i,\"_od.txt\",sep=\"\")))\n  print(i,stuff)\n}\nod\n\nmyv=1:10\nsum1=0\nfor(i in myv){\n  sum1=sum1+myv[i]\n}\nsum1\n\nlum=scan(\"~/R_language/luminescence.csv\")\nlum=matrix(lum,6,6)\nfor(i in seq(0,90,10)){\n  persp(lum,phi=30,theta=i,col=\"red\")\n  Sys.sleep(3)\n    \n}\n",
+    "created" : 1474875142446.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1629235349",
+    "id" : "322FFC36",
+    "lastKnownWriteTime" : 1474881784,
+    "last_content_update" : 1474881784242,
+    "path" : "~/R_language/20160926.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

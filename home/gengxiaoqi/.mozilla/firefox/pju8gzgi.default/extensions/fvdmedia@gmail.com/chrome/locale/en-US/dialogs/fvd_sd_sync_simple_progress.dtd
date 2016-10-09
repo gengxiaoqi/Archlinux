@@ -1,0 +1,17 @@
+<!ENTITY window.title "Please wait...">
+
+
+<!ENTITY please_wait "Sync is in progress. Please wait.">
+<!ENTITY please_wait_backup "Backup is in progress. Please wait.">
+<!ENTITY please_wait_restore "Restoring in progress. Please wait.">
+<!ENTITY please_wait_initialization "EverSync Bookmarks Initialization. Please wait.">
+
+<!ENTITY unsorted_msg_1 "Important, if you sync bookmarks between FireFox and Chrome!" >
+<!ENTITY unsorted_msg_2 "FireFox folder &quot;Unsorted&quot; won't be synced by Chrome browser," >
+<!ENTITY unsorted_msg_3 "but it will be synced by EverSync to FireFox." >
+<!ENTITY unsorted_msg_read_more "Read More &gt;&gt;">
+
+<!ENTITY success_text "Success!">
+<!ENTITY error_text "Failed!">
+
+<!ENTITY progress "Progress:">

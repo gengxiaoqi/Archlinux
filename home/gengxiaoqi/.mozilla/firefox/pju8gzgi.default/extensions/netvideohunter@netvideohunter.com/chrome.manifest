@@ -1,0 +1,32 @@
+content netvideohunter chrome/content/
+skin    netvideohunter classic/1.0 chrome/skin/classic/
+style chrome://global/content/customizeToolbar.xul chrome://netvideohunter/skin/overlay.css
+
+resource nvhlib nvhlib/
+# Firefox
+overlay chrome://browser/content/browser.xul chrome://netvideohunter/content/overlay.xul
+overlay chrome://navigator/content/navigator.xul chrome://netvideohunter/content/overlay.xul
+overlay chrome://songbird/content/xul/mainScriptsOverlay.xul chrome://netvideohunter/content/overlay.xul
+overlay chrome://emusic/content/startup.xul chrome://netvideohunter/content/overlay.xul
+
+# Locale
+locale netvideohunter en-US chrome/locale/en-US/
+locale netvideohunter es-ES chrome/locale/es-ES/
+locale netvideohunter hu chrome/locale/hu/
+locale netvideohunter de chrome/locale/de/
+locale netvideohunter fr chrome/locale/fr/
+locale netvideohunter it chrome/locale/it/
+locale netvideohunter gl chrome/locale/gl/
+locale netvideohunter pt-BR chrome/locale/pt-BR/
+locale netvideohunter tr-TR chrome/locale/tr-TR/
+locale netvideohunter zh-CN chrome/locale/zh-CN/
+locale netvideohunter zh-TW chrome/locale/zh-TW/
+locale netvideohunter ru-RU chrome/locale/ru-RU/
+locale netvideohunter cs chrome/locale/cs/
+locale netvideohunter sv-SE chrome/locale/sv-SE/
+locale netvideohunter sl-SL chrome/locale/sl-SL/
+
+
+
+
+

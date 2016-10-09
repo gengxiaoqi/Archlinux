@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!DOCTYPE bindings SYSTEM "chrome://netvideohunter/locale/mediaList.dtd">
+<bindings id="ignoreListBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+	<binding id="ignorelistbox-base" extends="chrome://global/content/bindings/richlistbox.xml#richlistbox">
+    <implementation>
+  		<field name="_data">null</field>	
+		<property name="data" >
+			<setter>
+				<![CDATA[
+					if(this._data){
+						this._data.removeEventListener("itemAdded",this.onItemAdded);
+						this._data.removeEventListener("itemRemoved",this.onItemRemoved);
+						this._data.removeEventListener("cleared",this.onListCleared);
+					}
+					this._data=val;
+					if(this._data){
+						this._data.addEventListener("itemAdded",this.onItemAdded,this);
+						this._data.addEventListener("itemRemoved",this.onItemRemoved,this);
+						this._data.addEventListener("cleared",this.onListCleared,this);
+					}
+					this.updateFromData();
+					return val;
+				]]>
+			</setter>
+			<getter>
+				<![CDATA[				
+					return this._data;
+				]]>
+			</getter>
+		</property>
+
+		<method name="removeAllDataListener">
+			<body>	
+				<![CDATA[
+					if(this._data){
+						this._data.removeEventListener("itemAdded",this.onItemAdded);
+						this._data.removeEventListener("itemRemoved",this.onItemRemoved);
+						this._data.removeEventListener("cleared",this.onListCleared);
+					}
+				]]> 
+			</body>
+		</method> 
+
+		<method name="onItemAdded">
+			<parameter name="event"/>
+			<body>	
+				<![CDATA[
+					this.addItem(event.item);
+				]]> 
+			</body>
+		</method> 		
+				
+		<method name="onItemRemoved">
+			<parameter name="event"/>
+			<body>	
+				<![CDATA[
+					this.removeItemById(event.item.id);
+				]]> 
+			</body>
+		</method> 
+		<method name="onListCleared">
+			<parameter name="event"/>
+			<body>	
+				<![CDATA[
+					this.removeAllItems();
+				]]> 
+			</body>
+		</method>
+
+		<method name="updateFromData">
+			<body>	
+				<![CDATA[
+					this.removeAllItems();		
+					this._data.forEach(function(item,i){
+						this.addItem(item,item.id);    
+					},this);
+				]]> 
+			</body>
+		</method> 		
+		
+		<method name="addItem">
+			<parameter name="item"/>
+			<body>	
+				<![CDATA[
+					var rli = document.createElement("ignorelistitem");			
+					rli.setAttribute("id",item['id']);						
+					this.appendChild(rli);
+					
+				]]> 
+			</body>		</method>  
+		
+		<method name="removeAllItems">
+			<body>	
+				<![CDATA[
+					while (this.childNodes.length > 0) {
+						this.removeChild(this.childNodes[0]);
+					}	
+				]]> 
+			</body>
+		</method> 
+		<method name="removeItemById">
+			<parameter name="id"/>
+			<body>	
+				<![CDATA[
+					for(i=0;i < this.childNodes.length;i++){
+						if(this.childNodes[i].getAttribute("id")==id){							
+							this.removeChild(this.childNodes[i]);
+						}
+					}
+				]]> 
+			</body>
+		</method> 
+		<destructor>
+			this.removeAllDataListener();
+		</destructor>
+    </implementation>
+  </binding>
+
+  <binding id="ignorelistitem-base" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
+	
+  </binding>
+  <binding id="ignorelistitem-default" extends="chrome://netvideohunter/content/ignoreList.xml#ignorelistitem-base">
+    <content>
+      <xul:hbox flex="1" pack="start" crop="none" >
+	      <xul:label xbl:inherits="value=id,tooltiptext=id" crop="right" class="ignoreItemTitle" flex="1"/> 
+		  <xul:button class="mediaButton ignoreDeleteButton" tooltiptext="Remove from the ignore list" image="chrome://netvideohunter/skin/deleteIcon13.gif" oncommand="var item=document.getBindingParent(this);item.parentNode.data.removeItem(item.id)"/>  
+      </xul:hbox>
+    </content>  
+  </binding>
+
+</bindings>

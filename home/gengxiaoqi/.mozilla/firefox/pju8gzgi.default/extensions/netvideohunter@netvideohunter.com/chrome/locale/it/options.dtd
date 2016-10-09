@@ -1,0 +1,20 @@
+<!ENTITY alwaysAsk "Chiedi sempre dove salvare i file">
+<!ENTITY saveTo "Salva nella seguente cartella: ">
+<!ENTITY chooseFolder "Sfoglia…">
+<!ENTITY downloads "Salvataggio dei file">
+<!ENTITY list "Lista dei file">
+<!ENTITY removeAfterDownload "Elimina i file dalla lista dopo l'inizio del download">
+<!ENTITY removeAfterSiteClosed "Elimina i file dalla lista quando non vi sono più finestre/schede aperte relative ai siti dei file. 
+ Es: se sono presenti nella lista file video di YouTube, questi verranno eliminati alla chiusura delle finestre/schede inerenti a YouTube">
+<!ENTITY iconAppearance "Visualizzazione degli elementi">
+<!ENTITY inStatusbar "Visualizza l'icona nella barra di stato">
+<!ENTITY inToolbar "Visualizza il pulsante nella barra degli strumenti">
+<!ENTITY inContext "Visualizza la voce di menu contestuale (clic con tasto destro nella pagina web)">
+<!ENTITY ignoreWebsites "Siti web non permessi">
+<!ENTITY ignoreWebsites.description "È possibile indicare i siti per i quali non verranno rilevati i file. Inserire il dominio del sito web da non permettere (es: youtube.com) e fare clic su Aggiungi">
+<!ENTITY add "Aggiungi">
+<!ENTITY windowMode "Apertura di NetVideoHunter">
+<!ENTITY openInPopup "Apri in una finestra separata">
+<!ENTITY openInTab "Apri in una scheda del browser">
+<!ENTITY fileTypes "Rilevamento dei file">
+<!ENTITY enableSwf "Rileva i file SWF nelle pagine web">

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://netvideohunter/locale/mediaList.dtd">
+<?xml-stylesheet href="chrome://global/skin/" type="text/css" ?>
+<?xml-stylesheet href="chrome://netvideohunter/skin/mediaList.css" type="text/css"?>
+<window
+	orient="vertical"
+	id="netvideohunterMediaListWin"
+	title="NetVideoHunter"
+	persist="screenX screenY width height windowState"
+	width="800"
+	height="600"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	onload="com.netvideohunter.downloader.MediaListWindow_Instance.onLoad(event);"
+	onunload="com.netvideohunter.downloader.MediaListWindow_Instance.onUnload(event);"
+	flex="1"
+	windowtype="netvideohunter"
+	>
+<html:head>
+<html:link rel="shortcut icon" href="chrome://netvideohunter/skin/netvideohunterIcon16.png"/>
+</html:head>
+<script type="application/x-javascript">
+   // init packages
+	if(!com) var com={};
+	if(!com.netvideohunter) com.netvideohunter={};
+	if(!com.netvideohunter.downloader) com.netvideohunter.downloader={};
+   Components.utils.import("resource://nvhlib/com/netvideohunter/downloader/MediaListWindow.js", com.netvideohunter.downloader);
+   Components.utils.import("resource://nvhlib/com/netvideohunter/downloader/Main.js",com.netvideohunter.downloader);
+   com.netvideohunter.downloader.MediaListWindow_Instance= new com.netvideohunter.downloader.MediaListWindow(com.netvideohunter.downloader.Main,window);
+
+</script>
+<script type="application/x-javascript" src="chrome://netvideohunter/content/js/com/netvideohunter/downloader/MediaList.js" />
+<script type="application/x-javascript" src="chrome://netvideohunter/content/js/com/netvideohunter/net/HttpRequest.js" />
+<script type="application/x-javascript" src="chrome://netvideohunter/content/js/com/netvideohunter/utils/Logger.js" />
+
+<menupopup id="itemMenu" onpopupshowing="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('onpopupshow');" onpopuphiding="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('onpopuphide');">
+		 <menuitem label="&itemMenu.copyLink;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('copy');" value="copy"/>
+		 <menuitem label="&itemMenu.saveFromCache;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('downloadcache');" value="downloadcache"/>
+		 <menuitem label="&itemMenu.openPage;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('openpage');" value="openpage"/>
+		 <!--<menuitem label="Play in external player" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.performCommand('externalPlay');" value="externalPlay"/>-->
+</menupopup>
+<label id="netvideohunterWarning" onclick="com.netvideohunter.downloader.Main.enabled=true;" hidden="true">NetVideoHunter is currently disabled click here to enable.</label>
+<hbox flex="1">
+	<vbox id="listbox" persist="width" flex="1" minwidth="50" width="300">
+		<richlistbox flex="1" id="netvideohunterMediaList" seltype="multiple">
+		</richlistbox>
+		<hbox id="listButtons" minwidth="50">
+			<button id="clearListButton" label="&clearList;" tooltiptext="&clearList.tooltip;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.main.mediaList.removeAll()" class="listBoxBottomButton" style="margin-left:3px"/>
+			<spacer flex="1"/>
+			<button id="selectAllButton" label="&selectAll;" tooltiptext="&selectAll.tooltip;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.onSelectAll(event)" class="listBoxBottomButton" />
+			<button id="selectNoneButton" label="&selectNone;" tooltiptext="&selectNone.tooltip;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.onSelectNone(event)"  class="listBoxBottomButton" hidden="true"/>
+			<button id="removeSelectedButton" label="&removeSelected;" tooltiptext="&removeSelected.tooltip;" oncommand="document.getElementById('netvideohunterMediaList').removeCheckedItemsFromData();" class="listBoxBottomButton" />
+			<button id="downloadSelectedButton" label="&downloadSelected;" tooltiptext="&downloadSelected.tooltip;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.downloadSelected();" class="listBoxBottomButton" style="margin-right:3px"/>
+
+		</hbox>
+
+	</vbox>
+	<splitter collapse="both" id="windowSplitter" resizebefore="closest" resizeafter="closest" tooltiptext="Resize" persist="state,substate">
+		 <grippy />
+    </splitter>
+	<vbox flex="1" style="overflow:auto;min-width:375px;height:100%;" persist="width" width="480" id="htmlbox" >
+			<browser id="homeBrowser" flex="1" type="content-primary" src="" message="true" contextmenu="contentAreaContextMenu" />
+			<hbox pack="right" id="browserButtonBar">
+				<spacer flex="1"/>
+				<button id="optionsButton" label="&options;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.onOptionsClick()" />
+				<button id="closeOptionsButton" label="&closeOptions;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.onCloseOptionsClick()" hidden="true" />
+				<button id="closePlayerButton" label="&closePlayer;" oncommand="com.netvideohunter.downloader.MediaListWindow_Instance.onClosePlayerClick()" hidden="true" />
+			</hbox>
+	</vbox>
+
+</hbox>
+
+</window>

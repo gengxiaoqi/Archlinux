@@ -1,0 +1,54 @@
+dialog{
+  padding: 3px;
+  min-width: 400px;
+}
+
+.head{
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+#errorBox{
+  color: red;
+}
+
+#successBox{
+  color: green;
+}
+
+#abortingBox label{
+  padding-left: 22px;
+  background: url(chrome://fvd.sync/skin/fvd.toolbar.download.ad_showing.gif) no-repeat;
+}
+
+#progressMeterParent{
+  margin: 5px;
+}
+
+
+#syncStatus{
+  padding: 5px;
+}
+
+#syncStatuses > hbox{
+  padding: 3px;
+  padding-left: 25px;
+  color: GrayText;
+  font-size: 14px;
+}
+
+#syncStatuses > hbox[status="active"]{
+  background: url(chrome://fvd.sync/skin/fvd.toolbar.download.ad_showing.gif) no-repeat;
+  color: WindowText;
+}
+
+#syncStatuses > hbox[status="done"]{
+  background: url(chrome://fvd.sync/skin/small_green_check.png) no-repeat;
+  color: WindowText;
+}
+
+#syncStatuses > hbox[status="error"]{
+  background: url(chrome://fvd.sync/skin/small_red_cross.png) no-repeat;
+  color: WindowText;
+}

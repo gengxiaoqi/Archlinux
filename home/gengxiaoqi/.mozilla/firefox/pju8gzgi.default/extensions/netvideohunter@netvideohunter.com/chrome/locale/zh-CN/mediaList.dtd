@@ -1,0 +1,20 @@
+<!ENTITY download "下载">
+<!ENTITY play "播放">
+<!ENTITY play.tooltip "下载前预览视频">
+<!ENTITY itemMenu.copyLink "复制视频文件链接">
+<!ENTITY itemMenu.saveFromCache "从浏览器缓存中保存视频">
+<!ENTITY itemMenu.openPage "打开视频原始页面">
+<!ENTITY selectAll "全选">
+<!ENTITY selectAll.tooltip "选择列表中的所有视频">
+<!ENTITY selectNone "取消选择">
+<!ENTITY selectNone.tooltip "取消选择列表中的视频">
+<!ENTITY removeSelected "移除所选">
+<!ENTITY removeSelected.tooltip "从列表中移除所选视频">
+<!ENTITY downloadSelected "下载所选">
+<!ENTITY downloadSelected.tooltip "下载所选视频">
+<!ENTITY options "选项">
+<!ENTITY closeOptions "关闭选项">
+<!ENTITY closePlayer "关闭播放器">
+<!ENTITY clearList "清除">
+<!ENTITY clearList.tooltip "从列表中移除所有项">
+<!ENTITY help "怎样下载视频？ 1.在原始网站播放视频。2.当播放开始后 NetVideoHunter 将捕捉视频链接，您能够在窗口的左侧列表中看到它。3.如果您点击列表中的下载按钮，您能够下载视频，您能通过播放按钮来预览视频来确保您正在下载正确的视频。">

@@ -1,0 +1,41 @@
+{
+   "625": {
+      "message": "Đang tải..."
+   },
+   "628": {
+      "message": "Cài đặt Scholar"
+   },
+   "853": {
+      "message": "Nút Google Scholar"
+   },
+   "854": {
+      "message": "Tra cứu các bài viết học thuật khi bạn duyệt web."
+   },
+   "855": {
+      "message": "Tra cứu các bài viết khi bạn duyệt web."
+   },
+   "859": {
+      "message": "Để tìm một bài viết khác, chọn tiêu đề của nó trên trang."
+   },
+   "860": {
+      "message": "Để tìm một bài viết, chọn tiêu đề của nó trên trang."
+   },
+   "861": {
+      "message": "Để tìm một bài viết khác, chọn và sao chép tiêu đề của nó trên trang."
+   },
+   "862": {
+      "message": "Để tìm một bài viết, chọn và sao chép tiêu đề của nó trên trang."
+   },
+   "920": {
+      "message": "Tìm kiếm"
+   },
+   "921": {
+      "message": "Không thể truy cập vào máy chủ."
+   },
+   "922": {
+      "message": "Mở kết quả trong tab mới"
+   },
+   "923": {
+      "message": "Không có kết quả nào cho tìm kiếm này."
+   }
+}

@@ -1,0 +1,20 @@
+<!ENTITY download "İndir">
+<!ENTITY play "Oynat">
+<!ENTITY play.tooltip "İndirmeden önce önizleme yap">
+<!ENTITY itemMenu.copyLink "Video linkini kopyala">
+<!ENTITY itemMenu.saveFromCache "Tarayıcı önbelleğinden video kaydet">
+<!ENTITY itemMenu.openPage "Videonun asıl sayfasını aç">
+<!ENTITY selectAll "Hepsi">
+<!ENTITY selectAll.tooltip "Listedekilerin hepsini seç">
+<!ENTITY selectNone "Hiçbiri">
+<!ENTITY selectNone.tooltip "Listedekilerin hiçbirini seçme">
+<!ENTITY removeSelected "Seçileni Sil">
+<!ENTITY removeSelected.tooltip "Seçilen video silinsin">
+<!ENTITY downloadSelected "Seçileni İndir">
+<!ENTITY downloadSelected.tooltip "Seçilen video indirilsin">
+<!ENTITY options "Seçenekler">
+<!ENTITY closeOptions "Seçenekleri kapat">
+<!ENTITY closePlayer "Oynatıcıyı kapat">
+<!ENTITY clearList "Temizle">
+<!ENTITY clearList.tooltip "Listedekilerin hepsini temizle">
+<!ENTITY help "Video nasıl indirilir? 1.Asıl sitesinde oynatarak. 2.Oynatmaya başladığında NetVideoHunter videolinkini yakalar ve listede sol taraftaki pencerede görebilirsin. 3.Listede İndire tıklayarak indirebilirsin veya Oynat tuşuyla önizleme yaparak doğru video indirdiğinden emin olursun.">

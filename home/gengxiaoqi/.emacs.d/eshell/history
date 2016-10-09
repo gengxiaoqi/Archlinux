@@ -4,3 +4,6 @@ cd Downloads/
 ls
 ls -a
 la
+adb device
+lsusb
+exit

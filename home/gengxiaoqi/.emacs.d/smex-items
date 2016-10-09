@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ shell
+ eshell
+ R
+ zone
  list-packages
  irc
  eval-region
- list-colors-display
- calc
- calendar
- tetris
 )
 
 ;; ----- smex-data -----
 (
- (R . 9)
+ (R . 12)
  (shell-command . 1)
  (list-packages . 9)
  (electric-pair-mode . 1)
@@ -27,8 +27,8 @@
  (autopair-mode . 1)
  (lisp-interaction-mode . 2)
  (imenu . 2)
- (shell . 2)
- (eshell . 1)
+ (shell . 5)
+ (eshell . 2)
  (mail . 2)
  (gnus . 2)
  (buffer-menu . 1)
@@ -40,4 +40,5 @@
  (list-colors-display . 1)
  (eval-region . 1)
  (irc . 1)
+ (zone . 2)
 )

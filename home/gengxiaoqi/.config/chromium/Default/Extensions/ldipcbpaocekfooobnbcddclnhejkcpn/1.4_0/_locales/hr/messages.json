@@ -1,0 +1,41 @@
+{
+   "625": {
+      "message": "Učitavanje..."
+   },
+   "628": {
+      "message": "Postavke Znalca"
+   },
+   "853": {
+      "message": "Gumb Google znalca"
+   },
+   "854": {
+      "message": "Potražite znanstvene članke dok pregledavate web."
+   },
+   "855": {
+      "message": "Potražite znanstvene radove dok pregledavate."
+   },
+   "859": {
+      "message": "Da biste pronašli neki drugi članak, odaberite njegov naslov na stranici."
+   },
+   "860": {
+      "message": "Da biste pronašli članak, odaberite njegov naslov na stranici."
+   },
+   "861": {
+      "message": "Da biste pronašli neki drugi članak, odaberite i kopirajte njegov naslov na stranici."
+   },
+   "862": {
+      "message": "Da biste pronašli članak, odaberite i kopirajte njegov naslov na stranici."
+   },
+   "920": {
+      "message": "Pretraži"
+   },
+   "921": {
+      "message": "Nije moguće pristupiti poslužitelju."
+   },
+   "922": {
+      "message": "Otvorite rezultate u novoj kartici"
+   },
+   "923": {
+      "message": "Nema rezultata za ovo pretraživanje."
+   }
+}

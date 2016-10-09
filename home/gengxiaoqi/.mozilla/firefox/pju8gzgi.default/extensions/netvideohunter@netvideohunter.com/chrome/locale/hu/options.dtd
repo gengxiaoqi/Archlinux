@@ -1,0 +1,19 @@
+<!ENTITY alwaysAsk "Mindig kérdezze meg hova menti a videókat">
+<!ENTITY saveTo "Mentse ide:">
+<!ENTITY chooseFolder "Válasszon könyvtárat">
+<!ENTITY downloads "Letöltés">
+<!ENTITY list "Lista">
+<!ENTITY removeAfterDownload "Törölje a videót a listából miután letöltődött">
+<!ENTITY removeAfterSiteClosed "Távolítsa el a videót a listából ha ma a hozzá kapcsolódó weblap már be van zárva. Például: ha vannak YouTube videók a listában, automatikusan el lesznek távolítva miután az összes Youtube ablakot és lapot bezárta.">
+<!ENTITY iconAppearance "Ikon megjelenése">
+<!ENTITY inStatusbar "Megjelenítés az állapotsorban">
+<!ENTITY inToolbar "Megjelenítés az eszköztárban">
+<!ENTITY inContext "Megjelenítés a jobbgombos menüben">
+<!ENTITY ignoreWebsites "Weboldal tiltólista">
+<!ENTITY ignoreWebsites.description "Ha hozzáad egy weboldalt ehhez a listához akkor erről az oldalról nem lesznek elkapva videók.">
+<!ENTITY add "Hozzáadás">
+<!ENTITY windowMode "Ablak mód">
+<!ENTITY openInPopup "Megnyitás ablakban">
+<!ENTITY openInTab "Megnyitás fülön">
+<!ENTITY fileTypes "Fájltípusok">
+<!ENTITY enableSwf "SWF fájltípus elkapásának engedélyezése">

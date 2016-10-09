@@ -1,0 +1,66 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#netvideohunterIgnoreList{
+	-moz-binding: url("chrome://netvideohunter/content/ignoreList.xml#ignorelistbox-base");
+	height:100px;
+}
+
+
+#netvideohunterIgnoreList ignorelistitem{
+	-moz-binding: url("chrome://netvideohunter/content/ignoreList.xml#ignorelistitem-default");
+    padding:0px;
+    border-bottom:solid 1px #BBBBBB;
+
+    
+}
+
+#netvideohunterIgnoreList ignorelistitem hbox{
+	margin:0px;
+	padding:0px;
+}
+
+#netvideohunterIgnoreList ignorelistitem[selected="true"]{
+	background:Menu;
+	color:MenuText;
+}
+
+#netvideohunterIgnoreList ignorelistitem[checked="true"]{
+	background:Highlight !important;
+	color:HighlightText !important;
+}
+
+#netvideohunterIgnoreList ignorelistitem[downloadStarted="true"]{
+	color:#AAAAAA;
+}
+.ignoreDeleteButton{
+
+	min-width:10px;
+	min-height:10px;
+	margin:2px;
+}
+
+.ignoreDeleteButton .button-box{
+	padding:0px;
+	margin:0px;
+	min-width:10px;
+	min-height:10px;
+}
+
+#addIgnoreItemButton image{
+	margin-right:5px;
+}
+
+.ignoreItemTitle{
+	margin-top:6px;
+	margin-left:5px;
+	padding:0px;
+}
+
+.caption-text{
+	font-weight:bold !important;
+}
+
+prefwindow, prefwindow > .paneDeckContainer, prefpane > .content-box, prefwindow[type="child"] > prefpane > .content-box {
+	overflow:auto;
+	-moz-box-flex:0;
+}

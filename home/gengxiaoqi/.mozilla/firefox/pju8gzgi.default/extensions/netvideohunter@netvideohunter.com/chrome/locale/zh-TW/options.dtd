@@ -1,0 +1,19 @@
+<!ENTITY alwaysAsk "總是詢問影片的儲存位置">
+<!ENTITY saveTo "儲存到：">
+<!ENTITY chooseFolder "選擇資料夾">
+<!ENTITY downloads "下載">
+<!ENTITY list "清單">
+<!ENTITY removeAfterDownload "下載開始後將影片從清單移除">
+<!ENTITY removeAfterSiteClosed "當相關視窗或分頁全部關閉時，將影片從清單移除。例：清單裡來自 YouTube 的影片在所有 YouTube 視窗和分頁都關閉之後就會被移除。">
+<!ENTITY iconAppearance "圖示顯示">
+<!ENTITY inStatusbar "顯示在狀態列">
+<!ENTITY inToolbar "顯示在工具列">
+<!ENTITY inContext "顯示在快顯功能表（網頁右鍵選單）">
+<!ENTITY ignoreWebsites "忽略網站">
+<!ENTITY ignoreWebsites.description "將網站（例：youtube.com）加入清單後，來自此網站的影片就不會被補捉。">
+<!ENTITY add "新增">
+<!ENTITY windowMode "視窗模式">
+<!ENTITY openInPopup "開啟在彈出視窗">
+<!ENTITY openInTab "開啟在分頁">
+<!ENTITY fileTypes "檔案類型">
+<!ENTITY enableSwf "啟用 SWF 檔案捕捉">

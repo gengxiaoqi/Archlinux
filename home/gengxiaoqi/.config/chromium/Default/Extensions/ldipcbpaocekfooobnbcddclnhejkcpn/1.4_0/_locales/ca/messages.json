@@ -1,0 +1,41 @@
+{
+   "625": {
+      "message": "S'està carregant..."
+   },
+   "628": {
+      "message": "Configuració de Google Acadèmic"
+   },
+   "853": {
+      "message": "Botó de Google Acadèmic"
+   },
+   "854": {
+      "message": "Cerqueu articles acadèmics mentre navegueu pel web."
+   },
+   "855": {
+      "message": "Cerqueu articles mentre navegueu."
+   },
+   "859": {
+      "message": "Per cercar un article diferent, seleccioneu-ne el títol a la pàgina."
+   },
+   "860": {
+      "message": "Per cercar un article, seleccioneu-ne el títol a la pàgina."
+   },
+   "861": {
+      "message": "Per cercar un article diferent, seleccioneu-ne i copieu-ne el títol a la pàgina."
+   },
+   "862": {
+      "message": "Per cercar un article, seleccioneu-ne i copieu-ne el títol a la pàgina."
+   },
+   "920": {
+      "message": "Cerca"
+   },
+   "921": {
+      "message": "No es pot accedir al servidor."
+   },
+   "922": {
+      "message": "Obre els resultats en una pestanya nova"
+   },
+   "923": {
+      "message": "No hi ha cap resultat per aquesta cerca."
+   }
+}

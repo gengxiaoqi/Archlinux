@@ -1,0 +1,33 @@
+{
+   "description": "",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzN3HcOoX9xmlfHAt0TnzcoKgQ6yi6wt9+3ueJufj0kQoogi1dYClOnhAr+Jv6rNN7iAgmt6gDtcSPAgm337Z9KyTFz064Cs1UFBF8bAxZ+cgvwhB6JPgrLWc3aoN4OvoEOShmiwwkT78tcSoC57KxTN13KDI5z6wTGmCgupPuViRKAsVU6i1BVT1tsBQgBtyFsKzRIcTa58absVaGYrQYBRrNaoW7TwWUSkR2IhDD47QfMxjRmjN+vZ4auXiwx5AY+75E9E3ZVexfCDjsaKuHpmIpmFrDO1oIqWbvgDV28XdS8hoM/NswYm1pFXg1RCcUk8cJMz1tP9J2ET06S6HwIDAQAB",
+   "manifest_version": 2,
+   "name": "Star Se7en",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 98, 98, 98 ],
+         "button_background": [ 0, 0, 0, 0 ],
+         "frame": [ 193, 229, 215 ],
+         "ntp_background": [ 255, 255, 255 ],
+         "ntp_text": [ 47, 47, 47 ],
+         "tab_background_text": [ 98, 98, 98 ],
+         "tab_text": [ 98, 98, 98 ],
+         "toolbar": [ 255, 255, 255 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_ntp_attribution": "images/theme_ntp_attribution.png",
+         "theme_ntp_background": "images/theme_ntp_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 0.6 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}

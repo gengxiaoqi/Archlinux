@@ -1,0 +1,12 @@
+#fvd_sync_MainButton
+{
+	list-style-image: url(chrome://fvd.sync/skin/main_button.png);
+	-moz-box-orient:horizontal;
+}
+
+toolbarpaletteitem[place="palette"] #fvd_sync_MainButton,
+#fvd_sync_MainButton[cui-areatype="menu-panel"]{
+  list-style-image: url(chrome://fvd.sync/skin/icon_32x32.png);
+}
+
+

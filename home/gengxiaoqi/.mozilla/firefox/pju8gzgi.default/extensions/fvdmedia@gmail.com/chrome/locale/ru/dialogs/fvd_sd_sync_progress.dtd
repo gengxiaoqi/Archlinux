@@ -1,0 +1,12 @@
+<!ENTITY window.title "Идёт синхронизация...">
+<!ENTITY button.try_again "Повторите снова">
+<!ENTITY button.close "Закрыть">
+<!ENTITY sync_success "Синхронизация успешна!">
+<!ENTITY sync_failed "Неудачная Синхронизация!">
+<!ENTITY aborting_sync "Синхронизация отменяется...">
+
+<!ENTITY syncing_status "Статус Синхронизации">
+<!ENTITY groups "Группы">
+<!ENTITY dials "Наборы">
+<!ENTITY apply_changes "Применить изменения">
+<!ENTITY close_when_finished "Закрыть по окончании">
