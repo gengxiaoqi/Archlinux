@@ -52,7 +52,7 @@
 * ttf-font-awesome
 * ttf-font-icon
 * xorg-xev
-* zatura
+* zathura
 * zathura-pdf-mupdf
 * virtualbox
 * refind-efi
