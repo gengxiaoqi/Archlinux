@@ -57,4 +57,7 @@
 * virtualbox
 * refind-efi
 * alsa-utils
-
+* screenfetch
+* bc
+* clac
+* 
