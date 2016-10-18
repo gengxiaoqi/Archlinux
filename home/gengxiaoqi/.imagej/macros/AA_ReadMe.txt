@@ -1,1 +1,0 @@
-/usr/share/imagej/macros/AA_ReadMe.txt

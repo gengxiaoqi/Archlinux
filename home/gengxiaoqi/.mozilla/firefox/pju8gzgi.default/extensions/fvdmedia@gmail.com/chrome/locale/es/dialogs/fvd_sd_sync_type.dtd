@@ -1,8 +1,0 @@
-<!ENTITY window.title "Seleccionar tipo de sincronización">
-<!ENTITY select_sync_type "Seleccionar tipo de sincronización">
-<!ENTITY merge.desc "Los datos del servidor y el ordenador se fusionarán. (Nota: El servidor tiene mayor prioridad.)">
-<!ENTITY merge "Fusionar datos locales y del servidor">
-<!ENTITY upload.desc "Copiar datos de tu ordenador al servidor">
-<!ENTITY upload "Sobrescribir datos en el servidor">
-<!ENTITY download.desc "Copiar datos del servidor a tu ordenador">
-<!ENTITY download "Sobrescribir datos locales">
