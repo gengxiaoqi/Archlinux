@@ -21,6 +21,7 @@
 * i3lock
 * i3status
 * i3blocks
+* i3-gaps
 * alsa-utils
 * xf86-video-intel
 * xf86-input-synaptics
@@ -51,6 +52,7 @@
 * networkmanager
 * ttf-font-awesome
 * ttf-font-icon
+* ttf-font-linux
 * xorg-xev
 * zathura
 * zathura-pdf-mupdf
@@ -60,4 +62,8 @@
 * screenfetch
 * bc
 * clac
+* noto-fonts
+* noto-fonts-cjk
+* noto-fonts-emoji
+* nototools
 * 
