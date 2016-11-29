@@ -66,4 +66,4 @@
 * noto-fonts-cjk
 * noto-fonts-emoji
 * nototools
-* 
+* cmus
