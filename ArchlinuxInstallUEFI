@@ -86,6 +86,7 @@ bootctl update
 #pacman -S grub
 #grub-install --target=i386-pc /dev/sdx
 #grub-mkconfig -o /boot/grub/grub.cfg
+#need ntfs-3g, otherwise failed to mount /boot/ (dual OS)
 
 nano /boot/loader/loader.conf
 #------------------------------
