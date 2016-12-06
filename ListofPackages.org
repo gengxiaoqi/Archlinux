@@ -51,7 +51,7 @@
 * dialog
 * networkmanager
 * ttf-font-awesome
-* ttf-font-icon
+* ttf-font-icons
 * ttf-font-linux
 * xorg-xev
 * zathura
