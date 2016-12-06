@@ -58,7 +58,6 @@
 * zathura-pdf-mupdf
 * virtualbox
 * refind-efi
-* alsa-utils
 * screenfetch
 * bc
 * clac
@@ -67,3 +66,4 @@
 * noto-fonts-emoji
 * nototools
 * cmus
+* sysstat
