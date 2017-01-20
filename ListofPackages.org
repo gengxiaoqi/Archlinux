@@ -67,3 +67,13 @@
 * nototools
 * cmus
 * sysstat
+* xbindkeys
+* rofi
+* openvpn
+* samba
+* cups
+* cifs-utils
+* fbset
+* sysstat
+* aspell
+* evtest
