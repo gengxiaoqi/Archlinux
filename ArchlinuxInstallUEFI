@@ -15,6 +15,7 @@ parted -a optimal /dev/sdx
 #sda4 /mnt/home/
 #------------------------------
 mklabel gpt
+#mklabel msdos <- BIOS
 (rm NUMBER)
 unit mib
 mkpart ESP fat32 1 513
