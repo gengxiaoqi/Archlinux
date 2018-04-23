@@ -86,6 +86,14 @@ bootctl update
 #for mbr
 #pacman -S grub
 #grub-install --target=i386-pc /dev/sdx
+
+#multiple partitions ERROR:
+#Nuke the gap between the boot sector and the first partition.
+# dd if=/dev/zero of=/dev/sdX seek=1 count=2047
+#That's for if the first partition starts at sector 2048. Some start earlier, especially on drives that were partitioned by Windows. To be sure, run
+# fdisk -l /dev/sdX
+#before starting and check to see where the first partition starts. Use count=S-1, where S is the start of the first partition.
+
 #grub-mkconfig -o /boot/grub/grub.cfg
 #need ntfs-3g, otherwise failed to mount /boot/ (dual OS)
 
