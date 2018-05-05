@@ -77,3 +77,4 @@
 * sysstat
 * aspell
 * evtest
+* Monaco (font fit screen)
