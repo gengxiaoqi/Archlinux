@@ -211,3 +211,5 @@ exit
 reboot
 #------------------------------
 #------------------------------
+
+timedatectl set-timezong Asia/Tokyo
