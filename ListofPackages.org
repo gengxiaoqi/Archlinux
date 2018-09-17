@@ -1,3 +1,4 @@
+* acpilight (xbacklight -inc 10 / -dec 20)[AUR]
 * htop
 * ranger
 * poppler
