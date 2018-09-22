@@ -27,6 +27,8 @@ mkpart primary ext4 29185 100%
 print #list the partition
 quit
 #------------------------------
+fdisk /dev/sdx
+#------------------------------
 
 #format the disk
 mkfs.fat -F32 /dev/sda1
@@ -45,9 +47,18 @@ mkdir -p /mnt/home
 mount /dev/sda4 /mnt/home
 mount -l #check
 
+# choose mirror, /etc/pacman.d/mirrorlist, put the 
 pacstrap -i /mnt base base-devel
+# failed to commit transaction(conflicting files)
+# --> delete /mnt/boot/vmlinnuz-linux
 
 genfstab -U -p /mnt >> /mnt/etc/fstab
+#-L       Use labels for source identifiers (shortcut for -t LABEL)
+ -p       Avoid printing pseudofs mounts (default behavior)
+ -t TAG   Use TAG for source identifiers
+ -U       Use UUIDs for source identifiers (shortcut for -t UUID)
+ -h       Print this help message
+ # https://git.archlinux.org/arch-install-scripts.git/tree/genfstab.in
 
 arch-chroot /mnt #/bin/bash
 
@@ -69,11 +80,20 @@ tzselect
 ln -s /usr/share/zoneinfo/ZONE/SUBZONE /etc/localtime
 
 hwclock -w -u
+# https://jlk.fjfi.cvut.cz/arch/manpages/man/hwclock.8
 
 (timedatectl set-ntp true) #enable and active network time synchronization
 
+#OPTIONAL, not necessary
 #create an initial ramdisk environment
 mkinitcpio -p linux
+
+#NETWORK
+cp /etc/netctl/examples/ethernet-dhcp /etc/netctl/network_Ethernet
+cp /etc/netctl/examples/wireless-wpa /etc/netctl/network_Wireless
+#change the interface with the right name in the files
+netctl enable network_Ethernet
+
 
 echo HOSTNAME > /etc/hostname
 nano /etc/hosts
@@ -112,6 +132,9 @@ linux /vmlinuz-linux
 initrd /initramfs-linux.img
 options root=PARTUUID=********-****-****-****-************ rw
 #------------------------------
+#Boot Order Changing
+#press 'd' on Windows in boot menu, make Windows by default
+
 
 exit
 
