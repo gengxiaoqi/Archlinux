@@ -1,3 +1,4 @@
+* bluez, bluez-util, pulseaudio-bluetooth, pulseaudio, alsa-utils, alsa-plugins, alsa-tools., hcitool
 * pkgfile (pkgfile --update)(pkgfile pacstrap)(pacman -S arch-install-scripts)
 * acpilight (xbacklight -inc 10 / -dec 20)[AUR]
 * htop
