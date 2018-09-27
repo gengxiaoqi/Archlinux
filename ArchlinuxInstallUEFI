@@ -47,7 +47,8 @@ mkdir -p /mnt/home
 mount /dev/sda4 /mnt/home
 mount -l #check
 
-# choose mirror, /etc/pacman.d/mirrorlist, put the 
+# choose mirror, /etc/pacman.d/mirrorlist, put the nearest one on the top!
+
 pacstrap -i /mnt base base-devel
 # failed to commit transaction(conflicting files)
 # --> delete /mnt/boot/vmlinnuz-linux
