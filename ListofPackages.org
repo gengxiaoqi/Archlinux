@@ -80,4 +80,4 @@
 * sysstat
 * aspell
 * evtest
-* Monaco (font fit screen)
+* Monaco (font fit screen) & ttf-monaco
