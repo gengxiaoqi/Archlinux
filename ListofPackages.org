@@ -1,3 +1,4 @@
+* (Shift+Insert = paste in xterm)
 * wps-office
 * bluez, bluez-util, pulseaudio-bluetooth, pulseaudio, alsa-utils, alsa-plugins, alsa-tools., hcitool
 * pkgfile (pkgfile --update)(pkgfile pacstrap)(pacman -S arch-install-scripts)
