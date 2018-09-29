@@ -86,3 +86,4 @@
 * aspell
 * evtest
 * Monaco (font fit screen) & ttf-monaco
+* nerd-fonts
