@@ -1,3 +1,5 @@
+* zsh
+* qbittorrent
 * (Shift+Insert = paste in xterm)
 * wps-office
 * bluez, bluez-util, pulseaudio-bluetooth, pulseaudio, alsa-utils, alsa-plugins, alsa-tools., hcitool
