@@ -1,4 +1,4 @@
-* tlp(power management) & acpi_call
+* tlp(power management) & acpi_call & tp_smapi (https://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html#installation)
 * volumeicon(.config/volumeicon/volumeicon)
 * zsh
 * qbittorrent
