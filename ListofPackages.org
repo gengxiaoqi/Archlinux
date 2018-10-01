@@ -1,3 +1,4 @@
+* tlp(power management)
 * volumeicon(.config/volumeicon/volumeicon)
 * zsh
 * qbittorrent
