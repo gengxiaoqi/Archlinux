@@ -1,4 +1,4 @@
-* tlp(power management)
+* tlp(power management) & acpi_call
 * volumeicon(.config/volumeicon/volumeicon)
 * zsh
 * qbittorrent
