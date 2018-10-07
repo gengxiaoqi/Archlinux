@@ -79,7 +79,7 @@ locale-gen
 tzselect
 
 ln -fs /usr/share/zoneinfo/ZONE/SUBZONE /etc/localtime
-hwclock --systoch --utc #-w -u
+hwclock --systohc --utc #-w -u
 # https://jlk.fjfi.cvut.cz/arch/manpages/man/hwclock.8
 
 (timedatectl set-ntp true) #enable and active network time synchronization
