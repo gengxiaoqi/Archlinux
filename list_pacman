@@ -46,7 +46,6 @@ rxvt-unicode
 screenfetch
 scrot
 sysstat
-sysstat
 terminus-font
 thunar
 tlp
@@ -67,7 +66,6 @@ wqy-zenhei
 xbindkeys
 xf86-input-synaptics
 xorg-server
-xorg-server-utils
 xorg-xev
 xorg-xinit
 xterm
