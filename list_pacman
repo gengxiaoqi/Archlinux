@@ -7,6 +7,7 @@ aspell
 bash-completion
 bzip2
 chromium
+chromium-dev
 cmus
 dialog
 dmenu
@@ -16,6 +17,7 @@ flashplugin
 gimp
 git
 goldendict
+google-chrome-dev
 gzip
 htop
 i3
