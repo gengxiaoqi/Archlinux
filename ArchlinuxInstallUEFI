@@ -152,6 +152,7 @@ ip link
 
 systemctl enable dhcpcd@INTERFACE.service
 systemctl start dhcpcd@INTERFACE.service
+dhcpcd # if ping temporary failure in name resolution
 
 nano /etc/sudoers
 #------------------------------
