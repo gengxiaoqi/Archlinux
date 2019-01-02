@@ -109,6 +109,7 @@ cp -r /windows/Windows/Fonts/ /usr/share/fonts/WindowsFonts
 chmod 755 /usr/share/fonts/WindowsFonts/*
 # Then regenerate the fontconfig cache:
 fc-cache -f
+fc-list :lang=zh
 
 #------------------------------
 #Power Management for ThinkPad
