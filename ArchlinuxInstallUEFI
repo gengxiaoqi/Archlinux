@@ -103,6 +103,13 @@ passwd
 bootctl install
 bootctl update
 
+# Using Windows Fonts
+mkdir /usr/share/fonts/WindowsFonts
+cp -r /windows/Windows/Fonts/ /usr/share/fonts/WindowsFonts
+chmod 755 /usr/share/fonts/WindowsFonts/*
+# Then regenerate the fontconfig cache:
+fc-cache -f
+
 #------------------------------
 #Power Management for ThinkPad
 #https://linrunner.de/en/tlp/tlp.html
