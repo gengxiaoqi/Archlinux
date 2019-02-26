@@ -103,38 +103,6 @@ passwd
 bootctl install
 bootctl update
 
-# Using Windows Fonts
-mkdir /usr/share/fonts/WindowsFonts
-cp -r /windows/Windows/Fonts/ /usr/share/fonts/WindowsFonts
-chmod 755 /usr/share/fonts/WindowsFonts/*
-# Then regenerate the fontconfig cache:
-fc-cache -f
-fc-list :lang=zh
-
-#------------------------------
-#Power Management for ThinkPad
-#https://linrunner.de/en/tlp/tlp.html
-#https://cnzhx.net/blog/power-management-and-battery-threshold-in-linux-on-t470s/
-sudo pacman -S tlp tlp-rdw
-sudo systemctl enable tlp.service
-sudo systemctl enable tlp-sleep.service
-sudo systemctl mask systemd-rfkill.service
-sudo systemctl mask systemd-rfkill.socket
-#------------------------------
-#for mbr
-#pacman -S grub
-#grub-install --target=i386-pc /dev/sdx
-
-#multiple partitions ERROR:
-#Nuke the gap between the boot sector and the first partition.
-# dd if=/dev/zero of=/dev/sdX seek=1 count=2047
-#That's for if the first partition starts at sector 2048. Some start earlier, especially on drives that were partitioned by Windows. To be sure, run
-# fdisk -l /dev/sdX
-#before starting and check to see where the first partition starts. Use count=S-1, where S is the start of the first partition.
-
-#grub-mkconfig -o /boot/grub/grub.cfg
-#need ntfs-3g, otherwise failed to mount /boot/ (dual OS)
-
 nano /boot/loader/loader.conf
 #------------------------------
 default Arch
@@ -150,10 +118,40 @@ linux /vmlinuz-linux
 initrd /initramfs-linux.img
 options root=PARTUUID=********-****-****-****-************ rw
 #------------------------------
+#for mbr
+#pacman -S grub
+#grub-install --target=i386-pc /dev/sdx
+#grub-mkconfig -o /boot/grub/grub.cfg
+#------------------------------
 #Boot Order Changing
 #press 'd' on Windows in boot menu, make Windows by default
+#------------------------------
+# Using Windows Fonts
+mkdir /usr/share/fonts/WindowsFonts
+cp -r /windows/Windows/Fonts/ /usr/share/fonts/WindowsFonts
+chmod 755 /usr/share/fonts/WindowsFonts/*
+# Then regenerate the fontconfig cache:
+fc-cache -f
+fc-list :lang=zh
+#------------------------------
+#Power Management for ThinkPad
+#https://linrunner.de/en/tlp/tlp.html
+#https://cnzhx.net/blog/power-management-and-battery-threshold-in-linux-on-t470s/
+sudo pacman -S tlp tlp-rdw
+sudo systemctl enable tlp.service
+sudo systemctl enable tlp-sleep.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+#------------------------------
+#multiple partitions ERROR:
+#Nuke the gap between the boot sector and the first partition.
+# dd if=/dev/zero of=/dev/sdX seek=1 count=2047
+#That's for if the first partition starts at sector 2048. Some start earlier, especially on drives that were partitioned by Windows. To be sure, run
+# fdisk -l /dev/sdX
+#before starting and check to see where the first partition starts. Use count=S-1, where S is the start of the first partition.
 
-
+#need ntfs-3g, otherwise failed to mount /boot/ (dual OS)
+#------------------------------
 exit
 
 umount -R /mnt
