@@ -119,9 +119,14 @@ initrd /initramfs-linux.img
 options root=PARTUUID=********-****-****-****-************ rw
 #------------------------------
 #for mbr
-#pacman -S grub
+#pacman -S grub #(os-prober)
 #grub-install --target=i386-pc /dev/sdx
 #grub-mkconfig -o /boot/grub/grub.cfg
+
+#for uefi
+#pacman -S grub #(dosfstools efibootmgr)
+# grub-install --target=x86_64-efi --efi-directory=<EFI 分区挂载点> --bootloader-id=GRUB
+# grub-mkconfig -o /boot/grub/grub.cfg
 #------------------------------
 #Boot Order Changing
 #press 'd' on Windows in boot menu, make Windows by default
