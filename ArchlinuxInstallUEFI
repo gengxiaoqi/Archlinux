@@ -266,6 +266,30 @@ grub-mkconfig -o /boot/grub/grub.cfg
 exit
 reboot
 #------------------------------
+timedatectl set-timezong Asia/Tokyo
+#------------------------------
+NetworkManager
+pacman -S networkmanager
+systemctl enable NetworkManager
+systemctl start NetworkManager
+systemctl status NetworkManager
+nmcli device status
+nmcli device wifi list
+nmcli device wifi connect "SSID" password "your_password"
+nmcli device wifi connect "SSID" password "your_password" ifname wlan0
+#check active connections
+nmcli connection show --active
+#disconnect
+nmcli device disconnect wlan0
+#connect to a wired network
+nmcli device connect eth0
+
+#launch the interface
+nmtui
+#If nmtui is not installed, you can install it via:
+pacman -S network-manager-applet
+#List all profiles
+nmcli connection show
 #------------------------------
 
-timedatectl set-timezong Asia/Tokyo
+
