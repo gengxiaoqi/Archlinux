@@ -1,0 +1,173 @@
+How to Enable and Use NetworkManager on Arch Linux
+Learn how to enable and use NetworkManager on Arch Linux.
+by İbrahim Korucuoğlu ( @siberoloji) | Sunday, April 13, 2025
+Tags:ArchlinuxHow-to Guides
+Categories:Arch Linux
+  5 minute read  
+
+Arch Linux is known for its minimalist and user-centric approach, which means users have full control over what software and services they install. When it comes to managing network connections, Arch offers multiple options—ranging from low-level tools like ip and dhcpcd to higher-level network managers like netctl and NetworkManager.
+
+Among these options, NetworkManager stands out as a modern, user-friendly, and feature-rich tool that simplifies the management of wired, wireless, VPN, and mobile broadband connections. Developed by Red Hat and widely adopted in distributions like Fedora, Ubuntu, and Manjaro, NetworkManager can also be used effectively on Arch Linux.
+
+In this guide, we’ll cover everything you need to enable and use NetworkManager on Arch Linux, including installation, configuration, and day-to-day usage.
+
+Why Use NetworkManager?
+Before diving into the technical steps, it’s worth understanding why NetworkManager might be the right choice for you:
+
+User-friendly CLI (nmcli) and GUI (nmtui, nm-applet, plasma-nm)
+Automatic connection management
+Support for Wi-Fi, Ethernet, VPN, and more
+Flexible profiles and connection priority
+Systemd integration
+Broad compatibility across desktop environments
+If you’re looking for a hassle-free network experience on your Arch Linux system—especially on laptops—NetworkManager is an excellent choice.
+
+Step 1: Remove Conflicting Network Tools
+Before installing NetworkManager, it’s important to disable and remove any conflicting network services, such as dhcpcd, netctl, or wicd.
+
+Check if conflicting services are enabled
+systemctl list-unit-files | grep enabled
+Disable conflicting services
+sudo systemctl stop dhcpcd
+sudo systemctl disable dhcpcd
+sudo systemctl stop netctl
+sudo systemctl disable netctl
+You can remove them with:
+
+sudo pacman -Rns dhcpcd netctl
+Note: This is optional. You can keep them installed, but they must not be active at the same time as NetworkManager.
+
+Step 2: Install NetworkManager
+NetworkManager is available in the official Arch repositories. You can install it using pacman:
+
+sudo pacman -S networkmanager
+This will also pull in some dependencies, including libnm.
+
+Step 3: Enable and Start NetworkManager
+Once installed, enable the NetworkManager service so it starts automatically on boot:
+
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
+Check its status to ensure it’s running:
+
+systemctl status NetworkManager
+You should see output indicating that the service is active and running.
+
+Step 4: Using NetworkManager via CLI (nmcli)
+NetworkManager includes a powerful command-line tool called nmcli. Let’s go through some common tasks using it.
+
+Show device and connection status
+nmcli device status
+Scan for Wi-Fi networks
+nmcli device wifi list
+Connect to a Wi-Fi network
+nmcli device wifi connect "SSID" password "your_password"
+You can also connect using the interface name explicitly:
+
+nmcli device wifi connect "SSID" password "your_password" ifname wlan0
+Check active connections
+nmcli connection show --active
+Disconnect from a network
+nmcli device disconnect wlan0
+Connect to a wired network
+Wired interfaces are usually managed automatically, but you can also set them up explicitly:
+
+nmcli device connect eth0
+Step 5: Using the Terminal User Interface (nmtui)
+For those who prefer an interactive text-based interface, nmtui is a great alternative to nmcli.
+
+Launch the interface
+nmtui
+You’ll see a menu with the following options:
+
+Activate a connection
+Set system hostname
+Edit a connection
+You can navigate using arrow keys and configure Wi-Fi, Ethernet, or VPN connections without needing to remember commands.
+
+If nmtui is not installed, you can install it via:
+
+sudo pacman -S network-manager-applet
+(Note: this package also installs the tray applet for graphical environments.)
+
+Step 6: NetworkManager in Desktop Environments
+If you use a graphical desktop environment, you can benefit from a GUI front-end for NetworkManager.
+
+GNOME
+GNOME has native support via gnome-control-center and the top bar network menu.
+
+KDE Plasma
+Install plasma-nm:
+
+sudo pacman -S plasma-nm
+This provides a system tray applet and network configuration module.
+
+XFCE/LXQt/Openbox
+Install network-manager-applet:
+
+sudo pacman -S network-manager-applet
+It shows a tray icon that allows you to manage connections easily.
+
+Step 7: Managing Connection Profiles
+Every time you connect to a network, NetworkManager creates a connection profile. You can manage these profiles with nmcli.
+
+List all profiles
+nmcli connection show
+Create a new profile manually
+nmcli connection add type wifi ifname wlan0 con-name mywifi ssid "MySSID" -- wifi-sec.key-mgmt wpa-psk wifi-sec.psk "mypassword"
+Modify a profile
+nmcli connection modify mywifi ipv4.method manual ipv4.addresses 192.168.1.100/24 ipv4.gateway 192.168.1.1
+Delete a profile
+nmcli connection delete mywifi
+This profile system is handy for switching between networks at work, home, or public hotspots.
+
+Step 8: VPN Support
+NetworkManager supports VPN connections through plugins. Popular options include:
+
+networkmanager-openvpn
+networkmanager-pptp
+networkmanager-l2tp
+networkmanager-strongswan
+Install OpenVPN support:
+
+sudo pacman -S networkmanager-openvpn
+After installation, you can import .ovpn files via:
+
+nmcli connection import type openvpn file /path/to/config.ovpn
+Or use a GUI like GNOME settings or nmtui to configure the VPN.
+
+Step 9: Autoconnect and Priority
+NetworkManager can automatically connect to saved profiles and allows you to set connection priority.
+
+Set a connection to autoconnect
+nmcli connection modify mywifi connection.autoconnect yes
+Set priority (higher number = higher priority)
+nmcli connection modify mywifi connection.autoconnect-priority 10
+This is particularly useful when you have multiple known Wi-Fi networks.
+
+Troubleshooting Tips
+If something doesn’t work, here are some common troubleshooting steps:
+
+Check device availability:
+
+nmcli device
+Restart the service:
+
+sudo systemctl restart NetworkManager
+Log output:
+
+journalctl -xeu NetworkManager
+Reset a misbehaving profile:
+
+nmcli connection delete <connection-name>
+Conclusion
+NetworkManager offers a modern and streamlined way to manage network connections on Arch Linux. Whether you’re a command-line enthusiast or prefer graphical tools, NetworkManager caters to a wide range of users and use cases.
+
+With support for Wi-Fi, Ethernet, VPNs, and even mobile broadband, NetworkManager is a versatile and robust choice for anyone seeking convenient network management. Once set up, it can handle almost everything automatically, making your Arch Linux experience smoother and more enjoyable—especially on laptops and mobile devices.
+
+Further Reading and Resources:
+
+NetworkManager Arch Wiki
+nmcli Manual
+nmtui Arch Wiki
+If you’re new to Arch or just want a reliable network management experience, enabling NetworkManager is a strong move that brings both power and ease of use.
