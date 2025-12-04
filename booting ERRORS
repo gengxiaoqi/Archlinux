@@ -1,0 +1,8 @@
+blacklist solve the intel hci ERROR
+
+#solve bluetooth ERROR while booting archlinux
+sudo vim /etc/modules-load.d/bluetooth.conf
+btusb
+bluetooth
+
+sudo mkinitcpio -P
