@@ -6,7 +6,8 @@ mount /nvme0n1p3 /mnt
 mount --mkdir /nvme1n1p1 /mnt/boot
 # 挂载启动目录/boot
 
-pacstrap -K /mnt base linux linux-firmware base-devel vim ranger networkmanager git wget htop efibootmgr 
+pacstrap -K /mnt base linux linux-firmware base-devel vi vim ranger networkmanager git wget htop btop efibootmgr zsh tmux ncdu fastfetch cmatrix cmus pipewire pipewire-alsa pipewire-pulse terminus-font 
+# noto-fonts-cjk ttf-font-awesome thunar sddm wofi moko brightnessctl foot sway swaybg swayidle swayimg swaylock swaync swayosd waybar
 # 这条命令的作用是向你挂载好的硬盘分区（/mnt）中安装最基本的系统组件。
 # -K: 这是一个非常重要的参数。它会将当前 Live 环境中的 软件包签名密钥（GPG Keys） 复制到新系统中。这样你进入新系统后，不需要重新初始化密钥就能直接使用 pacman 安装软件。
 # base: 基础软件包组。它包含了系统运行所必须的工具（如 bash、coreutils、iproute2 等），但不包含内核。
