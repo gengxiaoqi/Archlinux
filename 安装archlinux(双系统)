@@ -1,0 +1,126 @@
+lsblk #nvme1n1p1--winboot, nvme0n1p3--mnt
+# 列出所有硬盘及其分区情况
+
+mount /nvme0n1p3 /mnt
+# 挂载根目录/
+mount --mkdir /nvme1n1p1 /mnt/boot
+# 挂载启动目录/boot
+
+pacstrap -K /mnt base linux linux-firmware base-devel vim ranger networkmanager git wget htop efibootmgr 
+# 这条命令的作用是向你挂载好的硬盘分区（/mnt）中安装最基本的系统组件。
+# -K: 这是一个非常重要的参数。它会将当前 Live 环境中的 软件包签名密钥（GPG Keys） 复制到新系统中。这样你进入新系统后，不需要重新初始化密钥就能直接使用 pacman 安装软件。
+# base: 基础软件包组。它包含了系统运行所必须的工具（如 bash、coreutils、iproute2 等），但不包含内核。
+# linux: 这是 Arch Linux 的内核。没有它，系统就无法启动。
+# linux-firmware: 包含常见的硬件驱动固件（如显卡、网卡、声卡固件）。缺少它，很多硬件（尤其是 Wi-Fi）将无法正常工作。
+# base-devel: 包含了编译和构建软件所需的核心开发工具，但并不包含系统运行的基础组件（那是 base 的活）。
+
+genfstab -U /mnt >> /mnt/etc/fstab
+# 这条命令的作用是告诉新系统：“电脑里的这些分区，开机时分别应该挂载到哪个文件夹下面”。
+# genfstab: "Generate File System Table" 的缩写，意为“生成文件系统表”。
+# -U: 告诉脚本使用 UUID（通用唯一识别码）来标记分区。
+  # 为什么要用 UUID？ 传统的标记方式（如 /dev/sda1）在插入 U 盘或更换硬盘接口后可能会变动，导致系统找不到分区。UUID 是固定的，能保证引导极其稳定。
+# /mnt: 脚本会扫描当前 /mnt 目录下已经挂载好的分区情况。
+# >>: 这是重定向追加符号。它将脚本生成的文本内容“写入并附加”到指定文件的末尾。
+# /mnt/etc/fstab: 这是目标配置文件。系统启动时，内核会读取这个文件来挂载磁盘。
+
+arch-chroot /mnt
+# chroot (Change Root): 这是一个类 Unix 系统的标准命令，意为“改变根目录”。它会将进程及其子进程的根目录切换到你指定的文件夹。
+# arch-chroot: 这是 Arch Linux 提供的一个增强版脚本。它比标准的 chroot 更智能，因为它在切换根目录的同时，会自动帮你把 U 盘环境中的重要虚拟文件系统（如 /dev、/proc、/sys 和 /run）挂载到目标目录中。
+# /mnt: 这是你之前挂载硬盘分区的临时位置。
+
+  ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+  # ln (Link): 用于创建链接文件的命令。
+  # -s (Symbolic): 创建软链接（符号链接）。软链接类似于 Windows 的“快捷方式”，它指向原始文件的路径。
+  # -f (Force): 强制执行。如果 /etc/localtime 已经存在（通常安装时会有个默认值），-f 会先将其删除，然后再创建新的链接，确保命令不会因为文件已存在而报错。
+  # /usr/share/zoneinfo/: 存放所有时区定义的根目录。
+  # 这是系统读取当前时区的唯一标准位置。几乎所有的 Linux 程序（内核、数据库、日志服务等）在需要获取时间时，都会去查看 /etc/localtime 这个文件。
+  
+  hwclock --systohc
+  # 将系统时间同步到硬件时钟（BIOS 时间）。
+  # 将当前校准好的系统时间写入到主板硬件中，并自动生成 /etc/adjtime 文件。这个文件会记录硬件时钟偏差的调整信息。
+  
+  # timedatectl set-timezone Asia/Shanghai
+  # timedatectl set-ntp true
+  
+  vim /etc/locale.gen 
+  # 告诉系统使用哪种语言和字符集
+    -----------------
+    en_US.UTF-8
+    ja_JP.UTF-8
+    zh_CN.UTF-8
+    -----------------
+  locale-gen 
+  # 生成语言文件
+  
+  vim /etc/locale.conf
+  # 定义全局环境变量（如 LANG），告诉所有软件该以什么语言、字符编码、货币单位或时间格式运行。
+    ------------------
+    LANG=en_US.UTF-8
+    ------------------
+  
+  vim /etc/vconsole.conf
+  # 定义键盘布局（Keymap）和控制台字体。
+    --------------------
+    KEYMAP=us
+    # FONT=latarcyrheb-sun16
+    --------------------
+    # 键盘布局 (KEYMAP)：如果你使用的是标准美式键盘，通常不需要特意配置（默认就是 us）。但如果你用的是德语、法语键盘，就必须在这里指定，否则你输入的字符会和按键对不上。
+    # 字体 (FONT)：可以让你在黑框框里看到更清晰或者更大的字体。
+    
+  echo BULIBULI > /etc/hostname
+  # 设置主机名
+  
+  mkinitcpio -P
+  # 在 Linux 内核启动时，它其实非常“脆弱”：它甚至不知道如何读取你的 SSD 驱动器或加密分区。 initramfs（Initial RAM Filesystem）是一个小型内存文件系统。它包含了一组必要的驱动程序和脚本，作为内核与最终操作系统（根分区）之间的桥梁。
+  # mkinitcpio: 工具本身的名称。
+  # -P (--allpresets): 这是一个极其方便的参数，意为**“处理所有预设”**。
+    # 在 Arch 中，每安装一个内核（如 linux 或 linux-lts），系统都会在 /etc/mkinitcpio.d/ 目录下生成一个配置文件（Preset）。
+    # 使用 -P 会让工具扫描所有已安装的内核，并为它们分别生成对应的启动镜像（包括主镜像和回滚镜像）。
+  # 读取配置：查看 /etc/mkinitcpio.conf，确认需要加入哪些钩子（Hooks）和模块（Modules）。
+  # 收集驱动：根据配置，把硬盘控制器驱动（如 NVMe）、文件系统支持（如 Ext4/Btrfs）等打包。
+  # 压缩打包：将这些文件压缩成一个镜像文件（通常存放在 /boot/initramfs-linux.img）。
+  
+  passwd
+  # 设置root的密码
+  
+  #安装systemd-boot
+  bootctl install
+  # 此命令会执行以下操作：
+  # 将 systemd-boot 的 EFI 程序复制到 /boot/EFI/systemd/ 和 /boot/EFI/BOOT/。
+  # 在 NVRAM 中创建一个名为 "Linux Boot Manager" 的 UEFI 启动项。
+  # 生成 /boot/loader/loader.conf 主配置文件。
+  vim /boot/loader/loader.conf
+    --------------------------
+    default arch.conf         # default: 指向 entries/ 目录下对应的配置文件名（不带扩展名）。
+    timeout 3
+    editor no                 # editor: 设置为 no 可以防止在启动时通过编辑参数破解 root 权限，增加安全性。
+    console-mode max
+    --------------------------
+  blkid -s PARTUUID -o value /dev/nvme0n1p3 >> /boot/loader/entries/arch.conf #获取根分区的UUID
+  vim /boot/loader/entries/arch.conf # 创建启动项
+    --------------------------------
+    title Archlinux
+    linux /vmlinuz-linux
+    initrd /initramfs-linux.img
+    # initrd /intel-ucode.img       # 如果是AMD CPU则改为amd-ucode.img
+    options root=PARTUUID=****-****-****-**** rw
+    --------------------------------
+  bootctl list # 列出所有启动项
+  bootctl status # 查看状态
+  bootctl update # 更新systemd-boot
+  
+  #用efibootmgr创建启动项Linux Boot Manager(systemd-boot无法创建的情况)
+  sudo efibootmgr -c -d /dev/nvme1n1p1 -p 1 -l "\EFI\systemd\systemd-bootx64.efi" -L "Linux Boot Manager"
+  # sudo efibootmgr --create --disk /dev/sdX --part Y --loader /EFI/路径/文件名.efi --label "启动项名称" --unicode
+  # 参数详解：
+  # -c (--create): 创建新启动项。
+  # -d (--disk): 指定 EFI 分区所在的物理磁盘（如 /dev/nvme0n1 或 /dev/sda）。
+  # -p (--part): 指定 EFI 分区的编号（如果是第 1 个分区就填 1）。
+  # -l (--loader): 指定 .efi 文件的路径。注意： 路径必须使用反斜杠 \ 且相对于 EFI 分区的根目录。
+  # -L (--label): 在 BIOS 菜单中显示的名称。
+  # -u (--unicode): 传递额外的内核参数（如果直接引导内核的话）。
+  # 管理现有启动项
+  # 创建完成后，你可能需要调整它们：
+  # 查看当前列表： efibootmgr (直接输入命令即可)
+  # 更改启动顺序： 假设你想让 0001 号项排在第一位： sudo efibootmgr -o 0001,0000,0002
+  # 删除启动项： 如果你写错了，想删除 0002 号项： sudo efibootmgr -b 0002 -B
