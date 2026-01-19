@@ -1,0 +1,135 @@
+网络：NetWorkManager
+# 检查服务：systemctl status NetworkManager
+# 启动服务：systemctl enable --now NetworkManager
+# nmcli device wifi connect **** -a
+# 连接 Wi-Fi（如果还没连）：执行 nmtui 开启可视化连接界面。
+
+配置用户权限(sudo)
+# 添加用户：useradd -m -G wheel -s /bin/zsh bulibuli
+# 设置密码：passwd bulibuli
+# 赋予sudo权限：执行visudo，找到下面这一行并删掉前面的 # 注释： %wheel ALL=(ALL:ALL) ALL
+
+安装yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+安装显卡驱动
+# 3D 图形支持 (OpenGL/Vulkan)
+sudo pacman -S mesa vulkan-intel
+# 视频硬件加速 (非常重要，否则 Wayland 下浏览器看视频 CPU 占用极高)
+sudo pacman -S intel-media-driver libva-utils
+# Intel: sudo pacman -S mesa lib32-mesa
+# AMD: sudo pacman -S mesa lib32-mesa xf86-video-amdgpu
+# NVIDIA: sudo pacman -S nvidia nvidia-utils
+
+开启“早期微内核加载”(Early KMS) —— 关键步骤
+# 在 Wayland 环境下，为了让系统从启动的第一秒就获得正确的屏幕分辨率，并避免进入桌面时闪黑屏，建议开启 Early KMS：
+# 编辑配置文件：sudo nano /etc/mkinitcpio.conf
+# 找到 MODULES=(...) 这一行，添加 i915：
+# MODULES=(i915)
+# 重新生成镜像：sudo mkinitcpio -P
+
+屏幕缩放 (HiDPI)
+# 如果你使用的是高分屏（如 2K/4K 笔记本），Wayland 处理缩放比 X11 优秀得多。 在 Sway 配置文件中，你可以直接指定：
+vim ~/.config/sway/config
+  output <输出名称> scale 1.5
+
+浏览器硬件加速
+# 在 Wayland 下使用 Chrome 或 Firefox，即使装了驱动，默认也可能不调用 GPU 解码。
+# Firefox: 环境变量设置 MOZ_ENABLE_WAYLAND=1。
+# Chrome/Edge: 在地址栏输入 chrome://flags，搜索 Ozone 并将 Preferred Ozone platform 设为 Wayland。
+
+环境变量设置
+# 为了让各种开发工具（如 Qt/GTK 软件）原生运行在 Wayland 上而非通过 XWayland 转换，建议在 /etc/environment 中加入：
+# XDG_SESSION_TYPE=wayland
+# GDK_BACKEND=wayland
+# QT_QPA_PLATFORM=wayland
+
+检查是否在 Wayland 下正确调用了 Intel 显卡？
+# 安装工具：sudo pacman -S libva-utils intel-gpu-tools
+# 检查硬件加速状态： 执行 vainfo。 如果看到大量类似 VAEntrypointVLD 的列表，说明你的 Intel 视频加速已就绪。
+# 实时查看显卡负载： 执行 sudo intel_gpu_top。 打开网页视频或 Sway 界面时，你可以看到 Render/3D 和 Video 引擎的占用百分比。
+
+开启显示管理器 (登录界面)
+sudo pacman -S sddm
+sudo systemctl enable sddm
+
+中文环境优化
+# 进入图形界面后，你需要解决中文显示和输入问题：
+# 安装中文字体： sudo pacman -S wqy-microhei wqy-zenhei noto-fonts-cjk
+# 安装输入法（推荐 Fcitx5）： sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-configtool fcitx5-material-color
+# fcitx5-im: 基础包组（包含核心和主要的输入模块）。
+# fcitx5-chinese-addons: 包含拼音和五笔。
+# fcitx5-pinyin-zhwiki: (可选) 维基百科词库，让联想词更智能。
+# fcitx5-configtool: 图形化配置界面。
+# 配置 Locale：将 /etc/locale.conf 改为 LANG=zh_CN.UTF-8。
+sudo nvim /etc/environment
+# 在文件中添加以下内容：
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
+# 注意：在纯原生 Wayland 应用中，有些应用可能不再依赖 GTK_IM_MODULE 而是直接通过 Wayland 的输入协议，但为了兼容性，上述设置仍是必需的。
+# 编辑 ~/.config/sway/config，在文件末尾添加：
+exec fcitx5 -d
+# -d 参数表示以守护进程 (Daemon) 模式运行。
+
+# 如果你经常需要在 TTY 下长时间工作（比如没有图形界面的时候），建议把 终端字体 也调大一点，这样配合改好的 Ctrl 键，体验会好很多： 在 /etc/vconsole.conf 中添加：
+# FONT=ter-v32b  # 需要安装 terminus-font 包，这是公认 TTY 下最好看的字体之一
+# ter-v24b 的具体含义
+# 这是一种专为高分辨率屏幕设计的位图字体，拆解如下：
+# ter: 代表 Terminus 字体家族（这是 Linux TTY 下公认最清晰、阅读体验最好的字体之一）。
+# -v: 代表字符集编码。v 通常对应 Version 或特定的 VGA/Unicode 映射。
+# 24: 代表字号（Size）。在这里是 24 像素高。对于 1080p 或 2K 屏幕，24 或 28 的大小能让你看清文字，不至于眯着眼睛，最大32
+# b: 代表 Bold（加粗）。控制台字体通常有 n (normal) 和 b (bold) 之分。
+# 实时切换字体测试
+setfont ter-v24b
+setfont ter-v32b
+
+在TTY下把Capslock换成Control键，直接修改默认 US 布局
+# 如果你觉得上面的方法都太麻烦，可以直接去修改系统默认的 us 布局文件（虽然这种做法不那么“优雅”，但绝对有效）。
+# 找到默认布局文件： 通常在 /usr/share/kbd/keymaps/i386/qwerty/us.map.gz。
+# 解压并修改：
+cd /tmp
+gzip -d -c /usr/share/kbd/keymaps/i386/qwerty/us.map.gz > us_fixed.map
+# 编辑 us_fixed.map： 找到 keycode 58 = Caps_Lock，改为 keycode 58 = Control。
+# 替换回系统目录：
+gzip us_fixed.map
+sudo cp us_fixed.map.gz /usr/share/kbd/keymaps/i386/qwerty/us.map.gz
+# 然后在 /etc/vconsole.conf 中保持 KEYMAP=us 即可。
+# 为了确保在系统启动的最早期阶段就加载这个配置，必须更新 initramfs:
+sudo mkinitcpio -P
+reboot
+# 针对 Sway 环境（Wayland 设置）
+# 当你输入 sway 进入桌面后，Sway 会接管键盘驱动，不再理会 TTY 的设置。你需要修改 Sway 的配置文件：
+# 编辑配置：nvim ~/.config/sway/config
+# 添加输入规则：
+# 代码段
+# input "type:keyboard" {
+#     xkb_options ctrl:nocaps
+# }
+# 如果你想让左 Ctrl 变成 Caps Lock（即交换），可以使用 ctrl:swapcaps。
+# 重载配置：按下 $mod+Shift+c 立即生效。
+
+tmux 是现代 Linux 用户的首选。它不仅能让你在 TTY 里横向、纵向分屏，还能让你在掉线或退出后，重新连接并找回之前的会话。
+# 常用快捷键（默认前缀键是 Ctrl+b）：
+# 水平分屏：Ctrl+b 然后按 "
+# 垂直分屏：Ctrl+b 然后按 %
+# 切换窗口：Ctrl+b 然后按 方向键
+# 关闭当前分屏：输入 exit 或 Ctrl+d
+# 调整分屏大小：按住 Ctrl+b 的同时按 方向键
+
+
+安装桌面环境 (DE) 或窗口管理器 (WM)
+sudo pacman -S sway foot waybar wofi
+
+完整的 PipeWire 音频方案
+# 为了在 Sway 下获得最佳体验，建议一次性装齐：
+sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
+# pipewire-pulse: 替换老旧的 PulseAudio。
+# pipewire-alsa: 让只支持 ALSA 的老软件也能发声。
+# wireplumber: 必装，它是 PipeWire 的“大脑”，负责自动连接你的耳机和扬声器。
+# 💡 一个有用的小工具
+# 装完之后，如果你想看看音频是怎么流动的（类似于连线），可以装个图形化工具： sudo pacman -S qpwgraph 在 Sway 里打开它，你能看到非常直观的音频接线图。
