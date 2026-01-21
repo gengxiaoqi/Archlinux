@@ -121,7 +121,6 @@ tmux 是现代 Linux 用户的首选。它不仅能让你在 TTY 里横向、纵
 # 关闭当前分屏：输入 exit 或 Ctrl+d
 # 调整分屏大小：按住 Ctrl+b 的同时按 方向键
 
-
 安装桌面环境 (DE) 或窗口管理器 (WM)
 sudo pacman -S sway foot waybar wofi
 
@@ -133,3 +132,19 @@ sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 # wireplumber: 必装，它是 PipeWire 的“大脑”，负责自动连接你的耳机和扬声器。
 # 💡 一个有用的小工具
 # 装完之后，如果你想看看音频是怎么流动的（类似于连线），可以装个图形化工具： sudo pacman -S qpwgraph 在 Sway 里打开它，你能看到非常直观的音频接线图。
+
+waybar自动隐藏，背景透明，显示信息设置
+
+foot背景透明
+
+vim设置
+
+安装clash-verge-rev-bin并设置
+
+安装yay
+
+设置arhlinuxcn库
+
+安装各种字体
+
+
