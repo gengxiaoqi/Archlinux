@@ -133,18 +133,197 @@ sudo pacman -S pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber
 # 💡 一个有用的小工具
 # 装完之后，如果你想看看音频是怎么流动的（类似于连线），可以装个图形化工具： sudo pacman -S qpwgraph 在 Sway 里打开它，你能看到非常直观的音频接线图。
 
-waybar自动隐藏，背景透明，显示信息设置
+waybar自动隐藏，背景透明，显示信息设置,.config/waybar/config
 
-foot背景透明
+foot背景透明,.config/foot/foot.ini
 
-vim设置
+vim设置,.vimrc
 
-安装clash-verge-rev-bin并设置
+设置.zshrc
 
-安装yay
-
+安装yay,添加中国源并pacman -S yay
 设置arhlinuxcn库
 
 安装各种字体
 
+设置锁屏，swaylock-effects
+1. 安装
+确保你安装的是增强版。
+    Arch Linux: paru -S swaylock-effects-git
+2. 高颜值配置模板
+请将以下代码放入你的 ~/.config/sway/config。我为你调校了一组非常现代化的参数：
+Bash
+# 定义高颜值锁屏命令
+set $lock_cmd swaylock \
+    --screenshots \
+    --clock \
+    --indicator \
+    --indicator-radius 100 \
+    --indicator-thickness 7 \
+    --effect-blur 7x5 \
+    --effect-vignette 0.5:0.5 \
+    --ring-color bb00cc \
+    --key-hl-color 880033 \
+    --text-color ffffff \
+    --line-color 00000000 \
+    --inside-color 00000088 \
+    --separator-color 00000000 \
+    --fade-in 0.2
+# 快捷键锁定
+bindsym $mod+l exec $lock_cmd
 
+# 配合 swayidle 实现自动锁定
+exec swayidle -w \
+    timeout 300 '$lock_cmd' \
+    timeout 600 'swaymsg "output * power off"' \
+    resume 'swaymsg "output * power on"' \
+    before-sleep '$lock_cmd'
+3. 参数深度解析（你可以按需微调）
+    --screenshots: 抓取当前屏幕作为背景。
+    --effect-blur 7x5: 核心魔术。7 是模糊半径，5 是迭代次数。数值越大越模糊，但也越吃资源。
+    --effect-vignette 0.5:0.5: 加上暗角效果，让中间的解锁圆环和时钟更突出。
+    --clock: 在屏幕上显示时间。
+    --indicator: 显示那个会随敲击闪烁的圆环。
+    --fade-in 0.2: 增加 0.2 秒的淡入动画，避免闪烁感，显得更高级。
+    颜色代码 (RGBA): 例如 00000088，最后两位 88 代表透明度。
+4. 常见问题：锁屏背景变黑？
+如果你执行 $lock_cmd 后背景是黑的，通常是因为 swaylock-effects 没能成功截图。
+    解决方法：确保你安装了 grim（Sway 的截图工具），有些发行版的 effects 版本依赖它来获取背景。
+5. 最终效果预览
+当你按下 $mod+L：
+    当前的桌面会瞬间模糊成毛玻璃。
+    四周会稍微变暗（暗角）。
+    屏幕中心出现一个精致的时钟和圆环。
+    敲击键盘时，圆环会有色彩反馈。
+需要我帮你把“锁定前屏幕变暗”那个预警功能也整合进这个 effects 版本里吗？
+为了实现这个功能，你需要安装一个小工具 brightnessctl（用于控制亮度）。
+最终集成版配置
+请将以下内容替换或添加到你的 ~/.config/sway/config 中：
+Bash
+### --- 智能电源管理与高颜值锁屏 --- ###
+# 1. 定义锁屏样式 (swaylock-effects)
+set $lock_cmd swaylock \
+    --screenshots \
+    --clock \
+    --indicator \
+    --indicator-radius 100 \
+    --indicator-thickness 7 \
+    --effect-blur 7x5 \
+    --effect-vignette 0.5:0.5 \
+    --ring-color bb00cc \
+    --key-hl-color 880033 \
+    --text-color ffffff \
+    --line-color 00000000 \
+    --inside-color 00000088 \
+    --separator-color 00000000 \
+    --fade-in 0.3
+# 2. 自动化逻辑 (swayidle)
+# 注意：使用 -n 参数可以在恢复时自动还原亮度
+exec swayidle -w \
+    timeout 270 'brightnessctl -s set 10%' resume 'brightnessctl -r' \
+    timeout 300 '$lock_cmd' \
+    timeout 600 'swaymsg "output * power off"' \
+    resume 'swaymsg "output * power on"' \
+    before-sleep '$lock_cmd'
+# 3. 手动锁定快捷键
+bindsym $mod+l exec $lock_cmd
+逻辑解析：
+    4.5 分钟 (270s)：系统发现你没动，brightnessctl 会把亮度降到 10%。如果你这时动一下鼠标，亮度会立刻恢复（resume），避免了直接锁屏的尴尬。
+    5 分钟 (300s)：如果你还没理它，系统会执行 $lock_cmd，屏幕瞬间变幻为毛玻璃时钟界面。
+    10 分钟 (600s)：显示器彻底断电进入省电模式。
+    合盖/休眠前：确保无论如何都会先锁定，保护隐私。
+避坑小贴士：
+    权限配置：brightnessctl 可能需要你加入 video 用户组才能免 sudo 运行：
+    Bash
+    sudo usermod -aG video $USER
+    (修改组后通常需要重新登录系统才生效)
+    笔记本用户：如果你是台式机且显示器不支持 DDC/CI 调光，brightnessctl 可能无效。如果无效，你可以把第 270s 的动作换成其他提醒，或者直接删掉那一行。
+
+
+自动隐藏鼠标
+1. 核心工具：swayidle
+swayidle 是 Sway 原生的闲置管理工具。它不只是用来锁屏的，它的逻辑是：“当 [事件发生] 时，执行 [这条命令]”。
+2. 实现“锁屏时强制隐藏鼠标”
+通常锁屏时（如使用 swaylock），如果鼠标指针停在屏幕中间会非常碍眼。你可以在 Sway 配置文件中这样写：
+Bash
+exec swayidle -w \
+    timeout 300 'swaymsg "seat * hide_cursor 1"' \
+    resume 'swaymsg "seat * hide_cursor 5000"'
+逻辑拆解：
+timeout 300: 当你 300 秒（5 分钟）没动电脑时。
+swaymsg "seat * hide_cursor 1": 立即执行命令，将隐藏延迟改为 1 毫秒（相当于视觉上的瞬间消失）。
+resume: 当你重新移动鼠标或敲击键盘唤醒系统时。
+swaymsg "seat * hide_cursor 5000": 将延迟恢复到正常的 5 秒。
+
+
+多显示器设置
+确保你的 ~/.config/kanshi/config 结构正确。一个典型的双屏自动切换配置应该是这样的：
+代码段
+# 只有笔记本屏幕时
+profile {
+    output eDP-1 enable mode 1920x1080 position 0,0
+}
+# 实验室外接 HDMI 屏幕时
+profile {
+    output eDP-1 enable mode 1920x1080 position 0,0
+    output HDMI-A-1 enable mode 2560x1440 position 1920,0
+}
+自动启动：在 ~/.config/sway/config 中加入：
+代码段
+exec kanshi
+
+
+电源键及合盖设置
+通过 logind 全局配置（最推荐）
+如果你希望无论是否进入 Sway，电源键的行为都保持一致（例如：按下即休眠），这是最稳妥的方法。
+    编辑配置文件： 使用 sudo 权限打开 /etc/systemd/logind.conf。
+    修改相关参数： 找到以下几行，取消注释（去掉 #）并修改为你想要的行为：
+        HandlePowerKey=suspend （按下电源键时休眠）
+        HandleLidSwitch=suspend （合上盖子时休眠）
+    应用配置： 执行以下命令重启服务（注意：这可能会导致当前的登录会话短暂重连）：
+    Bash
+    sudo systemctl restart systemd-logind
+    可选值： ignore (忽略), poweroff (关机), reboot (重启), halt (停止), suspend (待机/休眠到内存), hibernate (休眠到硬盘), lock (锁屏)。
+
+
+安装clash-verge-rev-bin并设置
+在 Arch Linux (Sway) 环境下，clash-verge-rev-bin 无法安装 TUN 模式通常是因为权限限制或服务模式（Service Mode）未正确配置。
+由于 Sway 是 Wayland 协议，有时 GUI 触发的 root 权限请求（polkit）可能无法弹出，导致“安装服务”静默失败。你可以按照以下步骤手动修复。
+方法一：手动安装服务（推荐）
+这是解决“点击安装没反应”或“安装失败”最彻底的方法。
+    停止应用：彻底关闭 Clash Verge Rev。
+    执行安装脚本： 该软件包通常自带了安装服务的脚本，直接通过终端运行：
+    sudo clash-verge-service-install
+    启动并启用服务：
+    sudo systemctl enable --now clash-verge-service
+    重启应用：再次进入设置，你会发现“服务模式”已显示为“已安装”，此时即可开启 TUN 模式。
+最简单的方法：使用 Sway 配置启动
+编辑你的 Sway 配置文件 ~/.config/sway/config，在文件末尾添加一行：
+代码段
+# 启动 Clash Verge
+exec clash-verge
+如何让它“后台”启动？
+Clash Verge 本身支持“启动时最小化”。
+    打开 Clash Verge 界面。
+    进入 Settings (设置)。
+    找到 Start on Login (开机自启) 和 Start Minimized (启动时最小化) 并开启。
+    这样 Sway 启动它时，它会自动进入系统托盘，而不会弹出一个大窗口挡住你。
+
+
+配置 Shell 启动 Sway
+自动登录后，系统会停在 TTY1 的 shell 提示符处。我们需要在 shell 的初始化文件中加入逻辑：如果是 TTY1 且没有显示环境，则启动 Sway。
+根据你使用的 Shell，修改对应文件：
+如果你使用 Zsh (推荐)
+编辑 ~/.zprofile (或 ~/.zshrc)：
+Bash
+# 自动启动 Sway
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
+如果你使用 Bash
+编辑 ~/.bash_profile：
+Bash
+if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
+注意：使用 exec sway 而不是直接写 sway。这样当你说“退出 Sway”时，系统会直接退出登录回到 TTY，而不是停留在 shell 里，更加安全且优雅。
