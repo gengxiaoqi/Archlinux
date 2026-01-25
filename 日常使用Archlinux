@@ -494,3 +494,67 @@ sudo pacman -S python-gobject
 Bash
 powerprofilesctl list
 
+
+麦克风控制
+方案 A：使用 wpctl (PipeWire 原生)
+这是目前最现代的方法，不需要依赖旧的 PulseAudio 协议。
+功能	命令
+切换静音	wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+增加音量	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+
+减小音量	wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-
+解决问题
+1. 修正命令参数
+在 wpctl 中，默认麦克风的正确写法通常是 @DEFAULT_AUDIO_SOURCE@。
+请尝试执行这个更准确的命令：
+Bash
+wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+注：如果你写的是 @DEFAULT_SOURCE@，某些版本的 PipeWire 可能会由于无法解析而报错或无反应。
+2. 解决 RTKit 警告（让系统更稳定）
+虽然这些警告不一定会阻止命令运行，但解决掉它们能让音频性能更好（减少爆音、延迟）。
+解决方法：安装并启动 RTKit
+    安装：
+    Bash
+    sudo pacman -S rtkit
+    启动并设置开机自启：
+    Bash
+    sudo systemctl enable --now rtkit-daemon.service
+完成后再次执行 wpctl，那两条警告应该就消失了。
+3. 检查命令是否真的执行成功了？
+即便有警告，命令可能已经生效了。你可以通过以下命令检查麦克风的当前状态：
+Bash
+wpctl get-volume @DEFAULT_AUDIO_SOURCE@
+    如果显示 Volume: 0.50 [MUTED]，说明已经成功静音。
+    如果显示 Volume: 0.50，说明是开启状态。
+4. 深度排查：为什么按下按键没反应？
+如果手动输入上面的命令可以控制麦克风，但按键依然没反应，那问题出在 Sway 的按键映射上：
+    确认按键代号： 有些笔记本的麦克风键可能不叫 XF86AudioMicMute。请运行 wev，按下该键，看 sym: 后面跟着的到底是什么字符串。
+    Sway 配置刷新： 修改 ~/.config/sway/config 后，务必按下 $mod+Shift+c。
+    权限问题： 确保你的用户在 audio 组中（虽然现代 Arch/PipeWire 通常不需要，但可以作为保底排查）：
+    Bash
+    sudo usermod -aG audio $USER
+开机默认关闭麦克风
+编辑 ~/.config/sway/config，在文件末尾添加：
+代码段
+# 开机自动静音默认麦克风
+exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ 1
+    1 代表静音（Mute），0 代表取消静音（Unmute）。
+    这样每次你登录进入 Sway 桌面时，麦克风都会被强制设为静音状态。
+
+
+开机禁用摄像头
+在 Linux 系统中（尤其是 Arch Linux），控制摄像头最彻底且安全的方法是利用内核模块 (Kernel Modules)。
+由于摄像头通常由 uvcvideo 驱动程序控制，你可以通过配置内核参数，在开机时禁用该驱动，或者将其列入黑名单。
+以下是几种方案，按推荐程度排序：
+方案一：使用内核模块黑名单（最推荐，物理级禁用）
+这种方法会让系统在开机时不加载摄像头驱动，任何软件（包括浏览器、Zoom等）都检测不到摄像头的存在。
+    创建黑名单配置文件： 使用 sudo 权限创建一个配置文件：
+    Bash
+    sudo nano /etc/modprobe.d/disable-camera.conf
+    写入以下内容：
+    Plaintext
+    blacklist uvcvideo
+    如何临时恢复： 如果你偶尔需要用摄像头，不需要删掉文件，只需手动加载驱动即可：
+    Bash
+    sudo modprobe uvcvideo
+    用完后想再次关闭：sudo modprobe -r uvcvideo。
+
