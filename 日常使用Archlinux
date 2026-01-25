@@ -466,3 +466,31 @@ if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi
 注意：使用 exec sway 而不是直接写 sway。这样当你说“退出 Sway”时，系统会直接退出登录回到 TTY，而不是停留在 shell 里，更加安全且优雅。
+
+
+1. 现代简约派：power-profiles-daemon
+这是目前 GNOME 和 KDE 默认使用的方案，也是最符合现代硬件（尤其是 Intel/AMD 的 P-State）标准的。它提供“节能”、“平衡”、“性能”三个档位。
+安装与启动
+Bash
+sudo pacman -S power-profiles-daemon
+sudo systemctl enable --now power-profiles-daemon
+使用方法
+    查看当前模式：powerprofilesctl list
+    切换模式：powerprofilesctl set performance 或 balanced
+    Sway 集成：你可以通过 Waybar 的 power-profiles-daemon 模块在状态栏显示并切换模式。
+问题解决
+BULIBULI% powerprofilesctl list
+Traceback (most recent call last):
+  File "/usr/bin/powerprofilesctl", line 8, in <module>
+    from gi.repository import Gio, GLib
+ModuleNotFoundError: No module named 'gi.repository'
+这个报错是一个典型的 Python 依赖缺失问题。在 Arch Linux 中，powerprofilesctl 是一个 Python 脚本，它依赖 python-gobject（也称为 PyGObject）来与系统的 D-Bus 接口通信。
+即使安装了 power-profiles-daemon，由于某种原因（比如精简安装或手动清理），这个 Python 库可能没被装上。
+解决方法：安装缺失的 Python 库
+请运行以下命令来安装必要的底层库：
+Bash
+sudo pacman -S python-gobject
+安装完成后，再次尝试执行：
+Bash
+powerprofilesctl list
+
