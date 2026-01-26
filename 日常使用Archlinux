@@ -836,4 +836,40 @@ esac
     圆角没生效：如果你的 Sway 版本较旧或没有打补丁，可能不支持边框圆角渲染，但 Fuzzel 本身在支持 Wayland 协议的合成器上表现很好。
 
 
+在 Arch Linux 中，有许多优秀的软件可以用来查看磁盘和目录的占用情况。根据你的偏好（命令行或图形界面），以下是目前最推荐的几款工具：
+1. 终端交互工具 (CLI/TUI)
+如果你经常在终端操作，这几款工具不仅速度快，而且交互性极强。
+ncdu (NCurses Disk Usage)
+这是最经典、最常用的 TUI 工具。它会扫描目录并提供一个可以上下跳转的列表，支持直接在软件内删除文件。
+    特点： 轻量、稳定、操作直观。
+    安装： sudo pacman -S ncdu
+    使用： 在你想扫描的目录下运行 ncdu。
+gdu (Go Disk Usage)
+这是 ncdu 的高性能替代品，使用 Go 编写，专门为 SSD 进行了并行处理优化。
+    特点： 速度极快，在大容量 SSD 上优势明显，界面带有颜色区分。
+    安装： sudo pacman -S gdu
+    使用： gdu
+dua (Disk Usage Analyzer)
+如果你追求现代化的极致体验，dua（Rust 编写）是很好的选择。
+    特点： 支持交互模式（dua i），界面现代，计算速度也是顶尖水平。
+    安装： sudo pacman -S dua-cli
+    使用： dua i
+2. 图形化工具 (GUI)
+如果你喜欢用鼠标点击，或者希望通过“饼图”或“方块图”直观看到哪里占用了空间：
+Filelight (KDE 家族)
+    特点： 采用同心圆环图展示。点击圆环可以深入每一层目录，视觉化效果非常好。
+    安装： sudo pacman -S filelight
+Baobab (GNOME 磁盘占用分析器)
+    特点： 界面简洁明了，支持树状列表和饼图/矩形树图双重显示。
+    安装： sudo pacman -S baobab
+QDirStat / KDirStat
+    特点： 采用矩形树图 (Treemap)。文件越大，色块越大。它在清理服务器残留或寻找大视频文件时非常高效。
+    安装： sudo pacman -S qdirstat
+3. 基础系统命令
+如果不安装新软件，Arch 自带的命令也能快速解决问题：
+    查看磁盘分区整体占用： df -h
+    查看当前目录下各文件夹大小（不递归显示深层文件）： du -sh * | sort -h
+
+
+
 
