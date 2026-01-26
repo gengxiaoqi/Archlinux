@@ -774,3 +774,65 @@ steam --reset
     字体问题：有时缺失特定字体会导致 UI 无法渲染，建议安装 ttf-liberation。
 
 
+fuzzel 是 Sway 环境下非常受欢迎的启动器，它比 wofi 更轻量，且原生支持 Wayland 渲染，非常适合追求简约的 Arch 用户。
+1. 安装 fuzzel
+首先确保你已经安装了它：
+Bash
+sudo pacman -S fuzzel
+2. 创建配置文件
+Fuzzel 默认寻找 ~/.config/fuzzel/fuzzel.ini。如果文件夹不存在，请手动创建：
+Bash
+mkdir -p ~/.config/fuzzel
+touch ~/.config/fuzzel/fuzzel.ini
+3. 配置示例 (fuzzel.ini)
+将以下内容粘贴到 fuzzel.ini 中，这是一个美观且实用的基础配置：
+Ini, TOML
+# 字体设置
+font=JetBrainsMono Nerd Font:size=12
+# 终端模拟器（用于运行终端应用）
+terminal=foot -e 
+# 窗口外观
+[main]
+fields=name,generic,comment,executable
+icon-theme=Papirus
+width=30
+tabs=4
+horizontal-pad=20
+vertical-pad=10
+inner-pad=5
+# 颜色设置（这里以暗色调为例）
+[colors]
+background=282a36ff
+text=f8f8f2ff
+match=8be9fdff
+selection=44475aff
+selection-text=f8f8f2ff
+border=bd93f9ff
+[border]
+width=2
+radius=10
+4. 在 Sway 中绑定快捷键
+编辑你的 ~/.config/sway/config，找到原本绑定 dmenu 或 wofi 的那一行，修改为 fuzzel：
+代码段
+# 建议绑定到 $mod+d (默认通常是这个)
+bindsym $mod+d exec fuzzel
+修改完成后，按下 $mod + Shift + c 重载 Sway 配置。
+5. 进阶：作为 Power Menu (关机菜单)
+Fuzzel 也可以用来做关机菜单。你可以创建一个简单的脚本 powermenu.sh:
+Bash
+#!/bin/bash
+SELECTION=$(printf "🔒 Lock\n󰗽 Logout\n󰤄 Suspend\n Reboot\n⏻ Shutdown" | fuzzel --dmenu --p "Power: ")
+case "$SELECTION" in
+    "*Lock") swaylock ;;
+    "*Logout") swaymsg exit ;;
+    "*Suspend") systemctl suspend ;;
+    "*Reboot") systemctl reboot ;;
+    "*Shutdown") systemctl poweroff ;;
+esac
+赋予执行权限 chmod +x powermenu.sh 后，在 Sway 里给它绑一个快捷键，你会发现比安装专门的插件好用得多。
+常见调试
+    图标不显示：确保你安装了图标库，如 sudo pacman -S papirus-icon-theme。
+    圆角没生效：如果你的 Sway 版本较旧或没有打补丁，可能不支持边框圆角渲染，但 Fuzzel 本身在支持 Wayland 协议的合成器上表现很好。
+
+
+
