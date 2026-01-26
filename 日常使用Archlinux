@@ -430,6 +430,7 @@ exec kanshi
 安装clash-verge-rev-bin并设置
 在 Arch Linux (Sway) 环境下，clash-verge-rev-bin 无法安装 TUN 模式通常是因为权限限制或服务模式（Service Mode）未正确配置。
 由于 Sway 是 Wayland 协议，有时 GUI 触发的 root 权限请求（polkit）可能无法弹出，导致“安装服务”静默失败。你可以按照以下步骤手动修复。
+注意：如果升级版本，要先sudo clash-verge-service-uninstall 再 sudo clash-verge-service-install
 方法一：手动安装服务（推荐）
 这是解决“点击安装没反应”或“安装失败”最彻底的方法。
     停止应用：彻底关闭 Clash Verge Rev。
