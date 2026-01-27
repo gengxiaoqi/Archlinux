@@ -1011,7 +1011,7 @@ Bash
 ls /sys/class/backlight/
 如果输出是 intel_backlight，则在 Waybar 配置中保持默认；如果输出是其他名字（如 acpi_video0），请将 Waybar 配置中的 "device" 字段修改为该名字。
 小贴士：由于你的 Redmi Book 拥有 3.1K 屏幕，如果你觉得亮度调节的步进（5%）太小，可以把 5%+ 改成 10%+。
-
+（已解决：是因为多屏幕且笔记本内屏未开导致，不用进行下面步骤）{
 在系统冷启动或重启进入时不显示waybar上不显示亮度信息的解决办法：把waybar移出bar{}之外来独立触发
 既然你目前是在 Sway 的原生 bar {} 模块中启动 Waybar，那么迁移的过程其实是**“解耦”**的过程：让 Sway 只负责窗口管理，让 Waybar 作为一个独立的 Wayland 客户端运行。
 以下是详细的操作步骤：
@@ -1059,6 +1059,7 @@ CSS
     pkill waybar
     在 Sway 中按下 $mod+Shift+c 重新加载配置。
     等待 2 秒，观察 Waybar 是否带着亮度信息顺利出现。
+}
 
 
 针对 Arch Linux 的firefox最佳字体推荐
