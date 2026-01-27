@@ -1013,7 +1013,19 @@ ls /sys/class/backlight/
 小贴士：由于你的 Redmi Book 拥有 3.1K 屏幕，如果你觉得亮度调节的步进（5%）太小，可以把 5%+ 改成 10%+。
 
 
-
+针对 Arch Linux 的firefox最佳字体推荐
+在 Linux 系统上，为了获得最佳显示效果，建议安装 Google Noto 系列或 Adobe 思源 系列，它们对中文支持最完美。
+A. 无衬线字体 (Sans-serif) —— 最推荐的默认设置
+    推荐： Noto Sans CJK SC (思源黑体)
+    特点： 在高分辨率屏幕下非常清晰，字形标准。
+    安装： sudo pacman -S noto-fonts-cjk
+B. 衬线字体 (Serif) —— 适合阅读电子书
+    推荐： Noto Serif CJK SC (思源宋体)
+    特点： 优美、古典，但在低分辨率屏上可能略显单薄，不过在你的 3.1K 屏上表现会非常出色。
+C. 等宽字体 (Monospace) —— 极客必备
+    推荐： JetBrainsMono Nerd Font
+    特点： 专门为编程设计，字形极易辨认，且包含了你在 Sway/Waybar 中用到的所有图标。
+    安装： sudo pacman -S ttf-jetbrains-mono-nerd
 
 
 
