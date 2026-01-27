@@ -871,5 +871,149 @@ QDirStat / KDirStat
     查看当前目录下各文件夹大小（不递归显示深层文件）： du -sh * | sort -h
 
 
+在 Waybar 中显示蓝牙状态，最优雅且主流的方法是使用 Waybar 内置的 bluetooth 模块。它不需要你编写复杂的脚本，就能实现显示连接状态、设备名称以及点击打开管理器等功能。
+以下是具体的配置步骤：
+1. 修改 Waybar 配置文件
+打开你的 Waybar 配置文件（通常在 ~/.config/waybar/config 或 ~/.config/waybar/config.jsonc），按照以下步骤操作：
+第一步：在 modules-right（或你喜欢的位置）添加 "bluetooth"：
+JSON
+"modules-right": [
+    "bluetooth", 
+    "network", 
+    "pulseaudio", 
+    "clock", 
+    "tray"
+],
+第二步：定义 bluetooth 模块的具体配置： 将以下代码添加到配置文件中（与其他模块平级）：
+JSON
+"bluetooth": {
+    "format": " {status}",
+    "format-disabled": "󰂲 off", // 蓝牙关闭时的图标
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager" // 点击图标打开图形管理界面
+},
+    注意：图标（如 ）需要安装 Font Awesome 或 Nerd Fonts 才能正常显示。如果你看到的是乱码，请执行 sudo pacman -S ttf-font-awesome。
+2. 美化样式 (Optional)
+打开你的样式表 ~/.config/waybar/style.css，为蓝牙模块添加一些视觉区分：
+CSS
+#bluetooth {
+    background-color: #2980b9;
+    color: white;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+#bluetooth.connected {
+    background-color: #27ae60; /* 连接成功时显示绿色 */
+}
+#bluetooth.disabled {
+    background-color: #7f8c8d; /* 关闭时显示灰色 */
+}
+3. 安装依赖工具 (让点击生效)
+在上面的配置中，我们设置了 "on-click": "blueman-manager"。为了让这个功能生效，建议安装 blueman：
+Bash
+sudo pacman -S blueman
+4. 重载 Waybar
+保存文件后，在终端运行以下命令重载 Waybar 查看效果：
+Bash
+pkill waybar && waybar &
+进阶提示：为什么我看不到蓝牙图标？
+    服务未启动：请确保 systemctl is-active bluetooth 返回的是 active。
+    RF-Kill 锁定：如果蓝牙是 soft blocked，Waybar 也会显示已关闭。可以输入 rfkill unblock bluetooth 解锁。
+    字体缺失：Waybar 的图标高度依赖字体补丁。推荐安装 ttf-jetbrains-mono-nerd。
+在 Sway 配置中设置浮动规则
+打开你的 Sway 配置文件 ~/.config/sway/config，添加以下规则：
+代码段
+# 根据标题(title)将窗口设为浮动
+for_window [title="bluetooth-manager"] floating enable, resize set 600 400, move position center
+# 或者根据 app_id (如果你在终端启动时指定了 app-id)
+# for_window [app_id="bluetooth-manager"] floating enable, resize set 600 400
+    floating enable: 启用浮动模式。
+    resize set 600 400: 设置窗口大小（宽600，高400），你可以根据 Redmi Book 16 的高分辨率屏幕调整大一点（比如 800 600）。
+    move position center: 让它出现在屏幕正中央。
+进阶：如果你想让它像“下拉菜单”一样
+如果你希望这个窗口更像一个插件，可以尝试将它固定在屏幕顶部：
+代码段
+for_window [title="bluetooth-manager"] {
+    floating enable
+    resize set 800 500
+    move position center
+    # 甚至可以添加边框颜色区分
+    border pixel 2
+}
+为什么建议用 title 而不是 app_id？
+对于终端模拟器来说，app_id 通常固定为 foot 或 kitty，如果你针对 app_id 设置浮动，那么你打开的所有终端都会变成浮动的。使用 --title 标记可以精准打击，只让蓝牙窗口浮动。
+如果你安装的是 Blueman（图形化界面），确定它的窗口属性其实比终端更简单，因为它的 app_id 是固定的。
+在 Sway 下，Blueman 的主窗口通常有两个标识：
+    app_id: blueman-manager
+    title: Bluetooth Devices
+1. 验证准确的标识符
+最科学的方法是让 Sway 告诉你当前窗口的身份。请执行以下步骤：
+    打开 blueman-manager 窗口。
+    在终端输入以下命令：
+    Bash
+    swaymsg -t get_tree | grep -E "blueman-manager|Bluetooth Devices"
+    你会看到类似 "app_id": "blueman-manager" 或 "name": "Bluetooth Devices" 的字段。
+
+
+在 Waybar 上显示亮度，通常使用其内置的 backlight 模块。对于你的 Redmi Book Pro 16 2024，由于它搭载了 Intel Ultra 7 的 Arc 核显，亮度调节通常是非常灵敏且标准的。
+以下是实现步骤：
+1. 准备工作：确保有权限控制亮度
+在 Arch Linux 中，普通用户默认可能没有权限直接修改 /sys/class/backlight。
+    安装工具：推荐使用 brightnessctl，它轻量且在 Wayland 下表现稳定。
+    Bash
+    sudo pacman -S brightnessctl
+    加入用户组：将自己加入 video 组（通常不需要重启，但建议重新登录）：
+    Bash
+    sudo usermod -aG video $USER
+2. 配置 Waybar 模块
+打开 ~/.config/waybar/config，在相应位置添加模块：
+第一步：在布局中加入 "backlight"：
+JSON
+"modules-right": [
+    "backlight",
+    "bluetooth",
+    "pulseaudio",
+    "clock"
+],
+第二步：配置模块参数：
+JSON
+"backlight": {
+    "device": "intel_backlight", // Redmi Book 16 默认通常是这个
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"], // 需要 Nerd Fonts
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-",
+    "min-length": 6
+},
+3. 配置 Sway 快捷键
+为了让 Redmi Book 键盘顶部的亮度键（F1, F2 或 Fn+F1/F2）生效，在 ~/.config/sway/config 中添加：
+代码段
+# 亮度增加
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+# 亮度减少
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+4. 样式美化 (CSS)
+打开 ~/.config/waybar/style.css，让它看起来更精致：
+CSS
+#backlight {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    padding: 0 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+5. 故障排除：如果找不到设备
+如果你的 Waybar 亮度显示为 0% 或者干脆不显示，请在终端输入：
+Bash
+ls /sys/class/backlight/
+如果输出是 intel_backlight，则在 Waybar 配置中保持默认；如果输出是其他名字（如 acpi_video0），请将 Waybar 配置中的 "device" 字段修改为该名字。
+小贴士：由于你的 Redmi Book 拥有 3.1K 屏幕，如果你觉得亮度调节的步进（5%）太小，可以把 5%+ 改成 10%+。
+
+
+
+
 
 
