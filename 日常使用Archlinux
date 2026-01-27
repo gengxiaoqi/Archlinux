@@ -1012,6 +1012,54 @@ ls /sys/class/backlight/
 如果输出是 intel_backlight，则在 Waybar 配置中保持默认；如果输出是其他名字（如 acpi_video0），请将 Waybar 配置中的 "device" 字段修改为该名字。
 小贴士：由于你的 Redmi Book 拥有 3.1K 屏幕，如果你觉得亮度调节的步进（5%）太小，可以把 5%+ 改成 10%+。
 
+在系统冷启动或重启进入时不显示waybar上不显示亮度信息的解决办法：把waybar移出bar{}之外来独立触发
+既然你目前是在 Sway 的原生 bar {} 模块中启动 Waybar，那么迁移的过程其实是**“解耦”**的过程：让 Sway 只负责窗口管理，让 Waybar 作为一个独立的 Wayland 客户端运行。
+以下是详细的操作步骤：
+第一步：清理 config 中的旧代码
+打开你的 Sway 配置文件（通常在 ~/.config/sway/config），找到 bar { ... } 这一块。
+你需要将其彻底注释掉或删除：
+代码段
+# 找到这段代码并注释掉
+# bar {
+#     swaybar_command waybar
+#     ... 其他颜色或位置配置 ...
+# }
+为什么要删掉？ 因为当 Waybar 在 bar {} 内部运行时，Sway 会尝试去管理它的生命周期，并将其作为 swaybar 协议的一部分。移出之后，我们要把它当作一个普通的后台程序（像 swayidle 一样）来处理。
+第二步：添加独立启动指令
+在配置文件的末尾（或者专门放 exec 语句的地方），添加以下代码：
+代码段
+exec vs exec_always
+    exec：仅在 Sway 首次启动时执行一次。当你按下 $mod+Shift+c（reload）时，它不会再次运行。
+    exec_always：每次启动和重新加载配置时都会执行。
+当你把 Waybar 移出 bar {} 后，如果使用的是 exec，那么 reload 之后旧进程被删了（如果你配置里有 pkill）或者 Sway 只是重读配置，它不会去触发那个 sleep 2 && waybar。
+# 使用 sleep 确保亮度驱动 (backlight) 和网络驱动 (network) 已就绪
+exec_always sleep 2 && waybar
+如果你想更优雅一点： 为了防止多次重载（reload）配置导致启动多个 Waybar 进程，建议加上 pkill 逻辑（虽然 exec 默认不重启动，但这是个好习惯）：
+代码段
+exec_always pkill waybar; sleep 2 && waybar
+第三步：处理样式差异 (关键)
+当你把 Waybar 移出 bar {} 之后，Sway 不再为 Waybar 预留空间。如果此时 Waybar 覆盖了你的窗口，或者窗口顶住了屏幕边缘，你需要检查 Waybar 的配置文件（~/.config/waybar/config）。
+确保你的 Waybar 配置中有这一行，它会告诉 Sway 自动避开状态栏：
+JSON
+"layer": "top",
+"position": "top", // 或者 "bottom"
+第四步：同步颜色和外观
+如果你之前在 bar {} 块里写了很多 colors { ... } 配置，注意：这些配置对 Waybar 是无效的。
+Waybar 的外观完全由 ~/.config/waybar/style.css 决定。如果你发现移出后颜色变了，你需要去修改 CSS 文件。例如，设置背景颜色：
+CSS
+#waybar {
+    background: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+第五步：测试生效
+    保存 ~/.config/sway/config。
+    彻底杀死当前的 Waybar 进程（因为 reload 可能杀不掉旧的）：
+    Bash
+    pkill waybar
+    在 Sway 中按下 $mod+Shift+c 重新加载配置。
+    等待 2 秒，观察 Waybar 是否带着亮度信息顺利出现。
+
 
 针对 Arch Linux 的firefox最佳字体推荐
 在 Linux 系统上，为了获得最佳显示效果，建议安装 Google Noto 系列或 Adobe 思源 系列，它们对中文支持最完美。
