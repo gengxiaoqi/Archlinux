@@ -6,6 +6,16 @@ mount /nvme0n1p3 /mnt
 mount --mkdir /nvme1n1p1 /mnt/boot
 # 挂载启动目录/boot
 
+Arch 安装镜像内置了交互式工具 iwctl (iNet wireless daemon)，操作非常直观：
+交互步骤：
+    启动工具： 输入 iwctl 进入交互模式。
+    列出设备： 输入 device list 查看网卡名称（通常是 wlan0）。
+    扫描网络： 输入 station wlan0 scan。
+    列出可用网络： 输入 station wlan0 get-networks。
+    连接 Wi-Fi： 输入 station wlan0 connect SSID名称。
+        注：如果有密码，它会提示你输入。输入时屏幕不会显示任何字符。
+    退出： 连接成功后，输入 quit 退出工具。
+
 pacstrap -K /mnt base linux linux-firmware base-devel vi vim ranger networkmanager git wget htop btop efibootmgr zsh tmux ncdu fastfetch cmatrix cmus pipewire pipewire-alsa pipewire-pulse terminus-font 
 # noto-fonts-cjk ttf-font-awesome thunar sddm wofi moko brightnessctl foot sway swaybg swayidle swayimg swaylock swaync swayosd waybar
 # 这条命令的作用是向你挂载好的硬盘分区（/mnt）中安装最基本的系统组件。
