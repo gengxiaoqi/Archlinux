@@ -1442,5 +1442,47 @@ CSS
     SwayNC 自身样式：如果你是指 SwayNC 面板内部或弹窗右上角的红点，那需要在 ~/.config/swaync/style.css 中找到 .notification-red-dot 相关的选择器并设置 background: transparent;。
 
 
+在 Waybar 中设置“电源按钮”，通常有两部分工作：一是 Waybar 模块配置（外观与点击事件），二是 电源菜单脚本（点击后弹出的选项，如关机、重启、锁屏）。
+1. Waybar 模块配置
+在 ~/.config/waybar/config 中，你可以通过 custom 模块来创建一个电源按钮。
+JSON
+"modules-right": [..., "custom/power"],
+"custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "wlogout", // 或者使用你自己写的脚本路径
+    "on-click-right": "swaylock" // 右键直接锁屏
+}
+    提示：如果你没有安装 wlogout，可以直接把 on-click 改为执行关机命令 systemctl poweroff，但这样容易误触，建议配合脚本或 UI 工具使用。
+2. 方案 A：使用 wlogout (推荐，带图形界面)
+wlogout 是 Wayland 下非常流行的美观电源菜单。
+    安装：sudo yay -S wlogout
+    配置 Waybar：将上面的 on-click 设置为 wlogout。
+    效果：点击图标后，屏幕会变暗并弹出关机、重启、休眠、锁屏等大图标。
+4. Waybar 中的 CSS 美化
+为了让电源键更醒目（通常是红色），在 ~/.config/waybar/style.css 中添加：
+CSS
+#custom-power {
+    color: #f38ba8; /* 红色图标 */
+    background-color: #313244;
+    border-radius: 8px;
+    padding: 0 15px;
+    margin: 4px;
+    font-size: 18px;
+}
+#custom-power:hover {
+    background-color: #f38ba8;
+    color: #1e1e2e; /* 悬停时翻转颜色 */
+}
+5. 补充：Redmi Book 的电源键物理设置
+由于你使用的是笔记本，可能还希望按下物理电源键时触发特定动作。 修改 /etc/systemd/logind.conf：
+Ini, TOML
+HandlePowerKey=ignore 
+然后在 Sway 配置里绑定这个按键：
+代码段
+bindsym XF86PowerOff exec wlogout
+这样物理键和屏幕上的虚拟键就统一了。
+注意：waylock那一长串参数都要分别加入到waybar和wlogout的设置中
+
 
 
