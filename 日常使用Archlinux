@@ -1077,4 +1077,263 @@ C. 等宽字体 (Monospace) —— 极客必备
     安装： sudo pacman -S ttf-jetbrains-mono-nerd
 
 
+SwayNC (Sway Notification Center) 是目前 Sway 用户公认的“顶配”通知方案。它不仅能显示弹窗，还提供了一个类似 macOS 或 Windows 的右侧滑出面板，集成通知历史记录和控制中心（如勿扰模式、亮度、音量等）。
+1. 安装与启动
+首先，安装 swaync：
+Bash
+sudo pacman -S swaync
+然后在 ~/.config/sway/config 中启动它（如果你之前配置了 mako，请先删掉 mako 的相关行）：
+代码段
+exec swaync
+2. 配置与美化
+SwayNC 的配置由两个文件组成，通常位于 ~/.config/swaync/：
+    config.json：定义通知中心的逻辑、模块布局。
+    style.css：定义外观（颜色、圆角、阴影）。
+生成默认配置
+运行以下命令创建文件夹：
+Bash
+mkdir -p ~/.config/swaync
+如果你想看默认配置，可以参考 SwayNC GitHub。这里为你提供一个精简且实用的 config.json 示例：
+JSON
+{
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "top",
+  "control-center-width": 400,
+  "notification-window-width": 400,
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications",
+    "mpris",
+    "volume",
+    "backlight"
+  ]
+}
+3. 在 Waybar 中集成图标
+这是 SwayNC 最强大的地方。你可以在 Waybar 上放一个“铃铛”图标，实时显示通知数量。
+修改 ~/.config/waybar/config：
+JSON
+"modules-right": [..., "custom/notification", ...],
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+4. 常用交互命令 (Client)
+SwayNC 提供了一个客户端工具 swaync-client，你可以通过它来控制面板：
+命令	作用
+swaync-client -t	打开/关闭 侧边通知面板 (Toggle)
+swaync-client -d	一键切换 勿扰模式 (Do Not Disturb)
+swaync-client -C	清空 所有通知记录
+swaync-client -R	重新加载 配置文件
+5. 进阶使用：脚本联动
+你可以利用 swaync 的通知层级。比如你在写之前那个“手柄模式”脚本时，可以强制弹窗保持不消失：
+Bash
+# 发送一条高优先级通知，出现在最上方且不会自动消失，直到你点它
+notify-send "游戏模式已开启" "自动锁屏已禁用" -u critical
+6. 常见问题：面板显示不出来？
+如果点击 Waybar 图标没反应，请检查：
+    D-Bus 是否正常：SwayNC 依赖 D-Bus 信号。
+    Layer-shell 冲突：确保 config.json 里的 "layer": "top" 没有被其他窗口遮挡。
+    手动测试：在终端输入 swaync-client -t。如果报错，说明后台 swaync 进程没跑起来。
+解决不显示通知中心的问题
+彻底解决：systemd 服务（可选但推荐）
+为了保证服务永远在线，你可以让 systemd 来管理它：
+    创建目录：mkdir -p ~/.config/systemd/user/
+    创建文件：nano ~/.config/systemd/user/swaync.service
+    填入：
+    Ini, TOML
+    [Unit]
+    Description=Sway Notification Center
+    After=graphical-session.target
+    [Service]
+    Type=simple
+    ExecStart=/usr/bin/swaync
+    Restart=on-failure
+    [Install]
+    WantedBy=graphical-session.target
+    运行：systemctl --user enable --now swaync
+SwayNC 的外观主要通过 style.css 来控制。由于它基于 GTK，你可以像写网页前端一样，利用 CSS 调整颜色、边框、透明度和圆角。
 
+默认配置文件路径为：~/.config/swaync/style.css。
+1. 核心选择器结构
+SwayNC 的界面可以拆解为几个关键部分：
+    .control-center: 侧边栏面板整体。
+    .notification: 单条通知卡片。
+    .widget-title: 面板顶部的标题。
+    .widget-dnd: 勿扰模式按钮。
+    .widget-mpris: 音乐播放控制组件。
+2. 一个美观的透明风格示例
+你可以将以下内容粘贴到你的 style.css 中，这是一个采用深色半透明（Frosted Glass）风格的模板：
+CSS
+/* 全局字体 */
+* {
+    font-family: "Inter", "Source Han Sans CN", sans-serif;
+}
+/* 侧边栏背景 */
+.control-center {
+    background: rgba(40, 44, 52, 0.8); /* 半透明深灰 */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+/* 通知卡片样式 */
+.notification {
+    background: rgba(50, 54, 62, 0.9);
+    border-radius: 8px;
+    margin: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+/* 悬停在通知卡片上的效果 */
+.notification:hover {
+    background: rgba(60, 64, 72, 1);
+}
+/* 勿扰模式按钮 */
+.widget-dnd {
+    margin: 10px;
+    font-size: 1.1rem;
+}
+.widget-dnd > switch {
+    background: #4c566a;
+    border-radius: 20px;
+}
+.widget-dnd > switch:checked {
+    background: #88c0d0; /* 开启时的颜色 */
+}
+/* 音乐播放器模块 (MPRIS) */
+.widget-mpris {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+3. 如何实时查看修改效果？
+每当你修改并保存 style.css 后，不需要重启 Sway，只需要在终端运行命令让它立即重载样式：
+Bash
+swaync-client -R
+4. 进阶技巧：针对不同软件自定义
+如果你希望特定的软件发送的通知颜色不同（比如 Telegram 蓝色，或是系统警告红色），可以在 CSS 中使用 critical 或应用名称：
+CSS
+/* 紧急（高优先级）通知显示红色边框 */
+.notification.critical {
+    border: 2px solid #bf616a;
+}
+/* 针对特定应用的图标大小调整 */
+.notification .app-icon {
+    border-radius: 4px;
+    margin-right: 10px;
+}
+5. 常见 CSS 属性参考
+如果你想自己DIY，这些属性在 SwayNC 中最常用：
+    background-color: 背景色，推荐使用 rgba(r, g, b, a) 来调整透明度。
+    border-radius: 圆角大小，值越大越圆润。
+    box-shadow: 阴影，能让面板看起来有立体感（浮在窗口上方）。
+    color: 文字颜色。
+提示： 如果你发现修改后没有反应，请确保 config.json 里没有语法错误导致服务崩溃。
+
+1. 彻底排查“通知抢占” (最常见原因)
+如果你的通知没有出现在 SwayNC 面板里，说明它被发到了别的地方。 请在终端运行以下命令，看看系统里是否还有其他通知服务在跑：
+Bash
+ps aux | grep -E "mako|dunst|xfce4-notifyd"
+    如果有输出：说明除了 SwayNC，还有别的服务在运行。请卸载或禁用它们：
+    Bash
+    sudo pacman -Rs mako dunst  # 根据输出结果决定卸载哪个
+    手动杀死干扰进程：pkill mako; pkill dunst。
+
+3. 核心配置 (JSON)
+创建配置文件 ~/.config/swaync/config.json。这决定了侧边栏里有哪些按钮和功能。
+JSON
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-width": 380,
+  "notification-window-width": 350,
+  "layer": "top",
+  "widgets": [
+    "title",
+    "dnd",
+    "mpris",
+    "volume",
+    "backlight",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": { "text": "通知中心", "clear-all-button": true },
+    "dnd": { "text": "勿扰模式" }
+  }
+}
+4. 外观美化 (CSS)
+创建样式表 ~/.config/swaync/style.css。你可以根据喜好调整透明度和颜色。
+CSS
+/* 侧边栏整体 */
+.control-center {
+    background: rgba(30, 30, 46, 0.9); /* 深色半透明 */
+    border-radius: 15px;
+    border: 1px solid #89b4fa;
+    margin: 10px;
+    padding: 10px;
+}
+/* 通知卡片样式 */
+.notification {
+    background: rgba(45, 45, 66, 0.95);
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* 紧急通知（如低电量、蓝牙配对） */
+.notification.critical {
+    border: 2px solid #f38ba8;
+}
+/* 标题字体 */
+.widget-title > label {
+    font-size: 1.5rem;
+    color: #cdd6f4;
+}
+5. Waybar 集成 (点击唤出)
+在 ~/.config/waybar/config 中添加模块，让你能直接看到通知数量并点击打开面板。
+JSON
+"modules-right": [..., "custom/notification"],
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon} {}",
+    "format-icons": {
+        "notification": "<sup></sup>",
+        "none": "",
+        "dnd-notification": "<sup></sup>",
+        "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+}
+6. 常用控制命令
+你可以通过快捷键或终端直接控制 SwayNC：
+    打开/关闭面板：swaync-client -t
+    切换勿扰模式：swaync-client -d
+    重载配置/样式：swaync-client -R
+    发送测试通知：notify-send "标题" "内容" -u critical
+7. 迁移与排查小结
+    迁移：记得备份 ~/.config/swaync/ 文件夹。
+    故障：如果蓝牙消息不进中心，检查是否有 mako 或 dunst 干扰。
+    注意：蓝牙配对时弹出的“输入密码”框是 PolicyKit 窗口，不属于通知中心，它由 polkit-gnome 或 lxqt-policykit 处理。
