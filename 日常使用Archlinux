@@ -1337,3 +1337,110 @@ JSON
     迁移：记得备份 ~/.config/swaync/ 文件夹。
     故障：如果蓝牙消息不进中心，检查是否有 mako 或 dunst 干扰。
     注意：蓝牙配对时弹出的“输入密码”框是 PolicyKit 窗口，不属于通知中心，它由 polkit-gnome 或 lxqt-policykit 处理。
+
+在 Waybar 的 style.css 中设置 custom/notification，主要是为了让那个“铃铛”图标看起来更精致，特别是针对有新通知和勿扰模式时的不同状态进行视觉区分。
+
+由于我们在 JSON 配置中使用了 format-icons 和 return-type: json，Waybar 会根据通知状态给该模块加上不同的 CSS Class。
+1. 基础样式设置
+你可以将以下代码添加到 Waybar 的 style.css 中。
+CSS
+#custom-notification {
+    color: #cdd6f4; /* 基础文字/图标颜色 */
+    background: #313244; /* 背景色 */
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 4px 2px;
+    font-size: 16px;
+}
+/* 当有未读通知时（显示红点或变色） */
+#custom-notification.notification {
+    color: #f38ba8; /* 图标变红 */
+}
+/* 当开启勿扰模式（DND）时 */
+#custom-notification.dnd-none,
+#custom-notification.dnd-notification {
+    color: #fab387; /* 勿扰模式设为橙色 */
+}
+/* 鼠标悬停效果 */
+#custom-notification:hover {
+    background: #45475a;
+    color: #89b4fa;
+}
+2. 核心 CSS 选择器说明
+Waybar 会根据 swaync-client -swb 返回的状态自动切换 Class，你可以针对性地微调：
+    #custom-notification: 模块的最基础 ID。
+    .none: 没有通知时的状态。
+    .notification: 有未读通知时的状态（此时图标通常带红点）。
+    .dnd-none: 开启了勿扰模式，且没有通知。
+    .dnd-notification: 开启了勿扰模式，且有未读通知。
+3. 进阶：添加动画效果 (闪烁提醒)
+如果你希望有新通知时，Waybar 的图标能稍微闪烁一下提醒你，可以添加动画：
+CSS
+@keyframes blink {
+    to {
+        background-color: #f38ba8;
+        color: #1e1e2e;
+    }
+}
+#custom-notification.notification {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+4. 检查与生效
+    修改完 Waybar 的 style.css 后，保存文件。
+    按下你的 Sway 重新加载快捷键（通常是 $mod+Shift+c）。
+    使用命令测试一下：
+    Bash
+    notify-send "测试通知" "看看 Waybar 图标有没有变化"
+
+要取消通知图标右上角的红点，我们需要从两个地方入手：Waybar 的图标配置（去掉上标字符）和 Waybar 的 CSS 样式（去掉颜色标记）。
+1. 修改 Waybar 的 JSON 配置
+在你的 ~/.config/waybar/config 中，找到 custom/notification 模块。红点通常是由图标字符串中的 <sup></sup>（或者类似的特殊字符）生成的。
+将 format-icons 里的 <sup></sup> 全部删除，只保留基础图标。
+修改后的配置如下：
+JSON
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}", // 这里也可以去掉 {}，只留 {icon}
+    "format-icons": {
+        "notification": "",        // 去掉了 <sup></sup>
+        "none": "",
+        "dnd-notification": "",    // 去掉了 <sup></sup>
+        "dnd-none": "",
+        "inhibited-notification": "",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "",
+        "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+2. 修改 Waybar 的 CSS 样式
+如果你在 style.css 中设置了针对 .notification 类的特殊颜色（比如红色），即便没有了字符红点，图标颜色可能还是会变。如果你希望无论有没有通知，图标颜色都保持一致，请修改 style.css：
+CSS
+/* 基础样式 */
+#custom-notification {
+    color: #cdd6f4; /* 这里的颜色改为你喜欢的固定色 */
+    padding: 0 10px;
+}
+/* 统一所有状态的颜色，防止变红 */
+#custom-notification.notification,
+#custom-notification.none,
+#custom-notification.dnd-notification,
+#custom-notification.dnd-none {
+    color: #cdd6f4; /* 强制所有状态使用相同的颜色 */
+}
+3. 为什么有时候改了配置还有“红点”？
+    字体缓存：如果你使用的是特殊的图标字体（如 Font Awesome），有些图标本身就自带“带点的铃铛”变体。请确保你使用的 format-icons 里的字符只是  (f0f3) 而不是  (f0f3 变体)。
+    SwayNC 自身样式：如果你是指 SwayNC 面板内部或弹窗右上角的红点，那需要在 ~/.config/swaync/style.css 中找到 .notification-red-dot 相关的选择器并设置 background: transparent;。
+
+
+
+
