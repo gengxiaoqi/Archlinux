@@ -1485,4 +1485,55 @@ bindsym XF86PowerOff exec wlogout
 注意：waylock那一长串参数都要分别加入到waybar和wlogout的设置中
 
 
+既然你决定深入调优，这里有一份**“终极版”Waybar 内置日历样式**方案。它的优势在于：它是 Waybar 的一部分，不会像独立窗口那样产生焦点竞争或由于 Sway 规则配置不当而跑位。
+1. 替换 config 中的 clock 模块
+将你原有的 clock 模块替换为这个，它集成了点击切换和详细的日历布局：
+JSON
+"clock": {
+    "interval": 60,
+    "format": "󰃭 {:%m-%d %H:%M}", // 图标+日期+时间
+    "max-length": 25,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+        "mode"          : "month",
+        "mode-mon-col"  : 3,
+        "weeks-pos"     : "right",
+        "on-scroll"     : 1,
+        "format": {
+            "months":     "<span color='#ffead3'><b>{}</b></span>",
+            "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+            "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+            "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+            "today":      "<span color='#ff6699'><b><u>{}</u></b></u></span>"
+        }
+    },
+    "actions":  {
+        "on-click-right": "mode",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+    }
+}
+2. 润色 style.css
+为了让弹出的日历有“悬浮胶囊”的高级感，在 CSS 里加入以下修饰：
+CSS
+#clock {
+    background-color: rgba(30, 30, 46, 0.8);
+    color: #b4befe;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+/* 关键：设置弹窗日历的全局样式 */
+tooltip {
+    background: rgba(30, 30, 46, 0.9);
+    border: 1px solid rgba(180, 190, 254, 0.3);
+    border-radius: 12px;
+}
+tooltip label {
+    font-family: "JetBrainsMono Nerd Font";
+    color: #cdd6f4;
+}
+3. 操作小贴士
+    切换月份：鼠标停在时间上，滚动滚轮即可直接在日历中切换上/下个月（这比打开软件快多了）。
+    右键点击：根据上面的 actions 配置，右键可以切换模式（比如查看全年视图）。
+
 
